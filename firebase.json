@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "animagic",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "animagic-2023": {
+      "hosting": {
+        "animagic": [
+          "animagic-2023"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "animagic-2023"
+  }
+}
