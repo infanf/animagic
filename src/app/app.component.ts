@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Timestamp } from '@angular/fire/firestore';
-import { AnimagicEvent, FirebaseService } from '@services/firebase.service';
+import { AnimagicEvent } from '@models/event';
+import { FirebaseService } from '@services/firebase.service';
 import { Observable } from 'rxjs';
 
 @Component({

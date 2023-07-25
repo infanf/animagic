@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
-import {
-  CollectionReference,
-  Firestore,
-  Timestamp,
-} from '@angular/fire/firestore';
+import { CollectionReference, Firestore } from '@angular/fire/firestore';
 import { Observable, map } from 'rxjs';
+import { AnimagicEvent } from '@models/event';
 
 @Injectable({
   providedIn: 'root',
@@ -51,12 +48,4 @@ export class FirebaseService {
       });
     });
   }
-}
-
-export interface AnimagicEvent {
-  start: Timestamp;
-  end: Timestamp;
-  title: string;
-  description: string;
-  location: string;
 }
