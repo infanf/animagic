@@ -4,7 +4,17 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    children: []
+    children: [
+        {
+            path: '',
+            redirectTo: 'calendar',
+            pathMatch: 'full',
+        },
+        {
+            path: 'calendar',
+            loadChildren: () => import('./calendar/calendar.module').then(m => m.CalendarModule)
+        },
+    ]
   }
 ];
 
