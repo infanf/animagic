@@ -1,0 +1,163 @@
+[
+  {
+    "start": "2023-08-04T15:00:00+02:00",
+    "end": "2023-08-04T15:30:00+02:00",
+    "title": "SPY x FAMILY",
+    "description": "Ep. 1+2, Dt., ca. 50 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-04T16:00:00+02:00",
+    "end": "2023-08-04T17:00:00+02:00",
+    "title": "Mashle: Magic and Muscles",
+    "description": "Ep. 1+2, Dt., ca. 50 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-04T17:15:00+02:00",
+    "end": "2023-08-04T19:00:00+02:00",
+    "title": "Tsurune: The Movie – The First Shot",
+    "description": "OmU, ca. 102 Min., FSK: 6",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-04T19:15:00+02:00",
+    "end": "2023-08-04T21:00:00+02:00",
+    "title": "Goodbye, Don Glees! Wege einer Freundschaft",
+    "description": "Dt., ca. 96 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-04T21:15:00+02:00",
+    "end": "2023-08-04T22:15:00+02:00",
+    "title": "NieR:Automata Ver1.1a",
+    "description": "Ep. 1+2, Dt., ca. 50 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-04T22:30:00+02:00",
+    "end": "2023-08-05T00:00:00+02:00",
+    "title": "TRIGUN STAMPEDE",
+    "description": "Ep. 1–3, Dt., ca. 90 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-05T11:00:00+02:00",
+    "end": "2023-08-05T11:30:00+02:00",
+    "title": "Dr. STONE: NEW WORLD",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-05T11:30:00+02:00",
+    "end": "2023-08-05T12:00:00+02:00",
+    "title": "Future Boy Conan",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 6",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-05T12:15:00+02:00",
+    "end": "2023-08-05T13:15:00+02:00",
+    "title": "Mashle: Magic and Muscles",
+    "description": "Ep. 1+2, Dt., ca. 50 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-05T13:30:00+02:00",
+    "end": "2023-08-05T14:00:00+02:00",
+    "title": "KonoSuba: An Explosion on This Wonderful World!",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-05T14:15:00+02:00",
+    "end": "2023-08-05T15:15:00+02:00",
+    "title": "Made in Abyss – Staffel 2",
+    "description": "Ep. 1+2, Dt., ca. 50 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-05T15:30:00+02:00",
+    "end": "2023-08-05T16:30:00+02:00",
+    "title": "Call of the Night",
+    "description": "Ep. 1+2, Dt., ca. 50 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-05T16:45:00+02:00",
+    "end": "2023-08-05T17:45:00+02:00",
+    "title": "NieR:Automata Ver1.1a",
+    "description": "Ep. 1+2, Dt., ca. 50 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-05T18:00:00+02:00",
+    "end": "2023-08-05T19:00:00+02:00",
+    "title": "OVERLORD IV",
+    "description": "Ep. 1+2, Dt., ca. 50 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-05T19:15:00+02:00",
+    "end": "2023-08-05T20:45:00+02:00",
+    "title": "TRIGUN STAMPEDE",
+    "description": "Ep. 1–3, Dt., ca. 90 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-05T21:00:00+02:00",
+    "end": "2023-08-05T22:45:00+02:00",
+    "title": "The Deer King",
+    "description": "Dt., ca. 108 Min., FSK: 16",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-05T23:00:00+02:00",
+    "end": "2023-08-06T00:00:00+02:00",
+    "title": "Full Dive",
+    "description": "Ep. 1+2, Dt., ca. 50 Min., FSK: 16",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-06T11:00:00+02:00",
+    "end": "2023-08-06T12:00:00+02:00",
+    "title": "Made in Abyss – Staffel 2",
+    "description": "Ep. 1+2, Dt., ca. 50 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-06T12:15:00+02:00",
+    "end": "2023-08-06T12:45:00+02:00",
+    "title": "My Happy Marriage",
+    "description": "Ep. 1, OmU, ca. 30 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-06T13:00:00+02:00",
+    "end": "2023-08-06T13:30:00+02:00",
+    "title": "KonoSuba: An Explosion on this Wonderful World",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-06T13:45:00+02:00",
+    "end": "2023-08-06T14:45:00+02:00",
+    "title": "Given – The Movie",
+    "description": "Dt., ca. 60 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-06T15:00:00+02:00",
+    "end": "2023-08-06T16:45:00+02:00",
+    "title": "Tsurune: The Movie – The First Shot",
+    "description": "OmU, ca. 102 Min., FSK: 6",
+    "location": "AnimagiC-Kino 3"
+  },
+  {
+    "start": "2023-08-06T17:00:00+02:00",
+    "end": "2023-08-06T18:45:00+02:00",
+    "title": "Goodbye, Don Glees! Wege einer Freundschaft",
+    "description": "Dt., ca. 96 Min., FSK: 12",
+    "location": "AnimagiC-Kino 3"
+  }
+]

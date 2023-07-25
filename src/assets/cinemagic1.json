@@ -1,0 +1,156 @@
+[
+  {
+    "start": "2023-08-04T15:00:00+02:00",
+    "end": "2023-08-04T16:15:00+02:00",
+    "title": "Große Charity-Auktion",
+    "description": "",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-04T17:00:00+02:00",
+    "end": "2023-08-04T18:00:00+02:00",
+    "title": "Free! – Talk-Session",
+    "description": "mit dem Free!-Team von Kyoto Animation",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-04T18:30:00+02:00",
+    "end": "2023-08-04T20:00:00+02:00",
+    "title": "Free! the Final Stroke – the First Volume",
+    "description": "Dt., ca. 87 Min., FSK: 6",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-04T20:15:00+02:00",
+    "end": "2023-08-04T22:00:00+02:00",
+    "title": "Free! the Final Stroke – the Second Volume",
+    "description": "Dt., ca. 105 Min., FSK: 6",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-04T22:15:00+02:00",
+    "end": "2023-08-04T23:15:00+02:00",
+    "title": "Goblin Slayer – Season 2",
+    "description": "Ep. 1+2, OmU, ca. 60 Min., FSK: 16",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-04T23:30:00+02:00",
+    "end": "2023-08-05T00:00:00+02:00",
+    "title": "Chainsaw Man",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 16",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-05T00:00:00+02:00",
+    "end": "2023-08-05T00:30:00+02:00",
+    "title": "ZOM 100: Bucket List of the Dead",
+    "description": "Ep. 1, OmU, ca. 25 Min., FSK: 16",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-05T11:00:00+02:00",
+    "end": "2023-08-05T12:00:00+02:00",
+    "title": "TOEI ANIMATION PRESENTS",
+    "description": "Panel-Präsentation von und mit Toei Animation",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-05T12:30:00+02:00",
+    "end": "2023-08-05T13:15:00+02:00",
+    "title": "Aniplex Special Stage",
+    "description": "Panel-Präsentation von und mit Aniplex",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-05T14:00:00+02:00",
+    "end": "2023-08-05T15:00:00+02:00",
+    "title": "Crunchyroll Industry Panel",
+    "description": "Panel-Präsentation von und mit Crunchyroll",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-05T15:30:00+02:00",
+    "end": "2023-08-05T16:30:00+02:00",
+    "title": "KADOKAWA Industry Panel",
+    "description": "Panel-Präsentation von und mit Kadokawa",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-05T17:00:00+02:00",
+    "end": "2023-08-05T19:30:00+02:00",
+    "title": "The Rising of the Shield Hero 3",
+    "description": "Special-Panel mit den japanischen Ehrengästen von Kinema Citrus und Screening der Episoden 1 und 2",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-05T20:15:00+02:00",
+    "end": "2023-08-05T21:00:00+02:00",
+    "title": "Delicious in Dungeon ",
+    "description": "Ep. 1, OmU, ca. 25 Min., FSK: 12",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-05T21:15:00+02:00",
+    "end": "2023-08-05T22:15:00+02:00",
+    "title": "Goblin Slayer – Season 2",
+    "description": "Ep. 1+2; OmU, ca. 60 Min., FSK: 16",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-05T22:30:00+02:00",
+    "end": "2023-08-05T23:30:00+02:00",
+    "title": "VINLAND SAGA – Season 2",
+    "description": "Ep. 1+2; Dt., ca. 60 Min., FSK: 16",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-05T23:45:00+02:00",
+    "end": "2023-08-06T00:15:00+02:00",
+    "title": "Chainsaw Man",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 16",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-06T00:15:00+02:00",
+    "end": "2023-08-06T00:45:00+02:00",
+    "title": "ZOM 100: Bucket List of the Dead",
+    "description": "Ep. 1, OmU, ca. 25 Min., FSK: 16",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-06T11:00:00+02:00",
+    "end": "2023-08-06T12:00:00+02:00",
+    "title": "NieR:Automata Ver1.1a Special Stage",
+    "description": "mit dem NieR:Automata Anime-Team",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-06T12:30:00+02:00",
+    "end": "2023-08-06T13:30:00+02:00",
+    "title": "One Piece Überraschungs-Screening",
+    "description": "",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-06T14:00:00+02:00",
+    "end": "2023-08-06T15:30:00+02:00",
+    "title": "Deutsche Cosplaymeisterschaft",
+    "description": "Wettbewerb",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-06T16:00:00+02:00",
+    "end": "2023-08-06T16:30:00+02:00",
+    "title": "Deutsche Cosplaymeisterschaft",
+    "description": "Siegerehrung",
+    "location": "CineMagic 1"
+  },
+  {
+    "start": "2023-08-06T17:00:00+02:00",
+    "end": "2023-08-06T18:30:00+02:00",
+    "title": "Fate/Grand Order: Final Singularity Grand Temple of Time: Solomon",
+    "description": "Dt., ca. 94 Min., FSK: 12",
+    "location": "CineMagic 1"
+  }
+]

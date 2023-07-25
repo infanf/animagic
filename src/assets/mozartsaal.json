@@ -1,0 +1,170 @@
+[
+  {
+    "start": "2023-08-04T15:00:00+02:00",
+    "end": "2023-08-04T15:30:00+02:00",
+    "title": "SennaRin from SawanoHiroyuki[nzk]",
+    "description": "J-Pop-Konzert",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-04T15:45:00+02:00",
+    "end": "2023-08-04T17:00:00+02:00",
+    "title": "Horo",
+    "description": "Showgruppe „Dragon Prince – Per aspera ad astra“",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-04T17:30:00+02:00",
+    "end": "2023-08-04T18:00:00+02:00",
+    "title": "Kashitaro Ito",
+    "description": "J-Rock-Konzert",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-04T18:15:00+02:00",
+    "end": "2023-08-04T18:45:00+02:00",
+    "title": "ASCA",
+    "description": "J-Pop-Konzert",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-04T19:00:00+02:00",
+    "end": "2023-08-04T20:15:00+02:00",
+    "title": "Eröffnungsfeier",
+    "description": "Verleihung des AnimaniA Awards, J-Music-Acts & Vorstellung der deutschen sowie der japanischen Ehrengäste",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-04T20:45:00+02:00",
+    "end": "2023-08-04T21:15:00+02:00",
+    "title": "Yuki Kajiura/Fiction Junction",
+    "description": "Konzert",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-04T21:30:00+02:00",
+    "end": "2023-08-04T22:00:00+02:00",
+    "title": "THE FIRST SLAM DUNK · Preview-Event",
+    "description": "OmU., ca. 15 Min., FSK: 12",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-04T22:00:00+02:00",
+    "end": "2023-08-05T00:00:00+02:00",
+    "title": "Suzume",
+    "description": "Dt., ca. 121 Min., FSK: 12",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-05T11:00:00+02:00",
+    "end": "2023-08-05T11:15:00+02:00",
+    "title": "Taiko Heidelberg · Taiko-Trommler",
+    "description": "",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-05T11:45:00+02:00",
+    "end": "2023-08-05T13:00:00+02:00",
+    "title": "AnimagiC-Bühnencosplay-Wettbewerb",
+    "description": "",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-05T13:15:00+02:00",
+    "end": "2023-08-05T13:45:00+02:00",
+    "title": "Kashitaro Ito",
+    "description": "J-Rock-Konzert",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-05T14:00:00+02:00",
+    "end": "2023-08-05T14:30:00+02:00",
+    "title": "AnimagiC-Bühnencosplay",
+    "description": "Siegerehrung",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-05T14:45:00+02:00",
+    "end": "2023-08-05T15:00:00+02:00",
+    "title": "Taiko Heidelberg",
+    "description": "Taiko-Trommler",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-05T15:30:00+02:00",
+    "end": "2023-08-05T16:45:00+02:00",
+    "title": "Anime in Concert",
+    "description": "Classic-Konzert",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-05T17:15:00+02:00",
+    "end": "2023-08-05T18:45:00+02:00",
+    "title": "TnS – Tsuki no Senshi",
+    "description": "Showgruppe „Banana Fish“",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-05T19:30:00+02:00",
+    "end": "2023-08-05T21:30:00+02:00",
+    "title": "SACRA MUSIC X AnimagiC",
+    "description": "J-Pop-Konzert mit SennaRin, Who-ya Extended, ASCA & ReoNa",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-05T22:00:00+02:00",
+    "end": "2023-08-06T00:00:00+02:00",
+    "title": "SAO the Movie -Progressive- Aria of a Starless Night",
+    "description": "Dt., ca. 97 Min., FSK: 12",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-06T11:00:00+02:00",
+    "end": "2023-08-06T11:15:00+02:00",
+    "title": "Taiko Heidelberg · Taiko-Trommler",
+    "description": "",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-06T11:30:00+02:00",
+    "end": "2023-08-06T12:00:00+02:00",
+    "title": "Who-ya Extended",
+    "description": "J-Pop-Concert",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-06T12:45:00+02:00",
+    "end": "2023-08-06T14:00:00+02:00",
+    "title": "Anime in Concert",
+    "description": "Classic-Konzert",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-06T14:30:00+02:00",
+    "end": "2023-08-06T15:00:00+02:00",
+    "title": "Kashitaro Ito",
+    "description": "J-Rock-Konzert",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-06T15:30:00+02:00",
+    "end": "2023-08-06T16:00:00+02:00",
+    "title": "ReoNa",
+    "description": "J-Pop-Concert",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-06T16:30:00+02:00",
+    "end": "2023-08-06T17:00:00+02:00",
+    "title": "Yuki Kajiura/Fiction Junction",
+    "description": "Konzert",
+    "location": "Mozartsaal"
+  },
+  {
+    "start": "2023-08-06T17:30:00+02:00",
+    "end": "2023-08-06T18:30:00+02:00",
+    "title": "Großes Finale",
+    "description": "",
+    "location": "Mozartsaal"
+  }
+]

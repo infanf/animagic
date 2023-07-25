@@ -1,0 +1,233 @@
+[
+  {
+    "start": "2023-08-04T15:30:00+02:00",
+    "end": "2023-08-04T16:30:00+02:00",
+    "title": "TOKYOPOP-Panel",
+    "description": "Eine Stunde spannende Details zum TOKYOPOP-Line-up",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-04T17:00:00+02:00",
+    "end": "2023-08-04T18:00:00+02:00",
+    "title": "KonoSuba: Signierstunde",
+    "description": "Käufer von Produkten des Künstlers werden bevorzugt. Der Erwerb ist keine Vorrausetzung. First Come, First Serve!",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-04T18:45:00+02:00",
+    "end": "2023-08-04T20:30:00+02:00",
+    "title": "INU-OH",
+    "description": "Dt., ca. 98 Min., FSK: 6",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-04T20:45:00+02:00",
+    "end": "2023-08-04T21:15:00+02:00",
+    "title": "Die Königin der Tausend Jahre",
+    "description": "Ep.1, Dt., ca. 25 Min., FSK: 6",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-04T21:15:00+02:00",
+    "end": "2023-08-04T21:45:00+02:00",
+    "title": "Sengoku Night Blood",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 16",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-04T21:45:00+02:00",
+    "end": "2023-08-04T22:15:00+02:00",
+    "title": "Infinite Stratos",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 16",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-04T22:15:00+02:00",
+    "end": "2023-08-04T22:45:00+02:00",
+    "title": "Freezing",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 16",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-04T23:00:00+02:00",
+    "end": "2023-08-04T23:30:00+02:00",
+    "title": "Peter Grill – Staffel 2",
+    "description": "Ep. 1+2, OmU, ca. 25 Min., FSK: 16",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-04T23:30:00+02:00",
+    "end": "2023-08-05T00:00:00+02:00",
+    "title": "Higurashi SOTSU",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 16",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T00:00:00+02:00",
+    "end": "2023-08-05T00:30:00+02:00",
+    "title": "Mysterious Girlfriend X",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 16",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T11:00:00+02:00",
+    "end": "2023-08-05T12:00:00+02:00",
+    "title": "Baddog & Goodboy: Eine bebilderte Lesung",
+    "description": "von und mit Carlsen-Manga-Künstlerin Olschi",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T13:00:00+02:00",
+    "end": "2023-08-05T14:00:00+02:00",
+    "title": "KonoSuba: Signierstunde",
+    "description": "Käufer von Produkten des Künstlers werden bevorzugt. Der Erwerb ist keine Vorrausetzung. First Come, First Serve!",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T14:30:00+02:00",
+    "end": "2023-08-05T15:30:00+02:00",
+    "title": "Sailor Moon German",
+    "description": "30 Jahre Sailor Moon – Panel-Talk",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T16:00:00+02:00",
+    "end": "2023-08-05T16:45:00+02:00",
+    "title": "Panini-Manga-Panel",
+    "description": "Aktuelle Highlights und Infos zum kommenden Line-up",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T17:00:00+02:00",
+    "end": "2023-08-05T18:00:00+02:00",
+    "title": "Angelina Paustian · Workshop",
+    "description": "Thema: Foodtourismus in Japan",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T18:15:00+02:00",
+    "end": "2023-08-05T18:45:00+02:00",
+    "title": "My Isekai Life",
+    "description": "Dt., ca. 25 Min., FSK: 12",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T18:45:00+02:00",
+    "end": "2023-08-05T19:15:00+02:00",
+    "title": "Vermeil in Gold",
+    "description": "Ep.1, Dt., ca. 25 Min., FSK: 12",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T19:30:00+02:00",
+    "end": "2023-08-05T20:00:00+02:00",
+    "title": "Danmachi IV",
+    "description": "Dt., ca. 25 Min., FSK: 12",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T20:00:00+02:00",
+    "end": "2023-08-05T20:30:00+02:00",
+    "title": "My Life as an Inukai-sans Dog",
+    "description": "Ep. 1+2, OmU, 25 Min., FSK: 16",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T20:30:00+02:00",
+    "end": "2023-08-05T21:00:00+02:00",
+    "title": "MONSTER",
+    "description": "Dt., ca. 25 Min., FSK: 16",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T21:15:00+02:00",
+    "end": "2023-08-05T21:45:00+02:00",
+    "title": "Sengoku Night Blood",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 16",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T21:45:00+02:00",
+    "end": "2023-08-05T22:15:00+02:00",
+    "title": "Infinite Stratos",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 16",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T22:15:00+02:00",
+    "end": "2023-08-05T22:45:00+02:00",
+    "title": "Freezing",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 16",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T23:00:00+02:00",
+    "end": "2023-08-05T23:30:00+02:00",
+    "title": "Peter Grill – Staffel 2",
+    "description": "Ep. 1+2, OmU, ca. 25 Min., FSK: 16",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-05T23:30:00+02:00",
+    "end": "2023-08-06T00:00:00+02:00",
+    "title": "Higurashi SOTSU",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 16",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-06T00:00:00+02:00",
+    "end": "2023-08-06T00:30:00+02:00",
+    "title": "Mysterious Girlfriend X",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 16",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-06T11:00:00+02:00",
+    "end": "2023-08-06T12:00:00+02:00",
+    "title": "KonoSuba: Signierstunde",
+    "description": "Käufer von Produkten des Künstlers werden bevorzugt. Der Erwerb ist keine Vorrausetzung. First Come, First Serve!",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-06T12:30:00+02:00",
+    "end": "2023-08-06T13:30:00+02:00",
+    "title": "Jovantore: Panel-Talk",
+    "description": "von und mit Egmont Manga-Künstler Daniel Eichinger",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-06T14:00:00+02:00",
+    "end": "2023-08-06T15:00:00+02:00",
+    "title": "Mortalis: Vortrags-Panel",
+    "description": "von und mit Carlsen-Manga-Künstler Dominik Jell",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-06T15:30:00+02:00",
+    "end": "2023-08-06T16:30:00+02:00",
+    "title": "Angelina Paustian · Workshop",
+    "description": "Thema: Bento! Japanische Lebensfreude in der Box",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-06T17:00:00+02:00",
+    "end": "2023-08-06T17:30:00+02:00",
+    "title": "DATE A LIVE IV",
+    "description": "Ep. 1, Dt., ca. 25 Min., FSK: 12",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-06T17:30:00+02:00",
+    "end": "2023-08-06T18:00:00+02:00",
+    "title": "My Isekai Life",
+    "description": "Dt., ca. 25 Min., FSK: 12",
+    "location": "AnimagiC-Kino 5"
+  },
+  {
+    "start": "2023-08-06T18:00:00+02:00",
+    "end": "2023-08-06T18:30:00+02:00",
+    "title": "Vermeil in Gold",
+    "description": "Ep.1, Dt., ca. 25 Min., FSK: 12",
+    "location": "AnimagiC-Kino 5"
+  }
+]
