@@ -1,0 +1,7 @@
+<ng-container *ngIf="user$ | async; else login">
+  {{ (user$ | async)?.email || "No user" }}
+  <button (click)="logout()">Logout</button>
+</ng-container>
+<ng-template #login>
+  <button (click)="loginWithGoogle()">Login</button>
+</ng-template>

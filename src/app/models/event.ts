@@ -1,22 +1,62 @@
-import { Timestamp } from "@angular/fire/firestore";
+import { Timestamp } from '@angular/fire/firestore';
 
 export interface AnimagicEvent {
-    id?: string;
+  id?: string;
   start: Timestamp;
   end: Timestamp;
   title: string;
   description: string;
-  location: string;
+  location: Location;
 }
 
-export function eventColor(location: string) {
-    return location === 'Kino 1' ? colors[0] : colors[1];
+export function eventColor(location: Location) {
+  switch (location) {
+    case 'AnimagiC-Kino 1':
+      return colors[0];
+    case 'AnimagiC-Kino 2':
+      return colors[1];
+    case 'AnimagiC-Kino 3':
+      return colors[2];
+    case 'AnimagiC-Kino 4':
+      return colors[3];
+    case 'AnimagiC-Kino 5':
+      return colors[4];
+    case 'CineMagic 1':
+      return colors[5];
+    case 'CineMagic 2':
+      return colors[6];
+    case 'Mozartsaal':
+      return colors[7];
+    case 'Musensaal':
+      return colors[8];
+  }
+  return colors[9];
 }
+
+export const locations = [
+    'AnimagiC-Kino 1',
+    'AnimagiC-Kino 2',
+    'AnimagiC-Kino 3',
+    'AnimagiC-Kino 4',
+    'AnimagiC-Kino 5',
+    'CineMagic 1',
+    'CineMagic 2',
+    'Mozartsaal',
+    'Musensaal',
+    'Ramen-Wok-Wok-Karaoke'
+] as const;
+
+export type Location = typeof locations[number];
 
 const colors = [
-    "#70d6ff",
-    "#ff70a6",
-    "#ff9770",
-    "#ffd670",
-    "#e9ff70",
-]
+  '#003f5c',
+  '#58508d',
+  '#bc5090',
+  '#ff6361',
+  '#ffa600',
+  '#805300',
+  '#c0a980',
+  '#8097c0',
+  '#c08097',
+  '#97c080',
+];
