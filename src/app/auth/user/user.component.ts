@@ -1,5 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
-import { Auth, User } from '@angular/fire/auth';
+import { User } from '@angular/fire/auth';
+import { AuthService } from '@services/auth.service';
 import { Observable, Subscription } from 'rxjs';
 
 @Component({
@@ -10,31 +11,23 @@ import { Observable, Subscription } from 'rxjs';
 export class UserComponent implements OnDestroy {
   user$: Observable<User | null>;
   userSubscription: Subscription;
-  
-  constructor(private auth: Auth) {
-    const { user } = require('@angular/fire/auth') as typeof import('@angular/fire/auth');
-    this.user$ = user(this.auth);
-    this.userSubscription = this.user$.subscribe((aUser: User | null) => {
-      //handle user state changes here. Note, that user will be null if there is no currently logged in user.
+
+  constructor(private auth: AuthService) {
+    this.user$ = this.auth.user$;
+    this.userSubscription = this.auth.user$.subscribe((aUser: User | null) => {
       console.log(aUser);
     });
   }
 
   ngOnDestroy() {
-    // when manually subscribing to an observable remember to unsubscribe in ngOnDestroy
     this.userSubscription.unsubscribe();
   }
 
-  async loginWithGoogle() {
-    const { GoogleAuthProvider, signInWithPopup } = await import(
-      '@angular/fire/auth'
-    );
-    const provider = new GoogleAuthProvider();
-    await signInWithPopup(this.auth, provider);
+  loginWithGoogle() {
+    this.auth.loginWithGoogle();
   }
 
-  async logout() {
-    const { signOut } = await import('@angular/fire/auth');
-    await signOut(this.auth);
+  logout() {
+    this.auth.logout();
   }
 }

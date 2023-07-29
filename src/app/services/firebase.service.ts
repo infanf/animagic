@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
 import {
   CollectionReference,
+  DocumentReference,
   Firestore,
   QueryFieldFilterConstraint,
 } from '@angular/fire/firestore';
-import { Observable, Subject, map } from 'rxjs';
+import { Subject, lastValueFrom } from 'rxjs';
 import { AnimagicEvent, Location } from '@models/event';
+import { Calendar } from '@models/calendar';
+import { AuthService } from './auth.service';
+import { User } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root',
@@ -18,8 +22,9 @@ export class FirebaseService {
   private _myEvents: string[] = [];
   showMyEvents$: Subject<boolean> = new Subject<boolean>();
   private _showMyEvents = false;
+  private _user: User | null = null;
 
-  constructor(public firestore: Firestore) {
+  constructor(public firestore: Firestore, private auth: AuthService) {
     this.locations$.asObservable().subscribe((locations) => {
       this._locations = locations;
       this.updateEvents();
@@ -31,6 +36,11 @@ export class FirebaseService {
     this.showMyEvents$.asObservable().subscribe((showMyEvents) => {
       this._showMyEvents = showMyEvents;
       this.updateEvents();
+    });
+    this.auth.user$.subscribe((user) => {
+      console.debug('User', user);
+      this._user = user;
+      this.getCalendarEvents();
     });
     this.updateEvents();
   }
@@ -51,6 +61,7 @@ export class FirebaseService {
       this._myEvents.push(myEvents);
     }
     this.myEvents$.next(this._myEvents);
+    this.updateCalendarEvents();
   }
 
   set showMyEvents(showMyEvents: boolean) {
@@ -100,6 +111,73 @@ export class FirebaseService {
         description,
         location,
       });
+    });
+  }
+
+  private async createCalendar(uid: string) {
+    const { addDoc, collection, getDoc } =
+      require('@angular/fire/firestore') as typeof import('@angular/fire/firestore');
+    const itemCollection = collection(
+      this.firestore,
+      'calendars'
+    ) as CollectionReference<Calendar>;
+    const calendarReference = await addDoc(itemCollection, {
+      uid,
+      events: [],
+    });
+    return (await getDoc(calendarReference)).data();
+  }
+
+  async getCalendar(uid: string) {
+    const { collection, collectionData, query, where } =
+      require('@angular/fire/firestore') as typeof import('@angular/fire/firestore');
+    const itemCollection = collection(
+      this.firestore,
+      'calendars'
+    ) as CollectionReference<Calendar>;
+    const q = query(itemCollection, where('uid', '==', uid));
+    const collectionData$ = collectionData(q, { idField: 'id' });
+    const calendars = await new Promise<Calendar[]>((r) => {
+      collectionData$.subscribe((collection) => {
+        r(collection);
+      });
+    });
+    if (!calendars?.length) {
+      return this.createCalendar(uid);
+    }
+    return calendars[0];
+  }
+
+  async getCalendarEvents() {
+    if (!this._user) {
+      return;
+    }
+    const { uid } = this._user;
+    const calendar = await this.getCalendar(uid);
+    if (!calendar) {
+      return;
+    }
+    const { events } = calendar;
+    this.myEvents$.next(events);
+  }
+
+  async updateCalendarEvents() {
+    if (!this._user) {
+      return;
+    }
+    const { uid } = this._user;
+    const calendar = await this.getCalendar(uid);
+    if (!calendar) {
+      return;
+    }
+    const { updateDoc, doc } =
+      require('@angular/fire/firestore') as typeof import('@angular/fire/firestore');
+    const itemDoc = doc(
+      this.firestore,
+      `calendars/${calendar.id}`
+    ) as DocumentReference<Partial<Calendar>>;
+    await updateDoc(itemDoc, {
+      events: this._myEvents,
     });
   }
 }
