@@ -29,6 +29,7 @@ export class FirebaseService {
       this._locations = locations;
       this.updateEvents();
     });
+    this.myEvents$.next([]);
     this.myEvents$.asObservable().subscribe((myEvents) => {
       this._myEvents = myEvents;
       this.updateEvents();

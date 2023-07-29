@@ -3,7 +3,7 @@ import { CalendarOptions, EventInput } from '@fullcalendar/core';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import { Location, eventColor, locations } from '@models/event';
 import { FirebaseService } from '@services/firebase.service';
-import { Observable, map } from 'rxjs';
+import { Observable, map, merge, mergeMap, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-calendar',
@@ -44,21 +44,26 @@ export class CalendarComponent {
   events$: Observable<EventInput>;
 
   constructor(private firebase: FirebaseService) {
-    this.events$ = this.firebase.events$.asObservable().pipe(
-      map((events) =>
-        events.map(
-          (event) =>
-            ({
-              id: event.id,
-              title: event.title,
-              start: event.start.toDate(),
-              end: event.end.toDate(),
-              extendedProps: {
-                description: event.description,
-                location: event.location,
-              },
-              color: eventColor(event.location),
-            } as EventInput)
+    this.events$ = this.firebase.myEvents$.asObservable().pipe(
+      switchMap((myEvents) =>
+        firebase.events$.asObservable().pipe(
+          map((events) =>
+            events.map(
+              (event) =>
+                ({
+                  id: event.id,
+                  title: (event.id && myEvents.includes(event.id) ? "♥ " : "") + event.title,
+                  start: event.start.toDate(),
+                  end: event.end.toDate(),
+                  extendedProps: {
+                    description: event.description,
+                    location: event.location,
+                    myEvent: event.id && myEvents.includes(event.id),
+                  },
+                  color: eventColor(event.location),
+                } as EventInput)
+            )
+          )
         )
       )
     );
@@ -68,7 +73,7 @@ export class CalendarComponent {
     };
     this.firebase.locations$.asObservable().subscribe((locations) => {
       this.selectedLocations = locations;
-    })
+    });
   }
 
   toggleEvent(eventId: string) {
