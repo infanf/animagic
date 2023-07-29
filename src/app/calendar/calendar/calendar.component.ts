@@ -19,6 +19,7 @@ export class CalendarComponent {
       center: 'title',
       right: 'timeGridThreeDay,timeGridDay', // user can switch between the two
     },
+    height: 'auto',
     navLinks: true,
     slotMinTime: '11:00:00',
     slotMaxTime: '25:00:00',

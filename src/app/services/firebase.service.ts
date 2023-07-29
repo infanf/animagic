@@ -5,7 +5,7 @@ import {
   Firestore,
   QueryFieldFilterConstraint,
 } from '@angular/fire/firestore';
-import { Subject, lastValueFrom } from 'rxjs';
+import { Subject } from 'rxjs';
 import { AnimagicEvent, Location } from '@models/event';
 import { Calendar } from '@models/calendar';
 import { AuthService } from './auth.service';
@@ -68,9 +68,9 @@ export class FirebaseService {
     this.showMyEvents$.next(showMyEvents);
   }
 
-  updateEvents() {
+  async updateEvents() {
     const { collection, collectionData, query, where, documentId } =
-      require('@angular/fire/firestore') as typeof import('@angular/fire/firestore');
+      await import('@angular/fire/firestore');
     const itemCollection = collection(
       this.firestore,
       'events'
@@ -96,10 +96,9 @@ export class FirebaseService {
   }
 
   addEvents(event: AnimagicEvent[]) {
-    event.forEach((e) => {
+    event.forEach(async (e) => {
       const { start, end, title, description, location } = e;
-      const { addDoc, collection } =
-        require('@angular/fire/firestore') as typeof import('@angular/fire/firestore');
+      const { addDoc, collection } = await import('@angular/fire/firestore');
       const itemCollection = collection(
         this.firestore,
         'events'
@@ -115,8 +114,9 @@ export class FirebaseService {
   }
 
   private async createCalendar(uid: string) {
-    const { addDoc, collection, getDoc } =
-      require('@angular/fire/firestore') as typeof import('@angular/fire/firestore');
+    const { addDoc, collection, getDoc } = await import(
+      '@angular/fire/firestore'
+    );
     const itemCollection = collection(
       this.firestore,
       'calendars'
@@ -129,8 +129,9 @@ export class FirebaseService {
   }
 
   async getCalendar(uid: string) {
-    const { collection, collectionData, query, where } =
-      require('@angular/fire/firestore') as typeof import('@angular/fire/firestore');
+    const { collection, collectionData, query, where } = await import(
+      '@angular/fire/firestore'
+    );
     const itemCollection = collection(
       this.firestore,
       'calendars'
@@ -170,8 +171,7 @@ export class FirebaseService {
     if (!calendar) {
       return;
     }
-    const { updateDoc, doc } =
-      require('@angular/fire/firestore') as typeof import('@angular/fire/firestore');
+    const { updateDoc, doc } = await import('@angular/fire/firestore');
     const itemDoc = doc(
       this.firestore,
       `calendars/${calendar.id}`

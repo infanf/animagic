@@ -1,5 +1,7 @@
 <section>
-  <button (click)="toggleShowMyEvents()">toggle {{ showMyEvents }}</button>
+  <button (click)="toggleShowMyEvents()" [class]="{ active: showMyEvents }">
+    Zeige nur meine Events
+  </button>
   <button
     *ngFor="let location of locations"
     (click)="filterLocation(location)"
@@ -7,8 +9,8 @@
   >
     {{ location }}
   </button>
-  <full-calendar
-    [options]="calendarOptions"
-    [events]="events$ | async"
-  ></full-calendar>
 </section>
+<full-calendar
+  [options]="calendarOptions"
+  [events]="events$ | async"
+></full-calendar>
