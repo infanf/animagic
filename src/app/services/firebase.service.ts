@@ -86,20 +86,43 @@ export class FirebaseService {
 
   addEvents(event: AnimagicEvent[]) {
     event.forEach((e) => {
-      const { start, end, title, description, location } = e;
-      const { addDoc, collection } =
-        require('@angular/fire/firestore') as typeof import('@angular/fire/firestore');
-      const itemCollection = collection(
-        this.firestore,
-        'events'
-      ) as CollectionReference<AnimagicEvent>;
-      addDoc(itemCollection, {
-        start,
-        end,
-        title,
-        description,
-        location,
-      });
+      this.addEvent(e);
+    });
+  }
+
+  async addEvent(event: AnimagicEvent) {
+    const { start, end, title, description, location } = event;
+    const { addDoc, collection } =
+      require('@angular/fire/firestore') as typeof import('@angular/fire/firestore');
+    const itemCollection = collection(
+      this.firestore,
+      'events'
+    ) as CollectionReference<AnimagicEvent>;
+    const newEvent = await addDoc(itemCollection, {
+      start,
+      end,
+      title,
+      description,
+      location,
+    });
+    event.id = newEvent.id;
+    return newEvent.id;
+  }
+
+  async updateEvent(event: AnimagicEvent) {
+    if (!event.id) {
+      event.id = await this.addEvent(event);
+    }
+    const { start, end, title, description, location, id } = event;
+    const { doc, setDoc } =
+      require('@angular/fire/firestore') as typeof import('@angular/fire/firestore');
+    const itemDoc = doc(this.firestore, 'events', id);
+    setDoc(itemDoc, {
+      start,
+      end,
+      title,
+      description,
+      location,
     });
   }
 }

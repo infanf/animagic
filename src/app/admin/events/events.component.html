@@ -1,0 +1,4 @@
+<a [routerLink]="'new'">new</a>
+<div [routerLink]="event.id" *ngFor="let event of events$ | async">
+  {{ event.title }}
+</div>

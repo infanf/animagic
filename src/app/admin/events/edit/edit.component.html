@@ -1,0 +1,61 @@
+<div *ngIf="event">
+  <h1>Edit Event</h1>
+  <form (ngSubmit)="save()" #eventForm="ngForm">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="event.title"
+        name="title"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        class="form-control"
+        [(ngModel)]="event.description"
+        name="description"
+        required
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="date">Start</label>
+      <input
+        type="datetime-local"
+        class="form-control"
+        [(ngModel)]="event.start"
+        name="date"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="time">End</label>
+      <input
+        type="datetime-local"
+        class="form-control"
+        [(ngModel)]="event.end"
+        name="time"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="event.location"
+        name="location"
+        required
+      />
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="!eventForm.form.valid"
+    >
+      Submit
+    </button>
+  </form>
+</div>
