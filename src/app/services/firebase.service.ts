@@ -29,7 +29,6 @@ export class FirebaseService {
       this._locations = locations;
       this.updateEvents();
     });
-    this.myEvents$.next([]);
     this.myEvents$.asObservable().subscribe((myEvents) => {
       this._myEvents = myEvents;
       this.updateEvents();
@@ -39,7 +38,9 @@ export class FirebaseService {
       this.updateEvents();
     });
     this.auth.user$.subscribe((user) => {
-      console.debug('User', user);
+      if (!user) { 
+        this.myEvents$.next(this._myEvents);
+      }
       this._user = user;
       this.getCalendarEvents();
     });
@@ -76,11 +77,6 @@ export class FirebaseService {
       this.firestore,
       'events'
     ) as CollectionReference<AnimagicEvent>;
-    console.debug({
-      locations: this._locations,
-      myEvents: this._myEvents,
-      showMyEvents: this._showMyEvents,
-    });
     const queries: QueryFieldFilterConstraint[] = [];
     if (this._locations?.length) {
       queries.push(where('location', 'in', this._locations));

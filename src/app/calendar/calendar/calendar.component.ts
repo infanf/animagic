@@ -36,6 +36,8 @@ export class CalendarComponent {
         duration: { days: 3 },
       },
     },
+    locale: 'de-de',
+    nowIndicator: true,
   };
 
   showMyEvents = false;
