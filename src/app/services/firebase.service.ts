@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {
+  collectionData,
   CollectionReference,
+  doc,
   DocumentReference,
   Firestore,
   QueryFieldFilterConstraint,
@@ -38,7 +40,7 @@ export class FirebaseService {
       this.updateEvents();
     });
     this.auth.user$.subscribe((user) => {
-      if (!user) { 
+      if (!user) {
         this.myEvents$.next(this._myEvents);
       }
       this._user = user;
@@ -84,6 +86,8 @@ export class FirebaseService {
     if (this._myEvents?.length && this._showMyEvents) {
       queries.push(where(documentId(), 'in', this._myEvents));
     }
+    queries.push(where('start', '>=', new Date('2024-08-01')));
+    queries.push(where('start', '<=', new Date('2024-08-31')));
     const q = queries.length
       ? query(itemCollection, ...queries)
       : itemCollection;
@@ -106,6 +110,26 @@ export class FirebaseService {
         title,
         description,
         location,
+      });
+    });
+  }
+
+  async deleteEvents(from: Date, to: Date) {
+    const { collection, query, where, deleteDoc } = await import(
+      '@angular/fire/firestore'
+    );
+    const itemCollection = collection(
+      this.firestore,
+      'events'
+    ) as CollectionReference<AnimagicEvent>;
+    const q = query(
+      itemCollection,
+      where('start', '>=', from),
+      where('end', '<=', to)
+    );
+    collectionData(q, { idField: 'id' }).subscribe((collection) => {
+      collection.forEach(async (e) => {
+        await deleteDoc(doc(itemCollection, e.id));
       });
     });
   }

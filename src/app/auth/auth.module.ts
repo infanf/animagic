@@ -7,8 +7,8 @@ import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [UserComponent],
-  imports: [
-    CommonModule,
+  imports: [CommonModule],
+  providers: [
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
   ],

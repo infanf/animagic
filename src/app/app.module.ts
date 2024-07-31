@@ -10,14 +10,11 @@ import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    AppRoutingModule,
-    AuthModule,
-    BrowserModule,
+  imports: [AppRoutingModule, AuthModule, BrowserModule],
+  providers: [
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -9,6 +9,8 @@
   >
     {{ location }}
   </button>
+  <button (click)="init.init()">init</button>
+  <button (click)="init.clear()">clear</button>
 </section>
 <full-calendar
   [options]="calendarOptions"

@@ -3,6 +3,7 @@ import { CalendarOptions, EventInput } from '@fullcalendar/core';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import { Location, eventColor, locations } from '@models/event';
 import { FirebaseService } from '@services/firebase.service';
+import { InitService } from '@services/init.service';
 import { Observable, map, merge, mergeMap, switchMap } from 'rxjs';
 
 @Component({
@@ -23,10 +24,10 @@ export class CalendarComponent {
     navLinks: true,
     slotMinTime: '11:00:00',
     slotMaxTime: '25:00:00',
-    initialDate: '2023-08-04',
+    initialDate: '2024-08-02',
     validRange: {
-      start: '2023-08-04',
-      end: '2023-08-07',
+      start: '2024-08-02',
+      end: '2024-08-05',
     },
     allDaySlot: false,
     views: {
@@ -45,7 +46,7 @@ export class CalendarComponent {
   selectedLocations: Location[] = [];
   events$: Observable<EventInput>;
 
-  constructor(private firebase: FirebaseService) {
+  constructor(private firebase: FirebaseService, public init: InitService) {
     this.events$ = this.firebase.myEvents$.asObservable().pipe(
       switchMap((myEvents) =>
         firebase.events$.asObservable().pipe(
