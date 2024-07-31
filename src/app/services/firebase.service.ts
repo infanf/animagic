@@ -104,13 +104,18 @@ export class FirebaseService {
         this.firestore,
         'events'
       ) as CollectionReference<AnimagicEvent>;
-      addDoc(itemCollection, {
-        start,
-        end,
-        title,
-        description,
-        location,
-      });
+      console.log('Adding event', e);
+      try {
+        await addDoc(itemCollection, {
+          start,
+          end,
+          title,
+          description,
+          location,
+        });
+      } catch (err) {
+        console.error('Error adding event', e, err);
+      }
     });
   }
 
