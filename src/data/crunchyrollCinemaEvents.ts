@@ -1,0 +1,280 @@
+import { Event } from '../models/types';
+
+// Events für das Crunchyroll Cinema basierend auf dem Programmheft 2025
+export const crunchyrollCinemaEvents: Event[] = [
+  // Freitag, 01.08.2025
+  {
+    id: 'crunchyroll-1',
+    title: 'Gachiakuta - Into the Pit!',
+    description: 'Q&A-Panel mit dem Gachiakuta-Team',
+    startTime: '2025-08-01T15:00:00',
+    endTime: '2025-08-01T16:00:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Panel',
+    tags: ['Gachiakuta', 'Q&A']
+  },
+  {
+    id: 'crunchyroll-2',
+    title: 'The Rising of the Shield Hero S4: Draw Your Shields!',
+    description: 'Exklusive Live-Drawing-Session mit Team-Q&A',
+    startTime: '2025-08-01T17:00:00',
+    endTime: '2025-08-01T18:00:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Live-Drawing',
+    tags: ['Shield Hero', 'Drawing', 'Q&A']
+  },
+  {
+    id: 'crunchyroll-3',
+    title: 'The Rising of the Shield Hero S4',
+    description: 'Ep. 5, Dt., ca. 25 Min., FSK 12 (Deutschlandpremiere)',
+    startTime: '2025-08-01T18:00:00',
+    endTime: '2025-08-01T18:30:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Shield Hero', 'Deutschlandpremiere']
+  },
+  {
+    id: 'crunchyroll-4',
+    title: 'Die Tagebücher der Apothekerin S2',
+    description: 'Ep. 1, Dt., ca. 25 Min., FSK 12',
+    startTime: '2025-08-01T18:45:00',
+    endTime: '2025-08-01T19:15:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Apothekerin']
+  },
+  {
+    id: 'crunchyroll-5',
+    title: 'One-Punch Man – Season 2',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK 12',
+    startTime: '2025-08-01T19:15:00',
+    endTime: '2025-08-01T19:45:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['One-Punch Man']
+  },
+  {
+    id: 'crunchyroll-6',
+    title: 'Let\'s Play',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK 12 (EU-Premiere)',
+    startTime: '2025-08-01T20:45:00',
+    endTime: '2025-08-01T21:15:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Let\'s Play', 'EU-Premiere']
+  },
+  {
+    id: 'crunchyroll-7',
+    title: 'Gachiakuta',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK 16 - Aoi Ichikawa begrüßt euch persönlich zum Screening',
+    startTime: '2025-08-01T21:30:00',
+    endTime: '2025-08-01T22:00:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Gachiakuta', 'Special Guest']
+  },
+  {
+    id: 'crunchyroll-8',
+    title: 'Demon Slayer: Hashira Training Arc',
+    description: 'Ep. 8, Dt., ca. 41 Min., FSK 16',
+    startTime: '2025-08-01T22:00:00',
+    endTime: '2025-08-01T22:45:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Demon Slayer']
+  },
+  {
+    id: 'crunchyroll-9',
+    title: 'Kaiju No. 8 – Season 2',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK 16',
+    startTime: '2025-08-01T22:45:00',
+    endTime: '2025-08-01T23:15:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Kaiju No. 8']
+  },
+  {
+    id: 'crunchyroll-10',
+    title: 'Solo Leveling – Season 2',
+    description: 'Ep. 1 & 2, Dt., ca. 50 Min., FSK 16',
+    startTime: '2025-08-01T23:15:00',
+    endTime: '2025-08-02T00:15:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Solo Leveling']
+  },
+  {
+    id: 'crunchyroll-11',
+    title: 'Fire Force – Season 3',
+    description: 'Ep. 1, Dt., ca. 25 Min., FSK 16',
+    startTime: '2025-08-02T00:15:00',
+    endTime: '2025-08-02T00:45:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Fire Force']
+  },
+  
+  // Samstag, 02.08.2025
+  {
+    id: 'crunchyroll-12',
+    title: 'Gachiakuta - Into the Pit!',
+    description: 'Q&A-Panel mit dem Gachiakuta-Team',
+    startTime: '2025-08-02T11:00:00',
+    endTime: '2025-08-02T12:00:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Panel',
+    tags: ['Gachiakuta', 'Q&A']
+  },
+  {
+    id: 'crunchyroll-13',
+    title: 'Die Tagebücher der Apothekerin S2',
+    description: 'Ep. 1, Dt., ca. 25 Min., FSK 12',
+    startTime: '2025-08-02T12:30:00',
+    endTime: '2025-08-02T13:00:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Apothekerin']
+  },
+  {
+    id: 'crunchyroll-14',
+    title: 'Crunchyroll-Panel',
+    description: 'Panel-Präsentation von und mit Crunchyroll',
+    startTime: '2025-08-02T14:00:00',
+    endTime: '2025-08-02T14:45:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Panel',
+    tags: ['Crunchyroll']
+  },
+  {
+    id: 'crunchyroll-15',
+    title: 'Detektiv Conan Film 28: Der Flashback des Einäugigen',
+    description: 'Exklusive Preview (OmU, ca. 13 Min.)',
+    startTime: '2025-08-02T14:45:00',
+    endTime: '2025-08-02T15:00:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Film',
+    tags: ['Detektiv Conan', 'Preview', 'Exklusiv']
+  },
+  {
+    id: 'crunchyroll-16',
+    title: 'Kaiju No. 8 featuring Japanese Voice Cast',
+    description: 'Live-Dubbing Session & Q&A mit den Kaiju No. 8-Seiyus',
+    startTime: '2025-08-02T16:15:00',
+    endTime: '2025-08-02T17:15:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Live-Dubbing',
+    tags: ['Kaiju No. 8', 'Voice Cast', 'Q&A']
+  },
+  {
+    id: 'crunchyroll-17',
+    title: 'Behind the Scenes of Miss Kobayashi\'s Dragon Maid',
+    description: 'Q&A-Panel mit dem Team von Miss Kobayashi\'s Dragon Maid',
+    startTime: '2025-08-02T18:00:00',
+    endTime: '2025-08-02T19:00:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Panel',
+    tags: ['Dragon Maid', 'Behind the Scenes', 'Q&A']
+  },
+  {
+    id: 'crunchyroll-18',
+    title: 'Haikyu!! The Dumpster Battle',
+    description: 'Ep. 1, OmU, ca. 86 Min., FSK 12 - Susumu Mitsunaka begrüßt euch persönlich zum Screening',
+    startTime: '2025-08-02T19:45:00',
+    endTime: '2025-08-02T21:15:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Haikyu!!', 'Special Guest']
+  },
+  {
+    id: 'crunchyroll-19',
+    title: 'Let\'s Play',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK 12 (EU-Premiere)',
+    startTime: '2025-08-02T21:30:00',
+    endTime: '2025-08-02T22:00:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Let\'s Play', 'EU-Premiere']
+  },
+  {
+    id: 'crunchyroll-20',
+    title: 'Gachiakuta',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK 16',
+    startTime: '2025-08-02T22:00:00',
+    endTime: '2025-08-02T22:30:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Gachiakuta']
+  },
+  {
+    id: 'crunchyroll-21',
+    title: 'Sentenced to Be a Hero',
+    description: 'Ep. 1, OmU, ca. 45 Min., FSK 12 (Europapremiere)',
+    startTime: '2025-08-02T22:30:00',
+    endTime: '2025-08-02T23:15:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Sentenced to Be a Hero', 'Europapremiere']
+  },
+  {
+    id: 'crunchyroll-22',
+    title: 'Fire Force – Season 3',
+    description: 'Ep. 1, Dt., ca. 25 Min., FSK 16',
+    startTime: '2025-08-02T23:15:00',
+    endTime: '2025-08-02T23:45:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Fire Force']
+  },
+  {
+    id: 'crunchyroll-23',
+    title: 'Solo Leveling – Season 2',
+    description: 'Ep. 1 & 2, Dt., ca. 50 Min., FSK 16',
+    startTime: '2025-08-02T23:45:00',
+    endTime: '2025-08-03T00:35:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Solo Leveling']
+  },
+  
+  // Sonntag, 03.08.2025
+  {
+    id: 'crunchyroll-24',
+    title: 'One-Punch Man Special Panel',
+    description: 'Q&A-Panel mit dem One-Punch Man Team',
+    startTime: '2025-08-03T11:00:00',
+    endTime: '2025-08-03T12:00:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Panel',
+    tags: ['One-Punch Man', 'Q&A']
+  },
+  {
+    id: 'crunchyroll-25',
+    title: 'Kaiju No. 8 featuring Japanese Voice Cast',
+    description: 'Live-Dubbing Session & Q&A mit den Kaiju No. 8-Seiyus',
+    startTime: '2025-08-03T12:45:00',
+    endTime: '2025-08-03T13:45:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Live-Dubbing',
+    tags: ['Kaiju No. 8', 'Voice Cast', 'Q&A']
+  },
+  {
+    id: 'crunchyroll-26',
+    title: 'The Rising of the Shield Hero S4: Draw Your Shields!',
+    description: 'Exklusive Live-Drawing-Session mit Team-Q&A',
+    startTime: '2025-08-03T14:30:00',
+    endTime: '2025-08-03T15:30:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Live-Drawing',
+    tags: ['Shield Hero', 'Drawing', 'Q&A']
+  },
+  {
+    id: 'crunchyroll-27',
+    title: 'The Rising of the Shield Hero S4',
+    description: 'Ep. 5, Dt., ca. 25 Min., FSK 12 (Deutschlandpremiere)',
+    startTime: '2025-08-03T15:30:00',
+    endTime: '2025-08-03T16:00:00',
+    location: 'Crunchyroll Cinema',
+    category: 'Anime',
+    tags: ['Shield Hero', 'Deutschlandpremiere']
+  }
+];

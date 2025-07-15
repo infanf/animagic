@@ -1,7 +1,18 @@
 import { Event } from '../models/types';
+import { mozartsaalEvents } from '../data/mozartsaalEvents';
+import { musensaalEvents } from '../data/musensaalEvents';
+import { crunchyrollCinemaEvents } from '../data/crunchyrollCinemaEvents';
+import { cineMagic1Events } from '../data/cineMagic1Events';
+import { cineMagic2Events } from '../data/cineMagic2Events';
+import { animagicKino1Events } from '../data/animagicKino1Events';
+import { animagicKino2Events } from '../data/animagicKino2Events';
+import { animagicKino3Events } from '../data/animagicKino3Events';
+import { ramenWokWokKaraokeEvents } from '../data/ramenWokWokKaraokeEvents';
+import { verlagsstandEvents } from '../data/verlagsstandEvents';
 
 // Mock data for convention events
-const mockEvents: Event[] = [
+// Original mock events (keeping for reference)
+const originalMockEvents: Event[] = [
   {
     id: '1',
     title: 'Eröffnungszeremonie',
@@ -75,6 +86,21 @@ const mockEvents: Event[] = [
     category: 'Party',
     tags: ['Musik', 'Tanz', 'Unterhaltung']
   }
+];
+
+// Combine original mock events with the new events from the program
+const mockEvents: Event[] = [
+  ...mozartsaalEvents,
+  ...musensaalEvents,
+  ...crunchyrollCinemaEvents,
+  ...cineMagic1Events,
+  ...cineMagic2Events,
+  ...animagicKino1Events,
+  ...animagicKino2Events,
+  ...animagicKino3Events,
+  ...ramenWokWokKaraokeEvents,
+  ...verlagsstandEvents,
+  // You can add more events from other halls here
 ];
 
 /**

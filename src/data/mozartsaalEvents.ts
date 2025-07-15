@@ -1,0 +1,267 @@
+import { Event } from '../models/types';
+
+// Events für den Mozartsaal basierend auf dem Programmheft 2025
+export const mozartsaalEvents: Event[] = [
+  // Freitag, 01.08.2025
+  {
+    id: 'mozartsaal-1',
+    title: 'Einlass Mozartsaal',
+    description: 'Einlass in den Mozartsaal',
+    startTime: '2025-08-01T14:45:00',
+    endTime: '2025-08-01T15:30:00',
+    location: 'Mozartsaal',
+    category: 'Organisation'
+  },
+  {
+    id: 'mozartsaal-2',
+    title: 'Taiko Heidelberg',
+    description: 'Taiko-Performance',
+    startTime: '2025-08-01T15:30:00',
+    endTime: '2025-08-01T15:45:00',
+    location: 'Mozartsaal',
+    category: 'Performance',
+    tags: ['Taiko', 'Performance']
+  },
+  {
+    id: 'mozartsaal-3',
+    title: 'Sangatsu no Phantasia',
+    description: 'Anisong- / J-Pop-Konzert (Europapremiere)',
+    startTime: '2025-08-01T16:00:00',
+    endTime: '2025-08-01T16:30:00',
+    location: 'Mozartsaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Pop', 'Europapremiere']
+  },
+  {
+    id: 'mozartsaal-4',
+    title: 'Rei Yasuda',
+    description: 'Anisong- / J-Pop-Konzert (Europapremiere)',
+    startTime: '2025-08-01T17:00:00',
+    endTime: '2025-08-01T17:30:00',
+    location: 'Mozartsaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Pop', 'Europapremiere']
+  },
+  {
+    id: 'mozartsaal-5',
+    title: 'Kashitaro Ito',
+    description: 'Anisong- / J-Rock-Konzert',
+    startTime: '2025-08-01T18:00:00',
+    endTime: '2025-08-01T18:30:00',
+    location: 'Mozartsaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Rock']
+  },
+  {
+    id: 'mozartsaal-6',
+    title: 'Eröffnungsfeier',
+    description: 'Verleihung des AnimaniA Awards, Performance von J-Music-Acts & Vorstellung der Ehrengäste',
+    startTime: '2025-08-01T19:00:00',
+    endTime: '2025-08-01T20:30:00',
+    location: 'Mozartsaal',
+    category: 'Zeremonie',
+    tags: ['Eröffnung', 'Awards', 'Performance']
+  },
+  {
+    id: 'mozartsaal-7',
+    title: 'Hiroshi Kitadani',
+    description: 'Anisong- / J-Pop-Konzert (Deutschlandpremiere)',
+    startTime: '2025-08-01T21:00:00',
+    endTime: '2025-08-01T21:30:00',
+    location: 'Mozartsaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+  },
+  {
+    id: 'mozartsaal-8',
+    title: 'ClariS',
+    description: 'Anisong- / J-Pop-Konzert (Deutschlandpremiere)',
+    startTime: '2025-08-01T22:00:00',
+    endTime: '2025-08-01T22:30:00',
+    location: 'Mozartsaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+  },
+  
+  // Samstag, 02.08.2025
+  {
+    id: 'mozartsaal-9',
+    title: 'Einlass Mozartsaal',
+    description: 'Einlass in den Mozartsaal',
+    startTime: '2025-08-02T11:15:00',
+    endTime: '2025-08-02T11:30:00',
+    location: 'Mozartsaal',
+    category: 'Organisation'
+  },
+  {
+    id: 'mozartsaal-10',
+    title: 'Taiko Heidelberg',
+    description: 'Taiko-Performance',
+    startTime: '2025-08-02T11:30:00',
+    endTime: '2025-08-02T12:00:00',
+    location: 'Mozartsaal',
+    category: 'Performance',
+    tags: ['Taiko', 'Performance']
+  },
+  {
+    id: 'mozartsaal-11',
+    title: 'AnimagiC-Bühnencosplay',
+    description: 'Wettbewerb',
+    startTime: '2025-08-02T12:15:00',
+    endTime: '2025-08-02T13:30:00',
+    location: 'Mozartsaal',
+    category: 'Wettbewerb',
+    tags: ['Cosplay', 'Wettbewerb']
+  },
+  {
+    id: 'mozartsaal-12',
+    title: 'Kashitaro Ito',
+    description: 'Anisong- & J-Rock-Konzert',
+    startTime: '2025-08-02T13:45:00',
+    endTime: '2025-08-02T14:15:00',
+    location: 'Mozartsaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Rock']
+  },
+  {
+    id: 'mozartsaal-13',
+    title: 'AnimagiC-Bühnenshow',
+    description: 'Siegerehrung',
+    startTime: '2025-08-02T14:30:00',
+    endTime: '2025-08-02T15:00:00',
+    location: 'Mozartsaal',
+    category: 'Zeremonie',
+    tags: ['Bühnenshow', 'Siegerehrung']
+  },
+  {
+    id: 'mozartsaal-14',
+    title: 'Anime in Concert',
+    description: 'Anime-Orchesterkonzert Musikverein Siershahn e.V. X AnimagiC',
+    startTime: '2025-08-02T15:45:00',
+    endTime: '2025-08-02T17:00:00',
+    location: 'Mozartsaal',
+    category: 'Konzert',
+    tags: ['Anime', 'Orchester']
+  },
+  {
+    id: 'mozartsaal-15',
+    title: 'TnS - Taiki no Senshi',
+    description: 'Showgruppe "Hetalia 3 – Das Ende der Welt"',
+    startTime: '2025-08-02T17:30:00',
+    endTime: '2025-08-02T19:00:00',
+    location: 'Mozartsaal',
+    category: 'Show',
+    tags: ['Showgruppe', 'Hetalia']
+  },
+  {
+    id: 'mozartsaal-16',
+    title: 'Yoko Takahashi',
+    description: 'Anisong- & J-Pop-Konzert (Deutschlandpremiere)',
+    startTime: '2025-08-02T19:30:00',
+    endTime: '2025-08-02T20:00:00',
+    location: 'Mozartsaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+  },
+  {
+    id: 'mozartsaal-17',
+    title: 'SACRA MUSIC Fes. X AnimagiC',
+    description: 'Anisong-Konzert mit Who-ya Extended, ASCA, Sangatsu no Phantasia, Rei Yasuda & ClariS',
+    startTime: '2025-08-02T20:30:00',
+    endTime: '2025-08-02T23:00:00',
+    location: 'Mozartsaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'SACRA MUSIC', 'Festival']
+  },
+  
+  // Sonntag, 03.08.2025
+  {
+    id: 'mozartsaal-18',
+    title: 'Einlass Mozartsaal',
+    description: 'Einlass in den Mozartsaal',
+    startTime: '2025-08-03T10:30:00',
+    endTime: '2025-08-03T11:00:00',
+    location: 'Mozartsaal',
+    category: 'Organisation'
+  },
+  {
+    id: 'mozartsaal-19',
+    title: 'Kashitaro Ito',
+    description: 'Anisong- & J-Rock-Konzert',
+    startTime: '2025-08-03T11:15:00',
+    endTime: '2025-08-03T11:45:00',
+    location: 'Mozartsaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Rock']
+  },
+  {
+    id: 'mozartsaal-20',
+    title: 'Anime in Concert',
+    description: 'Anime-Orchesterkonzert Musikverein Siershahn e.V. X AnimagiC',
+    startTime: '2025-08-03T12:30:00',
+    endTime: '2025-08-03T13:45:00',
+    location: 'Mozartsaal',
+    category: 'Konzert',
+    tags: ['Anime', 'Orchester']
+  },
+  {
+    id: 'mozartsaal-21',
+    title: 'Hiroshi Kitadani',
+    description: 'Anisong- / J-Pop-Konzert (Deutschlandpremiere)',
+    startTime: '2025-08-03T14:15:00',
+    endTime: '2025-08-03T14:45:00',
+    location: 'Mozartsaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+  },
+  {
+    id: 'mozartsaal-22',
+    title: 'Who-ya Extended',
+    description: 'Anisong- & J-Pop-Konzert',
+    startTime: '2025-08-03T15:00:00',
+    endTime: '2025-08-03T15:30:00',
+    location: 'Mozartsaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Pop']
+  },
+  {
+    id: 'mozartsaal-23',
+    title: 'ASCA',
+    description: 'Anisong- & J-Pop-Konzert',
+    startTime: '2025-08-03T15:45:00',
+    endTime: '2025-08-03T16:15:00',
+    location: 'Mozartsaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Pop']
+  },
+  {
+    id: 'mozartsaal-24',
+    title: 'Yoko Takahashi',
+    description: 'Anisong- & J-Pop-Konzert (Deutschlandpremiere)',
+    startTime: '2025-08-03T16:30:00',
+    endTime: '2025-08-03T17:00:00',
+    location: 'Mozartsaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+  },
+  {
+    id: 'mozartsaal-25',
+    title: 'Taiko Heidelberg',
+    description: 'Taiko-Performance',
+    startTime: '2025-08-03T17:15:00',
+    endTime: '2025-08-03T17:30:00',
+    location: 'Mozartsaal',
+    category: 'Performance',
+    tags: ['Taiko', 'Performance']
+  },
+  {
+    id: 'mozartsaal-26',
+    title: 'Großes Finale',
+    description: 'Abschlussveranstaltung der AnimagiC 2025',
+    startTime: '2025-08-03T17:30:00',
+    endTime: '2025-08-03T18:30:00',
+    location: 'Mozartsaal',
+    category: 'Zeremonie',
+    tags: ['Finale', 'Abschluss']
+  }
+];

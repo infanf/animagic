@@ -1,0 +1,207 @@
+import { Event } from '../models/types';
+
+// Events für den Musensaal basierend auf dem Programmheft 2025
+export const musensaalEvents: Event[] = [
+  // Freitag, 01.08.2025
+  {
+    id: 'musensaal-1',
+    title: 'Einlass Musensaal',
+    description: 'Einlass in den Musensaal',
+    startTime: '2025-08-01T14:30:00',
+    endTime: '2025-08-01T15:15:00',
+    location: 'Musensaal',
+    category: 'Organisation'
+  },
+  {
+    id: 'musensaal-2',
+    title: 'Ryota Kikuchi x Budo',
+    description: 'Best of Classic Music & Anime (Deutschlandpremiere)',
+    startTime: '2025-08-01T15:15:00',
+    endTime: '2025-08-01T16:00:00',
+    location: 'Musensaal',
+    category: 'Konzert',
+    tags: ['Classic Music', 'Anime', 'Deutschlandpremiere']
+  },
+  {
+    id: 'musensaal-3',
+    title: 'VK Blanka',
+    description: 'Anisong- & J-Pop/Rock-Konzert (Deutschlandpremiere)',
+    startTime: '2025-08-01T16:30:00',
+    endTime: '2025-08-01T17:00:00',
+    location: 'Musensaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Pop', 'J-Rock', 'Deutschlandpremiere']
+  },
+  {
+    id: 'musensaal-4',
+    title: 'Chiai Fujikawa',
+    description: 'Anisong- & J-Pop-Konzert (Deutschlandpremiere)',
+    startTime: '2025-08-01T17:30:00',
+    endTime: '2025-08-01T18:00:00',
+    location: 'Musensaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+  },
+  {
+    id: 'musensaal-5',
+    title: 'COLORFUL STAGE! The Movie: A Miku Who Can\'t Cry',
+    description: 'Film (OmU, ca. 111 Min., FSK 6)',
+    startTime: '2025-08-01T18:30:00',
+    endTime: '2025-08-01T20:20:00',
+    location: 'Musensaal',
+    category: 'Film',
+    tags: ['Anime', 'Film', 'Miku']
+  },
+  {
+    id: 'musensaal-6',
+    title: 'Violet Evergarden x Cellotic Soundtrack Ensemble mit Anisong-Sängerin Aira Yuuki',
+    description: 'AnimagiC-exklusives Konzert (Weltpremiere)',
+    startTime: '2025-08-01T21:00:00',
+    endTime: '2025-08-01T22:00:00',
+    location: 'Musensaal',
+    category: 'Konzert',
+    tags: ['Violet Evergarden', 'Soundtrack', 'Anisong', 'Weltpremiere']
+  },
+  {
+    id: 'musensaal-7',
+    title: 'ASTERISM',
+    description: 'Heavy Metal x Anisong-Konzert (Deutschlandpremiere)',
+    startTime: '2025-08-01T22:30:00',
+    endTime: '2025-08-01T23:00:00',
+    location: 'Musensaal',
+    category: 'Konzert',
+    tags: ['Heavy Metal', 'Anisong', 'Deutschlandpremiere']
+  },
+  
+  // Samstag, 02.08.2025
+  {
+    id: 'musensaal-8',
+    title: 'Einlass Musensaal',
+    description: 'Einlass in den Musensaal',
+    startTime: '2025-08-02T10:45:00',
+    endTime: '2025-08-02T11:15:00',
+    location: 'Musensaal',
+    category: 'Organisation'
+  },
+  {
+    id: 'musensaal-9',
+    title: 'Daijobu - Showgruppe',
+    description: '"Black Butler – Eine schrecklich totgeglaubte Familie"',
+    startTime: '2025-08-02T11:15:00',
+    endTime: '2025-08-02T12:30:00',
+    location: 'Musensaal',
+    category: 'Show',
+    tags: ['Showgruppe', 'Black Butler']
+  },
+  {
+    id: 'musensaal-10',
+    title: 'Chiai Fujikawa',
+    description: 'Anisong- & J-Pop-Konzert (Deutschlandpremiere)',
+    startTime: '2025-08-02T13:00:00',
+    endTime: '2025-08-02T13:30:00',
+    location: 'Musensaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+  },
+  {
+    id: 'musensaal-11',
+    title: 'Ryota Kikuchi x Budo',
+    description: 'Best of Classic Music & Anime (Deutschlandpremiere)',
+    startTime: '2025-08-02T14:00:00',
+    endTime: '2025-08-02T14:45:00',
+    location: 'Musensaal',
+    category: 'Konzert',
+    tags: ['Classic Music', 'Anime', 'Deutschlandpremiere']
+  },
+  {
+    id: 'musensaal-12',
+    title: 'Violet Evergarden x Cellotic Soundtrack Ensemble mit Anisong-Sängerin Aira Yuuki',
+    description: 'AnimagiC-exklusives Konzert (Weltpremiere)',
+    startTime: '2025-08-02T15:30:00',
+    endTime: '2025-08-02T16:30:00',
+    location: 'Musensaal',
+    category: 'Konzert',
+    tags: ['Violet Evergarden', 'Soundtrack', 'Anisong', 'Weltpremiere']
+  },
+  {
+    id: 'musensaal-13',
+    title: 'ASTERISM',
+    description: 'Heavy Metal x Anisong-Konzert (Deutschlandpremiere)',
+    startTime: '2025-08-02T17:15:00',
+    endTime: '2025-08-02T17:45:00',
+    location: 'Musensaal',
+    category: 'Konzert',
+    tags: ['Heavy Metal', 'Anisong', 'Deutschlandpremiere']
+  },
+  {
+    id: 'musensaal-14',
+    title: 'Dice Actors - Synchronschauspiel x D&D',
+    description: 'Live (Einlass ab 19:00 Uhr)',
+    startTime: '2025-08-02T20:00:00',
+    endTime: '2025-08-02T23:00:00',
+    location: 'Musensaal',
+    category: 'Show',
+    tags: ['Synchronschauspiel', 'D&D', 'Live']
+  },
+  
+  // Sonntag, 03.08.2025
+  {
+    id: 'musensaal-15',
+    title: 'Einlass Musensaal',
+    description: 'Einlass in den Musensaal',
+    startTime: '2025-08-03T10:30:00',
+    endTime: '2025-08-03T11:30:00',
+    location: 'Musensaal',
+    category: 'Organisation'
+  },
+  {
+    id: 'musensaal-16',
+    title: 'Violet Evergarden x Cellotic Soundtrack Ensemble mit Anisong-Sängerin Aira Yuuki',
+    description: 'AnimagiC-exklusives Konzert (Weltpremiere)',
+    startTime: '2025-08-03T11:30:00',
+    endTime: '2025-08-03T12:30:00',
+    location: 'Musensaal',
+    category: 'Konzert',
+    tags: ['Violet Evergarden', 'Soundtrack', 'Anisong', 'Weltpremiere']
+  },
+  {
+    id: 'musensaal-17',
+    title: 'Ryota Kikuchi x Budo',
+    description: 'Best of Classic Music & Anime (Deutschlandpremiere)',
+    startTime: '2025-08-03T13:15:00',
+    endTime: '2025-08-03T14:00:00',
+    location: 'Musensaal',
+    category: 'Konzert',
+    tags: ['Classic Music', 'Anime', 'Deutschlandpremiere']
+  },
+  {
+    id: 'musensaal-18',
+    title: 'VK Blanka',
+    description: 'Anisong- & J-Pop/Rock-Konzert (Deutschlandpremiere)',
+    startTime: '2025-08-03T14:30:00',
+    endTime: '2025-08-03T15:00:00',
+    location: 'Musensaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Pop', 'J-Rock', 'Deutschlandpremiere']
+  },
+  {
+    id: 'musensaal-19',
+    title: 'Chiai Fujikawa',
+    description: 'Anisong- & J-Pop-Konzert (Deutschlandpremiere)',
+    startTime: '2025-08-03T15:30:00',
+    endTime: '2025-08-03T16:00:00',
+    location: 'Musensaal',
+    category: 'Konzert',
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+  },
+  {
+    id: 'musensaal-20',
+    title: 'ASTERISM',
+    description: 'Heavy Metal x Anisong-Konzert (Deutschlandpremiere)',
+    startTime: '2025-08-03T16:30:00',
+    endTime: '2025-08-03T17:00:00',
+    location: 'Musensaal',
+    category: 'Konzert',
+    tags: ['Heavy Metal', 'Anisong', 'Deutschlandpremiere']
+  }
+];

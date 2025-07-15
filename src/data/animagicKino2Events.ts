@@ -1,0 +1,280 @@
+import { Event } from '../models/types';
+
+// Events für AnimagiC-Kino 2 basierend auf dem Programmheft 2025
+export const animagicKino2Events: Event[] = [
+  // Freitag, 01.08.2025
+  {
+    id: 'animagickino2-1',
+    title: 'Dice Actors: Signierstunde',
+    description: 'Es gilt: "First Come, First Served."',
+    startTime: '2025-08-01T14:30:00',
+    endTime: '2025-08-01T15:30:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Signierstunde',
+    tags: ['Dice Actors', 'First Come First Served']
+  },
+  {
+    id: 'animagickino2-2',
+    title: 'My Deer Friend Nokotan',
+    description: 'Ep. 1 & 2, Dt., ca. 50 Min., FSK: 12',
+    startTime: '2025-08-01T18:00:00',
+    endTime: '2025-08-01T18:50:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['My Deer Friend Nokotan']
+  },
+  {
+    id: 'animagickino2-3',
+    title: 'Super Cube',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK: 12',
+    startTime: '2025-08-01T19:00:00',
+    endTime: '2025-08-01T19:30:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['Super Cube']
+  },
+  {
+    id: 'animagickino2-4',
+    title: 'Fermat Kitchen',
+    description: 'OmU, ca. 25 Min., FSK: 12',
+    startTime: '2025-08-01T19:30:00',
+    endTime: '2025-08-01T20:00:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['Fermat Kitchen']
+  },
+  {
+    id: 'animagickino2-5',
+    title: 'Dimensional Seduction',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK: 16',
+    startTime: '2025-08-01T20:00:00',
+    endTime: '2025-08-01T20:30:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['Dimensional Seduction']
+  },
+  {
+    id: 'animagickino2-6',
+    title: 'Danmachi – Familia Myth V',
+    description: 'Ep. 1, Dt., ca. 25 Min., FSK: 12 (Dub-Premiere)',
+    startTime: '2025-08-01T20:30:00',
+    endTime: '2025-08-01T21:00:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['Danmachi', 'Familia Myth', 'Dub-Premiere']
+  },
+  {
+    id: 'animagickino2-7',
+    title: 'DAN DA DAN - Staffel 1',
+    description: 'Ep. 1 & 2, Dt., ca. 50 Min., FSK: 16',
+    startTime: '2025-08-01T21:00:00',
+    endTime: '2025-08-01T21:50:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['DAN DA DAN']
+  },
+  {
+    id: 'animagickino2-8',
+    title: 'A Few Moments of Cheers',
+    description: 'Dt., ca. 68 Min., FSK: 16',
+    startTime: '2025-08-01T22:00:00',
+    endTime: '2025-08-01T23:10:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Film',
+    tags: ['A Few Moments of Cheers']
+  },
+  {
+    id: 'animagickino2-9',
+    title: 'Undead Unluck',
+    description: 'Ep. 1 & 2, Dt., ca. 50 Min., FSK: 16',
+    startTime: '2025-08-01T23:15:00',
+    endTime: '2025-08-02T00:05:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['Undead Unluck']
+  },
+  {
+    id: 'animagickino2-10',
+    title: 'Kakushite! Makina-san!!',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK: 16',
+    startTime: '2025-08-02T00:15:00',
+    endTime: '2025-08-02T00:45:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['Kakushite! Makina-san!!']
+  },
+  
+  // Samstag, 02.08.2025
+  {
+    id: 'animagickino2-11',
+    title: 'TOUGEN ANKI: Signierstunde',
+    description: 'Die Tickets wurden im Vorfeld per Lottery verlost.',
+    startTime: '2025-08-02T11:00:00',
+    endTime: '2025-08-02T12:00:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Signierstunde',
+    tags: ['TOUGEN ANKI', 'Lottery']
+  },
+  {
+    id: 'animagickino2-12',
+    title: 'Japanisch ist ziemlich einfach, oder?',
+    description: '"Einfach Japanisch" mit Ilija Trojanow und David Füleki',
+    startTime: '2025-08-02T12:30:00',
+    endTime: '2025-08-02T13:30:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Panel',
+    tags: ['Japanisch', 'Ilija Trojanow', 'David Füleki']
+  },
+  {
+    id: 'animagickino2-13',
+    title: 'Chiai Fujikawa: Signierstunde',
+    description: 'Es gilt die Reihenfolge: "First Come, First Served."',
+    startTime: '2025-08-02T14:00:00',
+    endTime: '2025-08-02T15:00:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Signierstunde',
+    tags: ['Chiai Fujikawa', 'First Come First Served']
+  },
+  {
+    id: 'animagickino2-14',
+    title: 'The Rising of the Shield Hero: Signierstunde Seira Minami',
+    description: 'Signierstunde mit der The Rising of the Shield Hero-Illustratorin Seira Minami in Kooperation mit TOKYOPOP. "First Come, First Served."',
+    startTime: '2025-08-02T16:00:00',
+    endTime: '2025-08-02T17:00:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Signierstunde',
+    tags: ['The Rising of the Shield Hero', 'Seira Minami', 'TOKYOPOP', 'First Come First Served']
+  },
+  {
+    id: 'animagickino2-15',
+    title: 'Haikyu!!: Signierstunde',
+    description: 'Teilnahme nur möglich, wenn ihr eine limitierte Autogrammkarte am TOHO-Stand erworben habt.',
+    startTime: '2025-08-02T18:00:00',
+    endTime: '2025-08-02T19:00:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Signierstunde',
+    tags: ['Haikyu!!', 'TOHO']
+  },
+  {
+    id: 'animagickino2-16',
+    title: 'Sailor Moon',
+    description: 'Ep. 1 & 2, Dt., ca. 50 Min., FSK: 12',
+    startTime: '2025-08-02T19:30:00',
+    endTime: '2025-08-02T20:20:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['Sailor Moon']
+  },
+  {
+    id: 'animagickino2-17',
+    title: 'Danmachi – Familia Myth V',
+    description: 'Ep. 1, Dt., ca. 25 Min., FSK: 12 (Dub-Premiere)',
+    startTime: '2025-08-02T20:30:00',
+    endTime: '2025-08-02T21:00:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['Danmachi', 'Familia Myth', 'Dub-Premiere']
+  },
+  {
+    id: 'animagickino2-18',
+    title: 'April Showers Bring May Flowers',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK: 12',
+    startTime: '2025-08-02T21:00:00',
+    endTime: '2025-08-02T21:30:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['April Showers Bring May Flowers']
+  },
+  {
+    id: 'animagickino2-19',
+    title: 'Bad Girl',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK: 12',
+    startTime: '2025-08-02T21:30:00',
+    endTime: '2025-08-02T22:00:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['Bad Girl']
+  },
+  {
+    id: 'animagickino2-20',
+    title: 'Witch Watch: Watch Party',
+    description: 'Dt., ca. 80 Min., FSK: 6',
+    startTime: '2025-08-02T22:00:00',
+    endTime: '2025-08-02T23:10:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['Witch Watch', 'Watch Party']
+  },
+  {
+    id: 'animagickino2-21',
+    title: 'Undead Unluck',
+    description: 'Ep. 1 & 2, Dt., ca. 50 Min., FSK: 16',
+    startTime: '2025-08-02T23:15:00',
+    endTime: '2025-08-03T00:05:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['Undead Unluck']
+  },
+  {
+    id: 'animagickino2-22',
+    title: 'Kakushite! Makina-san!!',
+    description: 'Ep. 1, OmU, ca. 50 Min., FSK: 16',
+    startTime: '2025-08-03T00:15:00',
+    endTime: '2025-08-03T00:45:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['Kakushite! Makina-san!!']
+  },
+  
+  // Sonntag, 03.08.2025
+  {
+    id: 'animagickino2-23',
+    title: 'Chiai Fujikawa: Signierstunde',
+    description: 'Die Tickets für diese Signierstunde wurden im Vorfeld per Lottery verlost. Bitte stellt euch nur mit gültigem Ticket an.',
+    startTime: '2025-08-03T11:30:00',
+    endTime: '2025-08-03T12:30:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Signierstunde',
+    tags: ['Chiai Fujikawa', 'Lottery']
+  },
+  {
+    id: 'animagickino2-24',
+    title: 'HNYWOOD: Danmachi-Synchro Inside!',
+    description: 'Synchro-Einblicke mit den deutschen Danmachi-SprecherInnen',
+    startTime: '2025-08-03T14:30:00',
+    endTime: '2025-08-03T15:30:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Panel',
+    tags: ['HNYWOOD', 'Danmachi', 'Synchronsprecher']
+  },
+  {
+    id: 'animagickino2-25',
+    title: 'Dice Actors: Signierstunde',
+    description: 'Es gilt: "First Come, First Served."',
+    startTime: '2025-08-03T16:00:00',
+    endTime: '2025-08-03T17:00:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Signierstunde',
+    tags: ['Dice Actors', 'First Come First Served']
+  },
+  {
+    id: 'animagickino2-26',
+    title: 'Super Cube',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK: 12',
+    startTime: '2025-08-03T17:15:00',
+    endTime: '2025-08-03T17:45:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['Super Cube']
+  },
+  {
+    id: 'animagickino2-27',
+    title: 'Pokemon Horizonte',
+    description: 'Ep. 1, Dt., ca. 20 Min., FSK: 12',
+    startTime: '2025-08-03T17:45:00',
+    endTime: '2025-08-03T18:35:00',
+    location: 'AnimagiC-Kino 2',
+    category: 'Anime',
+    tags: ['Pokemon', 'Pokemon Horizonte']
+  }
+];

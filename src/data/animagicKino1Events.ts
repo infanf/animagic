@@ -1,0 +1,240 @@
+import { Event } from '../models/types';
+
+// Events für AnimagiC-Kino 1 basierend auf dem Programmheft 2025
+export const animagicKino1Events: Event[] = [
+  // Freitag, 01.08.2025
+  {
+    id: 'animagickino1-1',
+    title: 'MAPPA Stage: Behind the Scenes of The Rose of Versailles',
+    description: 'Studio MAPPA stellt aktuelle Titel vor und blickt mit Gästen hinter die Kulissen von The Rose of Versailles',
+    startTime: '2025-08-01T15:15:00',
+    endTime: '2025-08-01T16:15:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Panel',
+    tags: ['MAPPA', 'The Rose of Versailles', 'Behind the Scenes']
+  },
+  {
+    id: 'animagickino1-2',
+    title: 'Kyoto Animation & ABC Animation Panel',
+    description: 'Das Kyoto-Animation-Team stellt euch neue Titel vor',
+    startTime: '2025-08-01T17:00:00',
+    endTime: '2025-08-01T17:45:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Panel',
+    tags: ['Kyoto Animation', 'ABC Animation']
+  },
+  {
+    id: 'animagickino1-3',
+    title: 'CITY the Animation',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK: 12 - Die CITY-Produzenten begrüßen euch persönlich zum Screening',
+    startTime: '2025-08-01T17:45:00',
+    endTime: '2025-08-01T18:15:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Anime',
+    tags: ['CITY the Animation', 'Special Guest']
+  },
+  {
+    id: 'animagickino1-4',
+    title: 'Anne Shirley',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK: 12',
+    startTime: '2025-08-01T18:30:00',
+    endTime: '2025-08-01T19:00:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Anime',
+    tags: ['Anne Shirley']
+  },
+  {
+    id: 'animagickino1-5',
+    title: 'YAIBA: Samurai Legends',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK: 12',
+    startTime: '2025-08-01T19:00:00',
+    endTime: '2025-08-01T19:30:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Anime',
+    tags: ['YAIBA: Samurai Legends']
+  },
+  {
+    id: 'animagickino1-6',
+    title: 'Mobile Suit Gundam Seed FREEDOM: Beginning-',
+    description: 'OmU, ca. 81 Min., FSK: 12',
+    startTime: '2025-08-01T19:30:00',
+    endTime: '2025-08-01T20:50:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Anime',
+    tags: ['Mobile Suit Gundam Seed', 'Film']
+  },
+  {
+    id: 'animagickino1-7',
+    title: 'BATMAN NINJA',
+    description: 'OmU, ca. 85 Min., FSK: 12',
+    startTime: '2025-08-01T21:15:00',
+    endTime: '2025-08-01T22:40:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Film',
+    tags: ['BATMAN NINJA', 'DC']
+  },
+  {
+    id: 'animagickino1-8',
+    title: 'BATMAN NINJA vs. YAKUZA LEAGUE',
+    description: 'OmU, ca. 90 Min., FSK: 12',
+    startTime: '2025-08-01T22:45:00',
+    endTime: '2025-08-02T00:15:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Film',
+    tags: ['BATMAN NINJA', 'YAKUZA LEAGUE', 'DC']
+  },
+  {
+    id: 'animagickino1-9',
+    title: 'Arifureta 3',
+    description: 'Dt., ca. 25 Min., FSK: 16',
+    startTime: '2025-08-02T00:15:00',
+    endTime: '2025-08-02T00:45:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Anime',
+    tags: ['Arifureta']
+  },
+  
+  // Samstag, 02.08.2025
+  {
+    id: 'animagickino1-10',
+    title: 'Yakuza Goes Hausmann',
+    description: 'Q&A mit Kousuke Oono',
+    startTime: '2025-08-02T11:00:00',
+    endTime: '2025-08-02T12:00:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Panel',
+    tags: ['Yakuza Goes Hausmann', 'Q&A', 'Kousuke Oono']
+  },
+  {
+    id: 'animagickino1-11',
+    title: 'AniMoon & MANGAMOON-Panel',
+    description: 'Q&A- und News-Panel',
+    startTime: '2025-08-02T13:00:00',
+    endTime: '2025-08-02T14:00:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Panel',
+    tags: ['AniMoon', 'MANGAMOON', 'Q&A']
+  },
+  {
+    id: 'animagickino1-12',
+    title: 'peppermint anime x AKIBA PASS',
+    description: 'News & Spaß mit dem peppermint-anime-Team',
+    startTime: '2025-08-02T15:00:00',
+    endTime: '2025-08-02T16:00:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Panel',
+    tags: ['peppermint anime', 'AKIBA PASS']
+  },
+  {
+    id: 'animagickino1-13',
+    title: 'ADN präsentiert',
+    description: 'Exklusive Anime-Previews von und mit ADN',
+    startTime: '2025-08-02T17:00:00',
+    endTime: '2025-08-02T17:45:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Preview',
+    tags: ['ADN', 'Anime-Previews']
+  },
+  {
+    id: 'animagickino1-14',
+    title: 'AniMoon: SynchronsprecherInnen-Panel',
+    description: 'Q&A-Panel mit Esra Vural & Daniela Molina',
+    startTime: '2025-08-02T18:30:00',
+    endTime: '2025-08-02T20:00:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Panel',
+    tags: ['AniMoon', 'Synchronsprecher', 'Esra Vural', 'Daniela Molina']
+  },
+  {
+    id: 'animagickino1-15',
+    title: 'CITY the Animation',
+    description: 'Ep. 1, OmU, ca. 25 Min., FSK: 12 - Die CITY-Produzenten begrüßen euch persönlich zum Screening',
+    startTime: '2025-08-02T20:30:00',
+    endTime: '2025-08-02T21:15:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Anime',
+    tags: ['CITY the Animation', 'Special Guest']
+  },
+  {
+    id: 'animagickino1-16',
+    title: 'Cheer for You! -Narenare-',
+    description: 'Ep. 1 & 2, Dt., ca. 50 Min., FSK: 12',
+    startTime: '2025-08-02T21:15:00',
+    endTime: '2025-08-02T22:05:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Anime',
+    tags: ['Cheer for You!']
+  },
+  {
+    id: 'animagickino1-17',
+    title: 'Akira',
+    description: 'Dt., ca. 124 Min., FSK: 16',
+    startTime: '2025-08-02T22:30:00',
+    endTime: '2025-08-03T00:35:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Film',
+    tags: ['Akira', 'Klassiker']
+  },
+  
+  // Sonntag, 03.08.2025
+  {
+    id: 'animagickino1-18',
+    title: 'Yakuza Goes Hausmann',
+    description: 'Live-Drawing mit Kousuke Oono',
+    startTime: '2025-08-03T11:30:00',
+    endTime: '2025-08-03T12:30:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Live-Drawing',
+    tags: ['Yakuza Goes Hausmann', 'Kousuke Oono']
+  },
+  {
+    id: 'animagickino1-19',
+    title: 'MAPPA Stage: Behind the Scenes of The Rose of Versailles',
+    description: 'Studio MAPPA stellt aktuelle Titel vor und blickt mit Gästen hinter die Kulissen von The Rose of Versailles',
+    startTime: '2025-08-03T13:15:00',
+    endTime: '2025-08-03T14:15:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Panel',
+    tags: ['MAPPA', 'The Rose of Versailles', 'Behind the Scenes']
+  },
+  {
+    id: 'animagickino1-20',
+    title: 'polyband anime präsentiert kommende Highlights',
+    description: 'polyband-anime-Panel',
+    startTime: '2025-08-03T14:45:00',
+    endTime: '2025-08-03T15:30:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Panel',
+    tags: ['polyband anime', 'Highlights']
+  },
+  {
+    id: 'animagickino1-21',
+    title: 'The Birth of Kitaro: Das Geheimnis von Gegege',
+    description: 'Preview (Dt., ca. 20 Min.)',
+    startTime: '2025-08-03T15:30:00',
+    endTime: '2025-08-03T15:50:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Preview',
+    tags: ['The Birth of Kitaro', 'Gegege']
+  },
+  {
+    id: 'animagickino1-22',
+    title: 'NinotakuTV - Q&A mit Moderator Nino Kerl',
+    description: 'Q&A-Panel',
+    startTime: '2025-08-03T16:15:00',
+    endTime: '2025-08-03T17:15:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Panel',
+    tags: ['NinotakuTV', 'Nino Kerl', 'Q&A']
+  },
+  {
+    id: 'animagickino1-23',
+    title: 'KONOSUBA – Staffel 3: Bonus Stage',
+    description: 'OVA 1 & 2, Dt., ca. 65 Min., FSK: 12',
+    startTime: '2025-08-03T17:30:00',
+    endTime: '2025-08-03T18:35:00',
+    location: 'AnimagiC-Kino 1',
+    category: 'Anime',
+    tags: ['KONOSUBA', 'OVA']
+  }
+];
