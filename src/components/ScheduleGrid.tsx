@@ -3,6 +3,10 @@ import { eventService } from '../services/eventService';
 import { Event } from '../models/types';
 import { formatTime, formatDate, getDayOfWeek } from '../utils/dateUtils';
 import '../styles/LocationCalendar.css';
+import StarIcon from '@mui/icons-material/Star';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import IconButton from '@mui/material/IconButton';
+import { scheduleService } from '../services/scheduleService';
 
 interface TimeSlot {
   start: Date;
@@ -128,6 +132,7 @@ const ScheduleGrid: React.FC = () => {
   const [locations, setLocations] = useState<string[]>([]);
   const [timeSlots, setTimeSlots] = useState<TimeSlot[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [userEventIds, setUserEventIds] = useState<string[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -152,6 +157,22 @@ const ScheduleGrid: React.FC = () => {
     };
     fetchData();
   }, [selectedDate]);
+
+  // Lade UserSchedule beim Mounten
+  useEffect(() => {
+    scheduleService.getUserSchedule().then(sch => setUserEventIds(sch.events));
+  }, []);
+
+  // Handler für Zeitplan-Button
+  const handleToggleEvent = async (eventId: string) => {
+    if (userEventIds.includes(eventId)) {
+      const sch = await scheduleService.removeEventFromSchedule(eventId);
+      setUserEventIds(sch.events);
+    } else {
+      const sch = await scheduleService.addEventToSchedule(eventId);
+      setUserEventIds(sch.events);
+    }
+  };
 
   // Anpassung der Event-zu-Slot-Logik:
   function eventStartsInSlotQuarter(event: Event, slot: TimeSlot) {
@@ -238,6 +259,7 @@ const ScheduleGrid: React.FC = () => {
                     const cell = locationEventGrid[loc][rowIdx];
                     if (!cell.renderCell) return null;
                     if (cell.event && cell.rowSpan > 0) {
+                      const isInSchedule = userEventIds.includes(cell.event.id);
                       return (
                         <td
                           key={loc + rowIdx}
@@ -245,17 +267,21 @@ const ScheduleGrid: React.FC = () => {
                           style={{
                             verticalAlign: 'top',
                             border: '1px solid #eee',
-                            
                             borderRadius: 4,
                             fontSize: 14,
                             height: SLOT_HEIGHT * cell.rowSpan,
                             padding: 0,
                           }}
                         >
-                          <div style={{ width: 'calc(100% - 4px)', height: 'calc(100% - 4px)', padding: '10px 8px', margin: '2px', background: '#e3f2fd', borderRadius: 4, boxSizing: 'border-box' }}>
-                            <strong>{cell.event.title}</strong><br />
+                          <div style={{ width: 'calc(100% - 4px)', height: 'calc(100% - 4px)', padding: '10px 8px', margin: '2px', background: isInSchedule ? '#ffe082' : '#e3f2fd', borderRadius: 4, boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: 4 }}>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                              <strong>{cell.event.title}</strong>
+                              <IconButton size="small" onClick={() => handleToggleEvent(cell.event?.id ?? '')} aria-label="Zeitplan">
+                                {isInSchedule ? <StarIcon color="warning" /> : <StarBorderIcon />}
+                              </IconButton>
+                            </div>
                             <span style={{ fontSize: 12 }}>
-                              {roundUpToNextQuarterHour(cell.event.startTime)} - {roundUpToNextQuarterHour(cell.event.endTime)}
+                              {formatTime(cell.event.startTime)} - {formatTime(cell.event.endTime)}
                             </span>
                           </div>
                         </td>
