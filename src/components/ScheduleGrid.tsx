@@ -37,6 +37,37 @@ function ceilToQuarterHour(date: Date): Date {
   return d;
 }
 
+// Hilfsfunktion: Events für einen Tag inkl. Nach-Mitternacht-Events (bis 05:00 Uhr) filtern
+function getEventsForFestivalDay(allEvents: Event[], selectedDate: string): Event[] {
+  const dayStart = new Date(selectedDate + 'T00:00');
+  const nextDay = new Date(dayStart);
+  nextDay.setDate(dayStart.getDate() + 1);
+  const cutoff = new Date(nextDay);
+  cutoff.setHours(5, 0, 0, 0); // 05:00 Uhr am Folgetag
+
+  return allEvents.filter(e => {
+    const start = new Date(e.startTime);
+    // Event startet am Tag zwischen 05:00 und 23:59
+    if (start >= dayStart && start < nextDay) {
+      if (start.getHours() < 5) {
+        // 00:00 bis 04:59 -> NICHT anzeigen (nur beim Vortag)
+        return false;
+      }
+      return true;
+    }
+    // Event startet nach Mitternacht bis 05:00 Uhr
+    if (start >= nextDay && start < cutoff) {
+      // Nur anzeigen, wenn der ausgewählte Tag der Vortag ist
+      const eventDay = new Date(start);
+      eventDay.setHours(0, 0, 0, 0);
+      const prevDay = new Date(eventDay);
+      prevDay.setDate(eventDay.getDate() - 1);
+      return prevDay.getTime() === dayStart.getTime();
+    }
+    return false;
+  });
+}
+
 function getQuarterHourSlots(events: Event[], selectedDate: string): TimeSlot[] {
   if (events.length === 0) {
     // Default: 10:00 bis 18:00 in 15-Minuten-Schritten
@@ -47,6 +78,12 @@ function getQuarterHourSlots(events: Event[], selectedDate: string): TimeSlot[] 
   // Früheste Startzeit und späteste Endzeit bestimmen (mit Rundung)
   let min = floorToQuarterHour(new Date(Math.min(...events.map(e => new Date(e.startTime).getTime()))));
   let max = ceilToQuarterHour(new Date(Math.max(...events.map(e => new Date(e.endTime).getTime()))));
+  // Maximal bis 05:00 Uhr am Folgetag
+  const dayStart = new Date(selectedDate + 'T00:00');
+  const cutoff = new Date(dayStart);
+  cutoff.setDate(dayStart.getDate() + 1);
+  cutoff.setHours(5, 0, 0, 0);
+  if (max > cutoff) max = cutoff;
   return getTimeSlots(min, max, 15);
 }
 
@@ -97,13 +134,13 @@ const ScheduleGrid: React.FC = () => {
       setLoading(true);
       try {
         const allEvents = await eventService.getAllEvents();
-        // Filter events for selected date
-        const filtered = allEvents.filter(e => e.startTime.startsWith(selectedDate));
+        // Events für den Festivaltag inkl. Nach-Mitternacht-Events filtern
+        const filtered = getEventsForFestivalDay(allEvents, selectedDate);
         setEvents(filtered);
         // Get all unique locations
         const locs = Array.from(new Set(filtered.map(e => e.location))).sort();
         setLocations(locs);
-        // Viertelstunden-Slots berechnen
+        // Viertelstunden-Slots berechnen (bis max. 05:00 Uhr)
         setTimeSlots(getQuarterHourSlots(filtered, selectedDate));
       } catch (err) {
         setEvents([]);
@@ -208,17 +245,19 @@ const ScheduleGrid: React.FC = () => {
                           style={{
                             verticalAlign: 'top',
                             border: '1px solid #eee',
-                            padding: 4,
-                            background: '#e3f2fd',
+                            
                             borderRadius: 4,
                             fontSize: 14,
                             height: SLOT_HEIGHT * cell.rowSpan,
+                            padding: 0,
                           }}
                         >
-                          <strong>{cell.event.title}</strong><br />
-                          <span style={{ fontSize: 12 }}>
-                            {roundUpToNextQuarterHour(cell.event.startTime)} - {roundUpToNextQuarterHour(cell.event.endTime)}
-                          </span>
+                          <div style={{ width: 'calc(100% - 4px)', height: 'calc(100% - 4px)', padding: '10px 8px', margin: '2px', background: '#e3f2fd', borderRadius: 4, boxSizing: 'border-box' }}>
+                            <strong>{cell.event.title}</strong><br />
+                            <span style={{ fontSize: 12 }}>
+                              {roundUpToNextQuarterHour(cell.event.startTime)} - {roundUpToNextQuarterHour(cell.event.endTime)}
+                            </span>
+                          </div>
                         </td>
                       );
                     } else {
