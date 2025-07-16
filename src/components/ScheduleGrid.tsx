@@ -92,40 +92,8 @@ function getQuarterHourSlots(events: Event[], selectedDate: string): TimeSlot[] 
   return getTimeSlots(min, max, 15);
 }
 
-function eventOverlapsSlot(event: Event, slot: TimeSlot) {
-  const eventStart = new Date(event.startTime);
-  const eventEnd = new Date(event.endTime);
-  return eventStart < slot.end && eventEnd > slot.start;
-}
-
-function eventStartsInSlot(event: Event, slot: TimeSlot) {
-  const eventStart = new Date(event.startTime);
-  return eventStart >= slot.start && eventStart < slot.end;
-}
-
-function getEventRowSpan(event: Event, slots: TimeSlot[]): number {
-  const eventStart = new Date(event.startTime);
-  const eventEnd = new Date(event.endTime);
-  let count = 0;
-  for (const slot of slots) {
-    if (eventEnd <= slot.start) break;
-    if (eventStart < slot.end && eventEnd > slot.start) count++;
-    if (eventEnd <= slot.end) break;
-  }
-  return count;
-}
-
-// Hilfsfunktion: Zeit auf nächste Viertelstunde runden
-function roundUpToNextQuarterHour(dateString: string): string {
-  const date = new Date(dateString);
-  let minutes = date.getMinutes();
-  let add = 0;
-  if (minutes % 15 !== 0) {
-    add = 15 - (minutes % 15);
-  }
-  date.setMinutes(minutes + add, 0, 0);
-  return formatTime(date.toISOString());
-}
+// Unused utility functions removed to fix lint errors
+// These functions were defined but never used in the component
 
 const ScheduleGrid: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState<string>(DATES[0]);
@@ -196,29 +164,36 @@ const ScheduleGrid: React.FC = () => {
 
   // Für jede Location: Map von slotIndex -> {event, rowSpan, renderCell}
   const locationEventGrid: Record<string, { event: Event | null; rowSpan: number; renderCell: boolean }[]> = {};
-  locations.forEach(loc => {
+  
+  // Helper function to build grid for a location
+  const buildLocationGrid = (location: string) => {
     const grid: { event: Event | null; rowSpan: number; renderCell: boolean }[] = [];
-    let slotIdx = 0;
-    while (slotIdx < timeSlots.length) {
+    let currentSlotIndex = 0;
+    while (currentSlotIndex < timeSlots.length) {
       // Finde Event, das in diesem Slot (nach Viertelstunden-Rundung) startet
-      const event = events.find(e => e.location === loc && eventStartsInSlotQuarter(e, timeSlots[slotIdx]));
+      // eslint-disable-next-line no-loop-func
+      const event = events.find(e => e.location === location && eventStartsInSlotQuarter(e, timeSlots[currentSlotIndex]));
       if (event) {
-        let span = getEventRowSpanQuarter(event, timeSlots.slice(slotIdx));
+        let span = getEventRowSpanQuarter(event, timeSlots.slice(currentSlotIndex));
         if (!span || span < 1) span = 1; // Schutz gegen Endlosschleife
         grid.push({ event, rowSpan: span, renderCell: true });
         for (let i = 1; i < span; i++) {
           grid.push({ event: null, rowSpan: 0, renderCell: false });
         }
-        slotIdx += span;
+        currentSlotIndex += span;
       } else {
         grid.push({ event: null, rowSpan: 1, renderCell: true });
-        slotIdx++;
+        currentSlotIndex++;
       }
     }
     while (grid.length < timeSlots.length) {
       grid.push({ event: null, rowSpan: 1, renderCell: true });
     }
-    locationEventGrid[loc] = grid;
+    return grid;
+  };
+
+  locations.forEach(loc => {
+    locationEventGrid[loc] = buildLocationGrid(loc);
   });
 
   return (

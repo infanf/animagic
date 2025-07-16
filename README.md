@@ -32,6 +32,35 @@ Die App verwendet eine Service-Architektur, die später leicht mit einem Backend
 
 Aktuell verwenden diese Services Mock-Daten und lokalen Speicher, können aber später durch echte API-Aufrufe ersetzt werden.
 
+## Deployment
+
+The application is automatically deployed to GitHub Pages when changes are pushed to the `main` branch.
+
+### Automated Deployment Process
+
+1. **Trigger**: Push to `main` branch or manual workflow dispatch
+2. **Build Process**:
+   - Install Node.js dependencies
+   - Run tests to ensure code quality
+   - Build the production application
+3. **Deploy**: Upload build artifacts to GitHub Pages
+
+The live application is available at: https://infanf.github.io/animagic
+
+### Manual Deployment
+
+You can also manually trigger deployment by:
+1. Going to the Actions tab in the GitHub repository
+2. Selecting the "Deploy to GitHub Pages" workflow
+3. Clicking "Run workflow"
+
+### Requirements for Deployment
+
+For the deployment to work, GitHub Pages must be enabled in the repository settings:
+1. Go to Settings > Pages in the GitHub repository
+2. Under "Source", select "GitHub Actions"
+3. The workflow will automatically deploy on the next push to main
+
 ## Available Scripts
 
 In the project directory, you can run:

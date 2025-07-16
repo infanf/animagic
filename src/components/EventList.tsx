@@ -4,7 +4,7 @@ import { Event } from '../models/types';
 import EventCard from './EventCard';
 import { scheduleService } from '../services/scheduleService';
 import { groupEventsByDay, sortEventsByStartTime, getDayOfWeek, formatDate } from '../utils/dateUtils';
-import { getCategoryColor } from '../styles/categoryColors';
+
 
 interface EventListProps {
   events: Event[];

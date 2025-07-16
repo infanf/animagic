@@ -11,7 +11,7 @@ import { ramenWokWokKaraokeEvents } from '../data/ramenWokWokKaraokeEvents';
 import { verlagsstandEvents } from '../data/verlagsstandEvents';
 
 // Mock data for convention events
-// Original mock events (keeping for reference)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const originalMockEvents: Event[] = [
   {
     id: '1',
