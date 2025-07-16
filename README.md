@@ -54,6 +54,13 @@ You can also manually trigger deployment by:
 2. Selecting the "Deploy to GitHub Pages" workflow
 3. Clicking "Run workflow"
 
+### Requirements for Deployment
+
+For the deployment to work, GitHub Pages must be enabled in the repository settings:
+1. Go to Settings > Pages in the GitHub repository
+2. Under "Source", select "GitHub Actions"
+3. The workflow will automatically deploy on the next push to main
+
 ## Available Scripts
 
 In the project directory, you can run:
