@@ -7,6 +7,7 @@ import StarIcon from '@mui/icons-material/Star';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import IconButton from '@mui/material/IconButton';
 import { scheduleService } from '../services/scheduleService';
+import { getCategoryColor } from '../styles/categoryColors';
 
 interface TimeSlot {
   start: Date;
@@ -259,7 +260,9 @@ const ScheduleGrid: React.FC = () => {
                     const cell = locationEventGrid[loc][rowIdx];
                     if (!cell.renderCell) return null;
                     if (cell.event && cell.rowSpan > 0) {
-                      const isInSchedule = userEventIds.includes(cell.event.id);
+                      const event = cell.event;
+                      const isInSchedule = userEventIds.includes(event.id);
+                      const categoryColor = getCategoryColor(event.category);
                       return (
                         <td
                           key={loc + rowIdx}
@@ -273,15 +276,15 @@ const ScheduleGrid: React.FC = () => {
                             padding: 0,
                           }}
                         >
-                          <div style={{ width: 'calc(100% - 4px)', height: 'calc(100% - 4px)', padding: '10px 8px', margin: '2px', background: isInSchedule ? '#ffe082' : '#e3f2fd', borderRadius: 4, boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: 4 }}>
+                          <div style={{ width: 'calc(100% - 4px)', height: 'calc(100% - 4px)', padding: '10px 8px', margin: '2px', background: categoryColor, borderRadius: 4, boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: 4 }}>
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                              <strong>{cell.event.title}</strong>
-                              <IconButton size="small" onClick={() => handleToggleEvent(cell.event?.id ?? '')} aria-label="Zeitplan">
+                              <strong>{event.title}</strong>
+                              <IconButton size="small" onClick={() => handleToggleEvent(event.id)} aria-label="Zeitplan">
                                 {isInSchedule ? <StarIcon color="warning" /> : <StarBorderIcon />}
                               </IconButton>
                             </div>
                             <span style={{ fontSize: 12 }}>
-                              {formatTime(cell.event.startTime)} - {formatTime(cell.event.endTime)}
+                              {formatTime(event.startTime)} - {formatTime(event.endTime)}
                             </span>
                           </div>
                         </td>

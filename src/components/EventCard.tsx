@@ -5,6 +5,7 @@ import { formatDate } from '../utils/dateUtils';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PersonIcon from '@mui/icons-material/Person';
+import { getCategoryColor } from '../styles/categoryColors';
 
 interface EventCardProps {
   event: Event;
@@ -20,7 +21,7 @@ const EventCard: React.FC<EventCardProps> = ({
   onRemoveFromSchedule 
 }) => {
   return (
-    <Card sx={{ mb: 2, borderLeft: isInSchedule ? '4px solid #4caf50' : 'none' }}>
+    <Card sx={{ mb: 2, borderLeft: isInSchedule ? '4px solid #4caf50' : 'none', background: getCategoryColor(event.category) }}>
       <CardContent>
         <Typography variant="h6" component="div" gutterBottom>
           {event.title}
