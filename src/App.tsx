@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage';
 import ProgramPage from './pages/ProgramPage';
 import SchedulePage from './pages/SchedulePage';
 import SearchPage from './pages/SearchPage';
+import CalendarPage from './pages/CalendarPage';
 
 // Import components
 import Layout from './components/Layout';
@@ -36,6 +37,7 @@ function App() {
             <Route path="/program" element={<ProgramPage />} />
             <Route path="/schedule" element={<SchedulePage />} />
             <Route path="/search" element={<SearchPage />} />
+            <Route path="/calendar" element={<CalendarPage />} />
           </Routes>
         </Layout>
       </Router>

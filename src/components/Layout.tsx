@@ -37,6 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { text: 'Startseite', icon: <HomeIcon />, path: '/' },
     { text: 'Programm', icon: <EventIcon />, path: '/program' },
     { text: 'Mein Zeitplan', icon: <CalendarMonthIcon />, path: '/schedule' },
+    { text: 'Kalenderübersicht', icon: <EventIcon />, path: '/calendar' },
     { text: 'Suche', icon: <SearchIcon />, path: '/search' }
   ];
 

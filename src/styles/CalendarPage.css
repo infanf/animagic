@@ -1,0 +1,11 @@
+.calendar-page {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  padding: 20px 0;
+}
+
+@media print {
+  .calendar-page {
+    background-color: white;
+  }
+}

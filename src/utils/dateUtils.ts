@@ -58,3 +58,18 @@ export const sortEventsByStartTime = (events: any[]): any[] => {
     return new Date(a.startTime).getTime() - new Date(b.startTime).getTime();
   });
 };
+
+/**
+ * Format a time string from an ISO date string
+ * @param dateString ISO date string
+ * @returns Formatted time string (e.g., "14:30")
+ */
+export const formatTime = (dateString: string): string => {
+  try {
+    const date = parseISO(dateString);
+    return format(date, 'HH:mm', { locale: de });
+  } catch (error) {
+    console.error('Error formatting time:', error);
+    return dateString;
+  }
+};
