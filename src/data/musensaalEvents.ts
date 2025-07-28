@@ -10,7 +10,7 @@ export const musensaalEvents: Event[] = [
     startTime: '2025-08-01T14:30:00',
     endTime: '2025-08-01T15:15:00',
     location: 'Musensaal',
-    category: 'Organisation'
+    category: 'Organisation',
   },
   {
     id: 'musensaal-2',
@@ -20,7 +20,7 @@ export const musensaalEvents: Event[] = [
     endTime: '2025-08-01T16:00:00',
     location: 'Musensaal',
     category: 'Konzert',
-    tags: ['Classic Music', 'Anime', 'Deutschlandpremiere']
+    tags: ['Classic Music', 'Anime', 'Deutschlandpremiere'],
   },
   {
     id: 'musensaal-3',
@@ -30,7 +30,7 @@ export const musensaalEvents: Event[] = [
     endTime: '2025-08-01T17:00:00',
     location: 'Musensaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Pop', 'J-Rock', 'Deutschlandpremiere']
+    tags: ['Anisong', 'J-Pop', 'J-Rock', 'Deutschlandpremiere'],
   },
   {
     id: 'musensaal-4',
@@ -40,27 +40,28 @@ export const musensaalEvents: Event[] = [
     endTime: '2025-08-01T18:00:00',
     location: 'Musensaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere'],
   },
   {
     id: 'musensaal-5',
-    title: 'COLORFUL STAGE! The Movie: A Miku Who Can\'t Cry',
+    title: "COLORFUL STAGE! The Movie: A Miku Who Can't Cry",
     description: 'Film (OmU, ca. 111 Min., FSK 6)',
     startTime: '2025-08-01T18:30:00',
     endTime: '2025-08-01T20:20:00',
     location: 'Musensaal',
     category: 'Film',
-    tags: ['Anime', 'Film', 'Miku']
+    tags: ['Anime', 'Film', 'Miku'],
   },
   {
     id: 'musensaal-6',
-    title: 'Violet Evergarden x Cellotic Soundtrack Ensemble mit Anisong-Sängerin Aira Yuuki',
+    title:
+      'Violet Evergarden x Cellotic Soundtrack Ensemble mit Anisong-Sängerin Aira Yuuki',
     description: 'AnimagiC-exklusives Konzert (Weltpremiere)',
     startTime: '2025-08-01T21:00:00',
     endTime: '2025-08-01T22:00:00',
     location: 'Musensaal',
     category: 'Konzert',
-    tags: ['Violet Evergarden', 'Soundtrack', 'Anisong', 'Weltpremiere']
+    tags: ['Violet Evergarden', 'Soundtrack', 'Anisong', 'Weltpremiere'],
   },
   {
     id: 'musensaal-7',
@@ -70,9 +71,9 @@ export const musensaalEvents: Event[] = [
     endTime: '2025-08-01T23:00:00',
     location: 'Musensaal',
     category: 'Konzert',
-    tags: ['Heavy Metal', 'Anisong', 'Deutschlandpremiere']
+    tags: ['Heavy Metal', 'Anisong', 'Deutschlandpremiere'],
   },
-  
+
   // Samstag, 02.08.2025
   {
     id: 'musensaal-8',
@@ -81,7 +82,7 @@ export const musensaalEvents: Event[] = [
     startTime: '2025-08-02T10:45:00',
     endTime: '2025-08-02T11:15:00',
     location: 'Musensaal',
-    category: 'Organisation'
+    category: 'Organisation',
   },
   {
     id: 'musensaal-9',
@@ -91,7 +92,7 @@ export const musensaalEvents: Event[] = [
     endTime: '2025-08-02T12:30:00',
     location: 'Musensaal',
     category: 'Show',
-    tags: ['Showgruppe', 'Black Butler']
+    tags: ['Showgruppe', 'Black Butler'],
   },
   {
     id: 'musensaal-10',
@@ -101,7 +102,7 @@ export const musensaalEvents: Event[] = [
     endTime: '2025-08-02T13:30:00',
     location: 'Musensaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere'],
   },
   {
     id: 'musensaal-11',
@@ -111,17 +112,18 @@ export const musensaalEvents: Event[] = [
     endTime: '2025-08-02T14:45:00',
     location: 'Musensaal',
     category: 'Konzert',
-    tags: ['Classic Music', 'Anime', 'Deutschlandpremiere']
+    tags: ['Classic Music', 'Anime', 'Deutschlandpremiere'],
   },
   {
     id: 'musensaal-12',
-    title: 'Violet Evergarden x Cellotic Soundtrack Ensemble mit Anisong-Sängerin Aira Yuuki',
+    title:
+      'Violet Evergarden x Cellotic Soundtrack Ensemble mit Anisong-Sängerin Aira Yuuki',
     description: 'AnimagiC-exklusives Konzert (Weltpremiere)',
     startTime: '2025-08-02T15:30:00',
     endTime: '2025-08-02T16:30:00',
     location: 'Musensaal',
     category: 'Konzert',
-    tags: ['Violet Evergarden', 'Soundtrack', 'Anisong', 'Weltpremiere']
+    tags: ['Violet Evergarden', 'Soundtrack', 'Anisong', 'Weltpremiere'],
   },
   {
     id: 'musensaal-13',
@@ -131,7 +133,7 @@ export const musensaalEvents: Event[] = [
     endTime: '2025-08-02T17:45:00',
     location: 'Musensaal',
     category: 'Konzert',
-    tags: ['Heavy Metal', 'Anisong', 'Deutschlandpremiere']
+    tags: ['Heavy Metal', 'Anisong', 'Deutschlandpremiere'],
   },
   {
     id: 'musensaal-14',
@@ -141,9 +143,9 @@ export const musensaalEvents: Event[] = [
     endTime: '2025-08-02T23:00:00',
     location: 'Musensaal',
     category: 'Show',
-    tags: ['Synchronschauspiel', 'D&D', 'Live']
+    tags: ['Synchronschauspiel', 'D&D', 'Live'],
   },
-  
+
   // Sonntag, 03.08.2025
   {
     id: 'musensaal-15',
@@ -152,17 +154,18 @@ export const musensaalEvents: Event[] = [
     startTime: '2025-08-03T10:30:00',
     endTime: '2025-08-03T11:30:00',
     location: 'Musensaal',
-    category: 'Organisation'
+    category: 'Organisation',
   },
   {
     id: 'musensaal-16',
-    title: 'Violet Evergarden x Cellotic Soundtrack Ensemble mit Anisong-Sängerin Aira Yuuki',
+    title:
+      'Violet Evergarden x Cellotic Soundtrack Ensemble mit Anisong-Sängerin Aira Yuuki',
     description: 'AnimagiC-exklusives Konzert (Weltpremiere)',
     startTime: '2025-08-03T11:30:00',
     endTime: '2025-08-03T12:30:00',
     location: 'Musensaal',
     category: 'Konzert',
-    tags: ['Violet Evergarden', 'Soundtrack', 'Anisong', 'Weltpremiere']
+    tags: ['Violet Evergarden', 'Soundtrack', 'Anisong', 'Weltpremiere'],
   },
   {
     id: 'musensaal-17',
@@ -172,7 +175,7 @@ export const musensaalEvents: Event[] = [
     endTime: '2025-08-03T14:00:00',
     location: 'Musensaal',
     category: 'Konzert',
-    tags: ['Classic Music', 'Anime', 'Deutschlandpremiere']
+    tags: ['Classic Music', 'Anime', 'Deutschlandpremiere'],
   },
   {
     id: 'musensaal-18',
@@ -182,7 +185,7 @@ export const musensaalEvents: Event[] = [
     endTime: '2025-08-03T15:00:00',
     location: 'Musensaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Pop', 'J-Rock', 'Deutschlandpremiere']
+    tags: ['Anisong', 'J-Pop', 'J-Rock', 'Deutschlandpremiere'],
   },
   {
     id: 'musensaal-19',
@@ -192,7 +195,7 @@ export const musensaalEvents: Event[] = [
     endTime: '2025-08-03T16:00:00',
     location: 'Musensaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere'],
   },
   {
     id: 'musensaal-20',
@@ -202,6 +205,6 @@ export const musensaalEvents: Event[] = [
     endTime: '2025-08-03T17:00:00',
     location: 'Musensaal',
     category: 'Konzert',
-    tags: ['Heavy Metal', 'Anisong', 'Deutschlandpremiere']
-  }
+    tags: ['Heavy Metal', 'Anisong', 'Deutschlandpremiere'],
+  },
 ];

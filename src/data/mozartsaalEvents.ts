@@ -10,7 +10,7 @@ export const mozartsaalEvents: Event[] = [
     startTime: '2025-08-01T14:45:00',
     endTime: '2025-08-01T15:30:00',
     location: 'Mozartsaal',
-    category: 'Organisation'
+    category: 'Organisation',
   },
   {
     id: 'mozartsaal-2',
@@ -20,7 +20,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-01T15:45:00',
     location: 'Mozartsaal',
     category: 'Performance',
-    tags: ['Taiko', 'Performance']
+    tags: ['Taiko', 'Performance'],
   },
   {
     id: 'mozartsaal-3',
@@ -30,7 +30,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-01T16:30:00',
     location: 'Mozartsaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Pop', 'Europapremiere']
+    tags: ['Anisong', 'J-Pop', 'Europapremiere'],
   },
   {
     id: 'mozartsaal-4',
@@ -40,7 +40,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-01T17:30:00',
     location: 'Mozartsaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Pop', 'Europapremiere']
+    tags: ['Anisong', 'J-Pop', 'Europapremiere'],
   },
   {
     id: 'mozartsaal-5',
@@ -50,17 +50,18 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-01T18:30:00',
     location: 'Mozartsaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Rock']
+    tags: ['Anisong', 'J-Rock'],
   },
   {
     id: 'mozartsaal-6',
     title: 'Eröffnungsfeier',
-    description: 'Verleihung des AnimaniA Awards, Performance von J-Music-Acts & Vorstellung der Ehrengäste',
+    description:
+      'Verleihung des AnimaniA Awards, Performance von J-Music-Acts & Vorstellung der Ehrengäste',
     startTime: '2025-08-01T19:00:00',
     endTime: '2025-08-01T20:30:00',
     location: 'Mozartsaal',
     category: 'Zeremonie',
-    tags: ['Eröffnung', 'Awards', 'Performance']
+    tags: ['Eröffnung', 'Awards', 'Performance'],
   },
   {
     id: 'mozartsaal-7',
@@ -70,7 +71,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-01T21:30:00',
     location: 'Mozartsaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere'],
   },
   {
     id: 'mozartsaal-8',
@@ -80,9 +81,9 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-01T22:30:00',
     location: 'Mozartsaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere'],
   },
-  
+
   // Samstag, 02.08.2025
   {
     id: 'mozartsaal-9',
@@ -91,7 +92,7 @@ export const mozartsaalEvents: Event[] = [
     startTime: '2025-08-02T11:15:00',
     endTime: '2025-08-02T11:30:00',
     location: 'Mozartsaal',
-    category: 'Organisation'
+    category: 'Organisation',
   },
   {
     id: 'mozartsaal-10',
@@ -101,7 +102,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-02T12:00:00',
     location: 'Mozartsaal',
     category: 'Performance',
-    tags: ['Taiko', 'Performance']
+    tags: ['Taiko', 'Performance'],
   },
   {
     id: 'mozartsaal-11',
@@ -111,7 +112,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-02T13:30:00',
     location: 'Mozartsaal',
     category: 'Wettbewerb',
-    tags: ['Cosplay', 'Wettbewerb']
+    tags: ['Cosplay', 'Wettbewerb'],
   },
   {
     id: 'mozartsaal-12',
@@ -121,7 +122,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-02T14:15:00',
     location: 'Mozartsaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Rock']
+    tags: ['Anisong', 'J-Rock'],
   },
   {
     id: 'mozartsaal-13',
@@ -131,7 +132,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-02T15:00:00',
     location: 'Mozartsaal',
     category: 'Zeremonie',
-    tags: ['Bühnenshow', 'Siegerehrung']
+    tags: ['Bühnenshow', 'Siegerehrung'],
   },
   {
     id: 'mozartsaal-14',
@@ -141,7 +142,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-02T17:00:00',
     location: 'Mozartsaal',
     category: 'Konzert',
-    tags: ['Anime', 'Orchester']
+    tags: ['Anime', 'Orchester'],
   },
   {
     id: 'mozartsaal-15',
@@ -151,7 +152,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-02T19:00:00',
     location: 'Mozartsaal',
     category: 'Show',
-    tags: ['Showgruppe', 'Hetalia']
+    tags: ['Showgruppe', 'Hetalia'],
   },
   {
     id: 'mozartsaal-16',
@@ -161,19 +162,20 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-02T20:00:00',
     location: 'Mozartsaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere'],
   },
   {
     id: 'mozartsaal-17',
     title: 'SACRA MUSIC Fes. X AnimagiC',
-    description: 'Anisong-Konzert mit Who-ya Extended, ASCA, Sangatsu no Phantasia, Rei Yasuda & ClariS',
+    description:
+      'Anisong-Konzert mit Who-ya Extended, ASCA, Sangatsu no Phantasia, Rei Yasuda & ClariS',
     startTime: '2025-08-02T20:30:00',
     endTime: '2025-08-02T23:00:00',
     location: 'Mozartsaal',
     category: 'Konzert',
-    tags: ['Anisong', 'SACRA MUSIC', 'Festival']
+    tags: ['Anisong', 'SACRA MUSIC', 'Festival'],
   },
-  
+
   // Sonntag, 03.08.2025
   {
     id: 'mozartsaal-18',
@@ -182,7 +184,7 @@ export const mozartsaalEvents: Event[] = [
     startTime: '2025-08-03T10:30:00',
     endTime: '2025-08-03T11:00:00',
     location: 'Mozartsaal',
-    category: 'Organisation'
+    category: 'Organisation',
   },
   {
     id: 'mozartsaal-19',
@@ -192,7 +194,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-03T11:45:00',
     location: 'Mozartsaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Rock']
+    tags: ['Anisong', 'J-Rock'],
   },
   {
     id: 'mozartsaal-20',
@@ -202,7 +204,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-03T13:45:00',
     location: 'Mozartsaal',
     category: 'Konzert',
-    tags: ['Anime', 'Orchester']
+    tags: ['Anime', 'Orchester'],
   },
   {
     id: 'mozartsaal-21',
@@ -212,7 +214,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-03T14:45:00',
     location: 'Mozartsaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere'],
   },
   {
     id: 'mozartsaal-22',
@@ -222,7 +224,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-03T15:30:00',
     location: 'Mozartsaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Pop']
+    tags: ['Anisong', 'J-Pop'],
   },
   {
     id: 'mozartsaal-23',
@@ -232,7 +234,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-03T16:15:00',
     location: 'Mozartsaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Pop']
+    tags: ['Anisong', 'J-Pop'],
   },
   {
     id: 'mozartsaal-24',
@@ -242,7 +244,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-03T17:00:00',
     location: 'Mozartsaal',
     category: 'Konzert',
-    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere']
+    tags: ['Anisong', 'J-Pop', 'Deutschlandpremiere'],
   },
   {
     id: 'mozartsaal-25',
@@ -252,7 +254,7 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-03T17:30:00',
     location: 'Mozartsaal',
     category: 'Performance',
-    tags: ['Taiko', 'Performance']
+    tags: ['Taiko', 'Performance'],
   },
   {
     id: 'mozartsaal-26',
@@ -262,6 +264,6 @@ export const mozartsaalEvents: Event[] = [
     endTime: '2025-08-03T18:30:00',
     location: 'Mozartsaal',
     category: 'Zeremonie',
-    tags: ['Finale', 'Abschluss']
-  }
+    tags: ['Finale', 'Abschluss'],
+  },
 ];

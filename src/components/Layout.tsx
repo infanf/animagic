@@ -14,7 +14,7 @@ import {
   ListItemText,
   Container,
   useMediaQuery,
-  useTheme
+  useTheme,
 } from '@mui/material';
 
 import { Link as RouterLink, useLocation } from 'react-router-dom';
@@ -39,18 +39,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { text: 'Programm', icon: <EventIcon />, path: '/program' },
     { text: 'Mein Zeitplan', icon: <CalendarMonthIcon />, path: '/schedule' },
     { text: 'Kalenderübersicht', icon: <EventIcon />, path: '/calendar' },
-    { text: 'Suche', icon: <SearchIcon />, path: '/search' }
+    { text: 'Suche', icon: <SearchIcon />, path: '/search' },
   ];
 
-  const toggleDrawer = (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
-    if (
-      event.type === 'keydown' &&
-      ((event as React.KeyboardEvent).key === 'Tab' || (event as React.KeyboardEvent).key === 'Shift')
-    ) {
-      return;
-    }
-    setDrawerOpen(open);
-  };
+  const toggleDrawer =
+    (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event.type === 'keydown' &&
+        ((event as React.KeyboardEvent).key === 'Tab' ||
+          (event as React.KeyboardEvent).key === 'Shift')
+      ) {
+        return;
+      }
+      setDrawerOpen(open);
+    };
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
@@ -73,31 +75,30 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             Convention App
           </Typography>
 
-
-
-          {!isMobile && menuItems.map((item) => (
-            <Button
-              key={item.path}
-              component={RouterLink}
-              to={item.path}
-              color="inherit"
-              sx={{
-                mx: 1,
-                fontWeight: location.pathname === item.path ? 'bold' : 'normal',
-                borderBottom: location.pathname === item.path ? '2px solid white' : 'none'
-              }}
-            >
-              {item.text}
-            </Button>
-          ))}
+          {!isMobile &&
+            menuItems.map(item => (
+              <Button
+                key={item.path}
+                component={RouterLink}
+                to={item.path}
+                color="inherit"
+                sx={{
+                  mx: 1,
+                  fontWeight:
+                    location.pathname === item.path ? 'bold' : 'normal',
+                  borderBottom:
+                    location.pathname === item.path
+                      ? '2px solid white'
+                      : 'none',
+                }}
+              >
+                {item.text}
+              </Button>
+            ))}
         </Toolbar>
       </AppBar>
 
-      <Drawer
-        anchor="left"
-        open={drawerOpen}
-        onClose={toggleDrawer(false)}
-      >
+      <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
         <Box
           sx={{ width: 250 }}
           role="presentation"
@@ -105,16 +106,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           onKeyDown={toggleDrawer(false)}
         >
           <List>
-            {menuItems.map((item) => (
+            {menuItems.map(item => (
               <ListItem key={item.text} disablePadding>
                 <ListItemButton
                   component={RouterLink}
                   to={item.path}
                   selected={location.pathname === item.path}
                 >
-                  <ListItemIcon>
-                    {item.icon}
-                  </ListItemIcon>
+                  <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
                 </ListItemButton>
               </ListItem>
@@ -127,7 +126,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </Box>
 
-      <Box component="footer" sx={{ py: 3, bgcolor: 'background.paper', mt: 'auto' }}>
+      <Box
+        component="footer"
+        sx={{ py: 3, bgcolor: 'background.paper', mt: 'auto' }}
+      >
         <Container maxWidth="md">
           <Typography variant="body2" color="text.secondary" align="center">
             © {new Date().getFullYear()} Convention App

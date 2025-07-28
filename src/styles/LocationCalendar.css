@@ -128,12 +128,12 @@
   .location-groups {
     grid-template-columns: 1fr;
   }
-  
+
   .date-selector {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .date-button {
     width: 100%;
     max-width: 300px;

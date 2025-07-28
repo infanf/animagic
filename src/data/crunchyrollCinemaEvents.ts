@@ -11,7 +11,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-01T16:00:00',
     location: 'Crunchyroll Cinema',
     category: 'Panel',
-    tags: ['Gachiakuta', 'Q&A']
+    tags: ['Gachiakuta', 'Q&A'],
   },
   {
     id: 'crunchyroll-2',
@@ -21,7 +21,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-01T18:00:00',
     location: 'Crunchyroll Cinema',
     category: 'Live-Drawing',
-    tags: ['Shield Hero', 'Drawing', 'Q&A']
+    tags: ['Shield Hero', 'Drawing', 'Q&A'],
   },
   {
     id: 'crunchyroll-3',
@@ -31,7 +31,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-01T18:30:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Shield Hero', 'Deutschlandpremiere']
+    tags: ['Shield Hero', 'Deutschlandpremiere'],
   },
   {
     id: 'crunchyroll-4',
@@ -41,7 +41,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-01T19:15:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Apothekerin']
+    tags: ['Apothekerin'],
   },
   {
     id: 'crunchyroll-5',
@@ -51,27 +51,28 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-01T19:45:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['One-Punch Man']
+    tags: ['One-Punch Man'],
   },
   {
     id: 'crunchyroll-6',
-    title: 'Let\'s Play',
+    title: "Let's Play",
     description: 'Ep. 1, OmU, ca. 25 Min., FSK 12 (EU-Premiere)',
     startTime: '2025-08-01T20:45:00',
     endTime: '2025-08-01T21:15:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Let\'s Play', 'EU-Premiere']
+    tags: ["Let's Play", 'EU-Premiere'],
   },
   {
     id: 'crunchyroll-7',
     title: 'Gachiakuta',
-    description: 'Ep. 1, OmU, ca. 25 Min., FSK 16 - Aoi Ichikawa begrüßt euch persönlich zum Screening',
+    description:
+      'Ep. 1, OmU, ca. 25 Min., FSK 16 - Aoi Ichikawa begrüßt euch persönlich zum Screening',
     startTime: '2025-08-01T21:30:00',
     endTime: '2025-08-01T22:00:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Gachiakuta', 'Special Guest']
+    tags: ['Gachiakuta', 'Special Guest'],
   },
   {
     id: 'crunchyroll-8',
@@ -81,7 +82,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-01T22:45:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Demon Slayer']
+    tags: ['Demon Slayer'],
   },
   {
     id: 'crunchyroll-9',
@@ -91,7 +92,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-01T23:15:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Kaiju No. 8']
+    tags: ['Kaiju No. 8'],
   },
   {
     id: 'crunchyroll-10',
@@ -101,7 +102,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-02T00:15:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Solo Leveling']
+    tags: ['Solo Leveling'],
   },
   {
     id: 'crunchyroll-11',
@@ -111,9 +112,9 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-02T00:45:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Fire Force']
+    tags: ['Fire Force'],
   },
-  
+
   // Samstag, 02.08.2025
   {
     id: 'crunchyroll-12',
@@ -123,7 +124,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-02T12:00:00',
     location: 'Crunchyroll Cinema',
     category: 'Panel',
-    tags: ['Gachiakuta', 'Q&A']
+    tags: ['Gachiakuta', 'Q&A'],
   },
   {
     id: 'crunchyroll-13',
@@ -133,7 +134,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-02T13:00:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Apothekerin']
+    tags: ['Apothekerin'],
   },
   {
     id: 'crunchyroll-14',
@@ -143,7 +144,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-02T14:45:00',
     location: 'Crunchyroll Cinema',
     category: 'Panel',
-    tags: ['Crunchyroll']
+    tags: ['Crunchyroll'],
   },
   {
     id: 'crunchyroll-15',
@@ -153,7 +154,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-02T15:00:00',
     location: 'Crunchyroll Cinema',
     category: 'Film',
-    tags: ['Detektiv Conan', 'Preview', 'Exklusiv']
+    tags: ['Detektiv Conan', 'Preview', 'Exklusiv'],
   },
   {
     id: 'crunchyroll-16',
@@ -163,37 +164,38 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-02T17:15:00',
     location: 'Crunchyroll Cinema',
     category: 'Live-Dubbing',
-    tags: ['Kaiju No. 8', 'Voice Cast', 'Q&A']
+    tags: ['Kaiju No. 8', 'Voice Cast', 'Q&A'],
   },
   {
     id: 'crunchyroll-17',
-    title: 'Behind the Scenes of Miss Kobayashi\'s Dragon Maid',
-    description: 'Q&A-Panel mit dem Team von Miss Kobayashi\'s Dragon Maid',
+    title: "Behind the Scenes of Miss Kobayashi's Dragon Maid",
+    description: "Q&A-Panel mit dem Team von Miss Kobayashi's Dragon Maid",
     startTime: '2025-08-02T18:00:00',
     endTime: '2025-08-02T19:00:00',
     location: 'Crunchyroll Cinema',
     category: 'Panel',
-    tags: ['Dragon Maid', 'Behind the Scenes', 'Q&A']
+    tags: ['Dragon Maid', 'Behind the Scenes', 'Q&A'],
   },
   {
     id: 'crunchyroll-18',
     title: 'Haikyu!! The Dumpster Battle',
-    description: 'Ep. 1, OmU, ca. 86 Min., FSK 12 - Susumu Mitsunaka begrüßt euch persönlich zum Screening',
+    description:
+      'Ep. 1, OmU, ca. 86 Min., FSK 12 - Susumu Mitsunaka begrüßt euch persönlich zum Screening',
     startTime: '2025-08-02T19:45:00',
     endTime: '2025-08-02T21:15:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Haikyu!!', 'Special Guest']
+    tags: ['Haikyu!!', 'Special Guest'],
   },
   {
     id: 'crunchyroll-19',
-    title: 'Let\'s Play',
+    title: "Let's Play",
     description: 'Ep. 1, OmU, ca. 25 Min., FSK 12 (EU-Premiere)',
     startTime: '2025-08-02T21:30:00',
     endTime: '2025-08-02T22:00:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Let\'s Play', 'EU-Premiere']
+    tags: ["Let's Play", 'EU-Premiere'],
   },
   {
     id: 'crunchyroll-20',
@@ -203,7 +205,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-02T22:30:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Gachiakuta']
+    tags: ['Gachiakuta'],
   },
   {
     id: 'crunchyroll-21',
@@ -213,7 +215,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-02T23:15:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Sentenced to Be a Hero', 'Europapremiere']
+    tags: ['Sentenced to Be a Hero', 'Europapremiere'],
   },
   {
     id: 'crunchyroll-22',
@@ -223,7 +225,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-02T23:45:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Fire Force']
+    tags: ['Fire Force'],
   },
   {
     id: 'crunchyroll-23',
@@ -233,9 +235,9 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-03T00:35:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Solo Leveling']
+    tags: ['Solo Leveling'],
   },
-  
+
   // Sonntag, 03.08.2025
   {
     id: 'crunchyroll-24',
@@ -245,7 +247,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-03T12:00:00',
     location: 'Crunchyroll Cinema',
     category: 'Panel',
-    tags: ['One-Punch Man', 'Q&A']
+    tags: ['One-Punch Man', 'Q&A'],
   },
   {
     id: 'crunchyroll-25',
@@ -255,7 +257,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-03T13:45:00',
     location: 'Crunchyroll Cinema',
     category: 'Live-Dubbing',
-    tags: ['Kaiju No. 8', 'Voice Cast', 'Q&A']
+    tags: ['Kaiju No. 8', 'Voice Cast', 'Q&A'],
   },
   {
     id: 'crunchyroll-26',
@@ -265,7 +267,7 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-03T15:30:00',
     location: 'Crunchyroll Cinema',
     category: 'Live-Drawing',
-    tags: ['Shield Hero', 'Drawing', 'Q&A']
+    tags: ['Shield Hero', 'Drawing', 'Q&A'],
   },
   {
     id: 'crunchyroll-27',
@@ -275,6 +277,6 @@ export const crunchyrollCinemaEvents: Event[] = [
     endTime: '2025-08-03T16:00:00',
     location: 'Crunchyroll Cinema',
     category: 'Anime',
-    tags: ['Shield Hero', 'Deutschlandpremiere']
-  }
+    tags: ['Shield Hero', 'Deutschlandpremiere'],
+  },
 ];

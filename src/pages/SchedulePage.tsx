@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Typography, Box, Button, Alert, CircularProgress } from '@mui/material';
+import {
+  Container,
+  Typography,
+  Box,
+  Button,
+  Alert,
+  CircularProgress,
+} from '@mui/material';
 import { eventService } from '../services/eventService';
 import { scheduleService } from '../services/scheduleService';
 import { Event } from '../models/types';
@@ -15,25 +22,25 @@ const SchedulePage: React.FC = () => {
     const loadSchedule = async () => {
       try {
         setLoading(true);
-        
+
         // Get user's schedule
         const userSchedule = await scheduleService.getUserSchedule();
-        
+
         // If schedule is empty, return early
         if (userSchedule.events.length === 0) {
           setScheduledEvents([]);
           setLoading(false);
           return;
         }
-        
+
         // Get all events
         const allEvents = await eventService.getAllEvents();
-        
+
         // Filter events that are in the user's schedule
-        const events = allEvents.filter(event => 
+        const events = allEvents.filter(event =>
           userSchedule.events.includes(event.id)
         );
-        
+
         setScheduledEvents(events);
       } catch (error) {
         console.error('Error loading schedule:', error);
@@ -62,9 +69,10 @@ const SchedulePage: React.FC = () => {
           Mein Zeitplan
         </Typography>
         <Typography variant="body1" color="text.secondary" paragraph>
-          Hier findest du alle Veranstaltungen, die du zu deinem persönlichen Zeitplan hinzugefügt hast.
+          Hier findest du alle Veranstaltungen, die du zu deinem persönlichen
+          Zeitplan hinzugefügt hast.
         </Typography>
-        
+
         {loading ? (
           <Box sx={{ display: 'flex', justifyContent: 'center', p: 3 }}>
             <CircularProgress />
@@ -72,26 +80,30 @@ const SchedulePage: React.FC = () => {
         ) : scheduledEvents.length > 0 ? (
           <>
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 2 }}>
-              <Button 
-                variant="outlined" 
-                color="error" 
+              <Button
+                variant="outlined"
+                color="error"
                 startIcon={<DeleteIcon />}
                 onClick={handleClearSchedule}
               >
                 Zeitplan leeren
               </Button>
             </Box>
-            
-            <EventList 
-              events={scheduledEvents} 
-              loading={false} 
-              title="Meine Veranstaltungen" 
+
+            <EventList
+              events={scheduledEvents}
+              loading={false}
+              title="Meine Veranstaltungen"
             />
           </>
         ) : (
           <Alert severity="info" sx={{ mt: 2 }}>
-            Du hast noch keine Veranstaltungen zu deinem Zeitplan hinzugefügt. 
-            Gehe zum <Button color="primary" href="/program">Programm</Button> und füge Veranstaltungen hinzu.
+            Du hast noch keine Veranstaltungen zu deinem Zeitplan hinzugefügt.
+            Gehe zum{' '}
+            <Button color="primary" href="/program">
+              Programm
+            </Button>{' '}
+            und füge Veranstaltungen hinzu.
           </Alert>
         )}
       </Box>

@@ -16,12 +16,13 @@ const originalMockEvents: Event[] = [
   {
     id: '1',
     title: 'Eröffnungszeremonie',
-    description: 'Offizielle Eröffnung der Convention mit Vorstellung der Highlights',
+    description:
+      'Offizielle Eröffnung der Convention mit Vorstellung der Highlights',
     startTime: '2025-08-01T10:00:00',
     endTime: '2025-08-01T11:30:00',
     location: 'Haupthalle',
     category: 'Zeremonie',
-    speakers: ['Convention Leiter']
+    speakers: ['Convention Leiter'],
   },
   {
     id: '2',
@@ -31,7 +32,7 @@ const originalMockEvents: Event[] = [
     endTime: '2025-08-01T16:30:00',
     location: 'Bühne 1',
     category: 'Wettbewerb',
-    tags: ['Cosplay', 'Wettbewerb']
+    tags: ['Cosplay', 'Wettbewerb'],
   },
   {
     id: '3',
@@ -42,7 +43,7 @@ const originalMockEvents: Event[] = [
     location: 'Raum 3B',
     category: 'Panel',
     speakers: ['Anime-Experte 1', 'Anime-Experte 2'],
-    tags: ['Anime', 'Diskussion']
+    tags: ['Anime', 'Diskussion'],
   },
   {
     id: '4',
@@ -53,7 +54,7 @@ const originalMockEvents: Event[] = [
     location: 'Workshop-Raum 2',
     category: 'Workshop',
     speakers: ['Manga-Künstler'],
-    tags: ['Manga', 'Zeichnen', 'Workshop']
+    tags: ['Manga', 'Zeichnen', 'Workshop'],
   },
   {
     id: '5',
@@ -63,7 +64,7 @@ const originalMockEvents: Event[] = [
     endTime: '2025-08-02T18:00:00',
     location: 'Gaming-Bereich',
     category: 'Turnier',
-    tags: ['Gaming', 'Wettbewerb']
+    tags: ['Gaming', 'Wettbewerb'],
   },
   {
     id: '6',
@@ -74,7 +75,7 @@ const originalMockEvents: Event[] = [
     location: 'Autogrammbereich',
     category: 'Meet & Greet',
     speakers: ['Synchronsprecher 1', 'Synchronsprecher 2'],
-    tags: ['Autogramme', 'Synchronsprecher']
+    tags: ['Autogramme', 'Synchronsprecher'],
   },
   {
     id: '7',
@@ -84,8 +85,8 @@ const originalMockEvents: Event[] = [
     endTime: '2025-08-03T23:00:00',
     location: 'Haupthalle',
     category: 'Party',
-    tags: ['Musik', 'Tanz', 'Unterhaltung']
-  }
+    tags: ['Musik', 'Tanz', 'Unterhaltung'],
+  },
 ];
 
 // Combine original mock events with the new events from the program
@@ -114,7 +115,7 @@ export class EventService {
    */
   async getAllEvents(): Promise<Event[]> {
     // Simulate API call delay
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       setTimeout(() => {
         resolve(mockEvents);
       }, 300);
@@ -128,7 +129,7 @@ export class EventService {
    */
   async getEventById(id: string): Promise<Event | undefined> {
     // Simulate API call delay
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       setTimeout(() => {
         const event = mockEvents.find(event => event.id === id);
         resolve(event);
@@ -143,7 +144,7 @@ export class EventService {
    */
   async getEventsByCategory(category: string): Promise<Event[]> {
     // Simulate API call delay
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       setTimeout(() => {
         const events = mockEvents.filter(event => event.category === category);
         resolve(events);
@@ -158,14 +159,18 @@ export class EventService {
    */
   async searchEvents(query: string): Promise<Event[]> {
     const normalizedQuery = query.toLowerCase();
-    
+
     // Simulate API call delay
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       setTimeout(() => {
-        const events = mockEvents.filter(event => 
-          event.title.toLowerCase().includes(normalizedQuery) || 
-          event.description.toLowerCase().includes(normalizedQuery) ||
-          (event.tags && event.tags.some(tag => tag.toLowerCase().includes(normalizedQuery)))
+        const events = mockEvents.filter(
+          event =>
+            event.title.toLowerCase().includes(normalizedQuery) ||
+            event.description.toLowerCase().includes(normalizedQuery) ||
+            (event.tags &&
+              event.tags.some(tag =>
+                tag.toLowerCase().includes(normalizedQuery)
+              ))
         );
         resolve(events);
       }, 300);

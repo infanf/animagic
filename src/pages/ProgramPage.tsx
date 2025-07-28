@@ -32,12 +32,12 @@ const ProgramPage: React.FC = () => {
   // Handle search
   const handleSearch = async (query: string) => {
     setSearchQuery(query);
-    
+
     if (!query.trim()) {
       setFilteredEvents(events);
       return;
     }
-    
+
     try {
       setLoading(true);
       const searchResults = await eventService.searchEvents(query);
@@ -56,24 +56,24 @@ const ProgramPage: React.FC = () => {
           Programm
         </Typography>
         <Typography variant="body1" color="text.secondary" paragraph>
-          Hier findest du alle Veranstaltungen der Convention. Füge sie deinem persönlichen Zeitplan hinzu, 
-          um keine Veranstaltung zu verpassen.
+          Hier findest du alle Veranstaltungen der Convention. Füge sie deinem
+          persönlichen Zeitplan hinzu, um keine Veranstaltung zu verpassen.
         </Typography>
-        
+
         <Paper sx={{ p: 2, mb: 3 }}>
           <SearchBar onSearch={handleSearch} />
-          
+
           {searchQuery && (
             <Typography variant="body2" sx={{ mt: 1 }}>
               {filteredEvents.length} Ergebnisse für "{searchQuery}"
             </Typography>
           )}
         </Paper>
-        
-        <EventList 
-          events={filteredEvents} 
-          loading={loading} 
-          title={searchQuery ? 'Suchergebnisse' : 'Alle Veranstaltungen'} 
+
+        <EventList
+          events={filteredEvents}
+          loading={loading}
+          title={searchQuery ? 'Suchergebnisse' : 'Alle Veranstaltungen'}
         />
       </Box>
     </Container>

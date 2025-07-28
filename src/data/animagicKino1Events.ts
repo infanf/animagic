@@ -6,12 +6,13 @@ export const animagicKino1Events: Event[] = [
   {
     id: 'animagickino1-1',
     title: 'MAPPA Stage: Behind the Scenes of The Rose of Versailles',
-    description: 'Studio MAPPA stellt aktuelle Titel vor und blickt mit Gästen hinter die Kulissen von The Rose of Versailles',
+    description:
+      'Studio MAPPA stellt aktuelle Titel vor und blickt mit Gästen hinter die Kulissen von The Rose of Versailles',
     startTime: '2025-08-01T15:15:00',
     endTime: '2025-08-01T16:15:00',
     location: 'AnimagiC-Kino 1',
     category: 'Panel',
-    tags: ['MAPPA', 'The Rose of Versailles', 'Behind the Scenes']
+    tags: ['MAPPA', 'The Rose of Versailles', 'Behind the Scenes'],
   },
   {
     id: 'animagickino1-2',
@@ -21,17 +22,18 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-01T17:45:00',
     location: 'AnimagiC-Kino 1',
     category: 'Panel',
-    tags: ['Kyoto Animation', 'ABC Animation']
+    tags: ['Kyoto Animation', 'ABC Animation'],
   },
   {
     id: 'animagickino1-3',
     title: 'CITY the Animation',
-    description: 'Ep. 1, OmU, ca. 25 Min., FSK: 12 - Die CITY-Produzenten begrüßen euch persönlich zum Screening',
+    description:
+      'Ep. 1, OmU, ca. 25 Min., FSK: 12 - Die CITY-Produzenten begrüßen euch persönlich zum Screening',
     startTime: '2025-08-01T17:45:00',
     endTime: '2025-08-01T18:15:00',
     location: 'AnimagiC-Kino 1',
     category: 'Anime',
-    tags: ['CITY the Animation', 'Special Guest']
+    tags: ['CITY the Animation', 'Special Guest'],
   },
   {
     id: 'animagickino1-4',
@@ -41,7 +43,7 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-01T19:00:00',
     location: 'AnimagiC-Kino 1',
     category: 'Anime',
-    tags: ['Anne Shirley']
+    tags: ['Anne Shirley'],
   },
   {
     id: 'animagickino1-5',
@@ -51,7 +53,7 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-01T19:30:00',
     location: 'AnimagiC-Kino 1',
     category: 'Anime',
-    tags: ['YAIBA: Samurai Legends']
+    tags: ['YAIBA: Samurai Legends'],
   },
   {
     id: 'animagickino1-6',
@@ -61,7 +63,7 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-01T20:50:00',
     location: 'AnimagiC-Kino 1',
     category: 'Anime',
-    tags: ['Mobile Suit Gundam Seed', 'Film']
+    tags: ['Mobile Suit Gundam Seed', 'Film'],
   },
   {
     id: 'animagickino1-7',
@@ -71,7 +73,7 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-01T22:40:00',
     location: 'AnimagiC-Kino 1',
     category: 'Film',
-    tags: ['BATMAN NINJA', 'DC']
+    tags: ['BATMAN NINJA', 'DC'],
   },
   {
     id: 'animagickino1-8',
@@ -81,7 +83,7 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-02T00:15:00',
     location: 'AnimagiC-Kino 1',
     category: 'Film',
-    tags: ['BATMAN NINJA', 'YAKUZA LEAGUE', 'DC']
+    tags: ['BATMAN NINJA', 'YAKUZA LEAGUE', 'DC'],
   },
   {
     id: 'animagickino1-9',
@@ -91,9 +93,9 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-02T00:45:00',
     location: 'AnimagiC-Kino 1',
     category: 'Anime',
-    tags: ['Arifureta']
+    tags: ['Arifureta'],
   },
-  
+
   // Samstag, 02.08.2025
   {
     id: 'animagickino1-10',
@@ -103,7 +105,7 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-02T12:00:00',
     location: 'AnimagiC-Kino 1',
     category: 'Panel',
-    tags: ['Yakuza Goes Hausmann', 'Q&A', 'Kousuke Oono']
+    tags: ['Yakuza Goes Hausmann', 'Q&A', 'Kousuke Oono'],
   },
   {
     id: 'animagickino1-11',
@@ -113,7 +115,7 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-02T14:00:00',
     location: 'AnimagiC-Kino 1',
     category: 'Panel',
-    tags: ['AniMoon', 'MANGAMOON', 'Q&A']
+    tags: ['AniMoon', 'MANGAMOON', 'Q&A'],
   },
   {
     id: 'animagickino1-12',
@@ -123,7 +125,7 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-02T16:00:00',
     location: 'AnimagiC-Kino 1',
     category: 'Panel',
-    tags: ['peppermint anime', 'AKIBA PASS']
+    tags: ['peppermint anime', 'AKIBA PASS'],
   },
   {
     id: 'animagickino1-13',
@@ -133,7 +135,7 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-02T17:45:00',
     location: 'AnimagiC-Kino 1',
     category: 'Preview',
-    tags: ['ADN', 'Anime-Previews']
+    tags: ['ADN', 'Anime-Previews'],
   },
   {
     id: 'animagickino1-14',
@@ -143,17 +145,18 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-02T20:00:00',
     location: 'AnimagiC-Kino 1',
     category: 'Panel',
-    tags: ['AniMoon', 'Synchronsprecher', 'Esra Vural', 'Daniela Molina']
+    tags: ['AniMoon', 'Synchronsprecher', 'Esra Vural', 'Daniela Molina'],
   },
   {
     id: 'animagickino1-15',
     title: 'CITY the Animation',
-    description: 'Ep. 1, OmU, ca. 25 Min., FSK: 12 - Die CITY-Produzenten begrüßen euch persönlich zum Screening',
+    description:
+      'Ep. 1, OmU, ca. 25 Min., FSK: 12 - Die CITY-Produzenten begrüßen euch persönlich zum Screening',
     startTime: '2025-08-02T20:30:00',
     endTime: '2025-08-02T21:15:00',
     location: 'AnimagiC-Kino 1',
     category: 'Anime',
-    tags: ['CITY the Animation', 'Special Guest']
+    tags: ['CITY the Animation', 'Special Guest'],
   },
   {
     id: 'animagickino1-16',
@@ -163,7 +166,7 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-02T22:05:00',
     location: 'AnimagiC-Kino 1',
     category: 'Anime',
-    tags: ['Cheer for You!']
+    tags: ['Cheer for You!'],
   },
   {
     id: 'animagickino1-17',
@@ -173,9 +176,9 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-03T00:35:00',
     location: 'AnimagiC-Kino 1',
     category: 'Film',
-    tags: ['Akira', 'Klassiker']
+    tags: ['Akira', 'Klassiker'],
   },
-  
+
   // Sonntag, 03.08.2025
   {
     id: 'animagickino1-18',
@@ -185,17 +188,18 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-03T12:30:00',
     location: 'AnimagiC-Kino 1',
     category: 'Live-Drawing',
-    tags: ['Yakuza Goes Hausmann', 'Kousuke Oono']
+    tags: ['Yakuza Goes Hausmann', 'Kousuke Oono'],
   },
   {
     id: 'animagickino1-19',
     title: 'MAPPA Stage: Behind the Scenes of The Rose of Versailles',
-    description: 'Studio MAPPA stellt aktuelle Titel vor und blickt mit Gästen hinter die Kulissen von The Rose of Versailles',
+    description:
+      'Studio MAPPA stellt aktuelle Titel vor und blickt mit Gästen hinter die Kulissen von The Rose of Versailles',
     startTime: '2025-08-03T13:15:00',
     endTime: '2025-08-03T14:15:00',
     location: 'AnimagiC-Kino 1',
     category: 'Panel',
-    tags: ['MAPPA', 'The Rose of Versailles', 'Behind the Scenes']
+    tags: ['MAPPA', 'The Rose of Versailles', 'Behind the Scenes'],
   },
   {
     id: 'animagickino1-20',
@@ -205,7 +209,7 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-03T15:30:00',
     location: 'AnimagiC-Kino 1',
     category: 'Panel',
-    tags: ['polyband anime', 'Highlights']
+    tags: ['polyband anime', 'Highlights'],
   },
   {
     id: 'animagickino1-21',
@@ -215,7 +219,7 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-03T15:50:00',
     location: 'AnimagiC-Kino 1',
     category: 'Preview',
-    tags: ['The Birth of Kitaro', 'Gegege']
+    tags: ['The Birth of Kitaro', 'Gegege'],
   },
   {
     id: 'animagickino1-22',
@@ -225,7 +229,7 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-03T17:15:00',
     location: 'AnimagiC-Kino 1',
     category: 'Panel',
-    tags: ['NinotakuTV', 'Nino Kerl', 'Q&A']
+    tags: ['NinotakuTV', 'Nino Kerl', 'Q&A'],
   },
   {
     id: 'animagickino1-23',
@@ -235,6 +239,6 @@ export const animagicKino1Events: Event[] = [
     endTime: '2025-08-03T18:35:00',
     location: 'AnimagiC-Kino 1',
     category: 'Anime',
-    tags: ['KONOSUBA', 'OVA']
-  }
+    tags: ['KONOSUBA', 'OVA'],
+  },
 ];

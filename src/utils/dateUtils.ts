@@ -7,7 +7,10 @@ import { de } from 'date-fns/locale';
  * @param formatStr Format string for date-fns
  * @returns Formatted date string
  */
-export const formatDate = (dateString: string, formatStr: string = 'dd.MM.yyyy HH:mm'): string => {
+export const formatDate = (
+  dateString: string,
+  formatStr: string = 'dd.MM.yyyy HH:mm'
+): string => {
   try {
     const date = parseISO(dateString);
     return format(date, formatStr, { locale: de });

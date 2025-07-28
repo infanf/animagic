@@ -234,11 +234,12 @@
   .schedule-grid {
     grid-auto-columns: 80px;
   }
-  
-  .time-slot, .event-cell {
+
+  .time-slot,
+  .event-cell {
     font-size: 12px;
   }
-  
+
   .schedule-header {
     font-size: 14px;
     padding: 8px 4px;

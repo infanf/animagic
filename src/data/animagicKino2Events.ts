@@ -11,7 +11,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-01T15:30:00',
     location: 'AnimagiC-Kino 2',
     category: 'Signierstunde',
-    tags: ['Dice Actors', 'First Come First Served']
+    tags: ['Dice Actors', 'First Come First Served'],
   },
   {
     id: 'animagickino2-2',
@@ -21,7 +21,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-01T18:50:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['My Deer Friend Nokotan']
+    tags: ['My Deer Friend Nokotan'],
   },
   {
     id: 'animagickino2-3',
@@ -31,7 +31,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-01T19:30:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['Super Cube']
+    tags: ['Super Cube'],
   },
   {
     id: 'animagickino2-4',
@@ -41,7 +41,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-01T20:00:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['Fermat Kitchen']
+    tags: ['Fermat Kitchen'],
   },
   {
     id: 'animagickino2-5',
@@ -51,7 +51,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-01T20:30:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['Dimensional Seduction']
+    tags: ['Dimensional Seduction'],
   },
   {
     id: 'animagickino2-6',
@@ -61,7 +61,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-01T21:00:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['Danmachi', 'Familia Myth', 'Dub-Premiere']
+    tags: ['Danmachi', 'Familia Myth', 'Dub-Premiere'],
   },
   {
     id: 'animagickino2-7',
@@ -71,7 +71,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-01T21:50:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['DAN DA DAN']
+    tags: ['DAN DA DAN'],
   },
   {
     id: 'animagickino2-8',
@@ -81,7 +81,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-01T23:10:00',
     location: 'AnimagiC-Kino 2',
     category: 'Film',
-    tags: ['A Few Moments of Cheers']
+    tags: ['A Few Moments of Cheers'],
   },
   {
     id: 'animagickino2-9',
@@ -91,7 +91,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-02T00:05:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['Undead Unluck']
+    tags: ['Undead Unluck'],
   },
   {
     id: 'animagickino2-10',
@@ -101,9 +101,9 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-02T00:45:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['Kakushite! Makina-san!!']
+    tags: ['Kakushite! Makina-san!!'],
   },
-  
+
   // Samstag, 02.08.2025
   {
     id: 'animagickino2-11',
@@ -113,7 +113,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-02T12:00:00',
     location: 'AnimagiC-Kino 2',
     category: 'Signierstunde',
-    tags: ['TOUGEN ANKI', 'Lottery']
+    tags: ['TOUGEN ANKI', 'Lottery'],
   },
   {
     id: 'animagickino2-12',
@@ -123,7 +123,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-02T13:30:00',
     location: 'AnimagiC-Kino 2',
     category: 'Panel',
-    tags: ['Japanisch', 'Ilija Trojanow', 'David Füleki']
+    tags: ['Japanisch', 'Ilija Trojanow', 'David Füleki'],
   },
   {
     id: 'animagickino2-13',
@@ -133,27 +133,34 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-02T15:00:00',
     location: 'AnimagiC-Kino 2',
     category: 'Signierstunde',
-    tags: ['Chiai Fujikawa', 'First Come First Served']
+    tags: ['Chiai Fujikawa', 'First Come First Served'],
   },
   {
     id: 'animagickino2-14',
     title: 'The Rising of the Shield Hero: Signierstunde Seira Minami',
-    description: 'Signierstunde mit der The Rising of the Shield Hero-Illustratorin Seira Minami in Kooperation mit TOKYOPOP. "First Come, First Served."',
+    description:
+      'Signierstunde mit der The Rising of the Shield Hero-Illustratorin Seira Minami in Kooperation mit TOKYOPOP. "First Come, First Served."',
     startTime: '2025-08-02T16:00:00',
     endTime: '2025-08-02T17:00:00',
     location: 'AnimagiC-Kino 2',
     category: 'Signierstunde',
-    tags: ['The Rising of the Shield Hero', 'Seira Minami', 'TOKYOPOP', 'First Come First Served']
+    tags: [
+      'The Rising of the Shield Hero',
+      'Seira Minami',
+      'TOKYOPOP',
+      'First Come First Served',
+    ],
   },
   {
     id: 'animagickino2-15',
     title: 'Haikyu!!: Signierstunde',
-    description: 'Teilnahme nur möglich, wenn ihr eine limitierte Autogrammkarte am TOHO-Stand erworben habt.',
+    description:
+      'Teilnahme nur möglich, wenn ihr eine limitierte Autogrammkarte am TOHO-Stand erworben habt.',
     startTime: '2025-08-02T18:00:00',
     endTime: '2025-08-02T19:00:00',
     location: 'AnimagiC-Kino 2',
     category: 'Signierstunde',
-    tags: ['Haikyu!!', 'TOHO']
+    tags: ['Haikyu!!', 'TOHO'],
   },
   {
     id: 'animagickino2-16',
@@ -163,7 +170,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-02T20:20:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['Sailor Moon']
+    tags: ['Sailor Moon'],
   },
   {
     id: 'animagickino2-17',
@@ -173,7 +180,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-02T21:00:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['Danmachi', 'Familia Myth', 'Dub-Premiere']
+    tags: ['Danmachi', 'Familia Myth', 'Dub-Premiere'],
   },
   {
     id: 'animagickino2-18',
@@ -183,7 +190,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-02T21:30:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['April Showers Bring May Flowers']
+    tags: ['April Showers Bring May Flowers'],
   },
   {
     id: 'animagickino2-19',
@@ -193,7 +200,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-02T22:00:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['Bad Girl']
+    tags: ['Bad Girl'],
   },
   {
     id: 'animagickino2-20',
@@ -203,7 +210,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-02T23:10:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['Witch Watch', 'Watch Party']
+    tags: ['Witch Watch', 'Watch Party'],
   },
   {
     id: 'animagickino2-21',
@@ -213,7 +220,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-03T00:05:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['Undead Unluck']
+    tags: ['Undead Unluck'],
   },
   {
     id: 'animagickino2-22',
@@ -223,19 +230,20 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-03T00:45:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['Kakushite! Makina-san!!']
+    tags: ['Kakushite! Makina-san!!'],
   },
-  
+
   // Sonntag, 03.08.2025
   {
     id: 'animagickino2-23',
     title: 'Chiai Fujikawa: Signierstunde',
-    description: 'Die Tickets für diese Signierstunde wurden im Vorfeld per Lottery verlost. Bitte stellt euch nur mit gültigem Ticket an.',
+    description:
+      'Die Tickets für diese Signierstunde wurden im Vorfeld per Lottery verlost. Bitte stellt euch nur mit gültigem Ticket an.',
     startTime: '2025-08-03T11:30:00',
     endTime: '2025-08-03T12:30:00',
     location: 'AnimagiC-Kino 2',
     category: 'Signierstunde',
-    tags: ['Chiai Fujikawa', 'Lottery']
+    tags: ['Chiai Fujikawa', 'Lottery'],
   },
   {
     id: 'animagickino2-24',
@@ -245,7 +253,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-03T15:30:00',
     location: 'AnimagiC-Kino 2',
     category: 'Panel',
-    tags: ['HNYWOOD', 'Danmachi', 'Synchronsprecher']
+    tags: ['HNYWOOD', 'Danmachi', 'Synchronsprecher'],
   },
   {
     id: 'animagickino2-25',
@@ -255,7 +263,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-03T17:00:00',
     location: 'AnimagiC-Kino 2',
     category: 'Signierstunde',
-    tags: ['Dice Actors', 'First Come First Served']
+    tags: ['Dice Actors', 'First Come First Served'],
   },
   {
     id: 'animagickino2-26',
@@ -265,7 +273,7 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-03T17:45:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['Super Cube']
+    tags: ['Super Cube'],
   },
   {
     id: 'animagickino2-27',
@@ -275,6 +283,6 @@ export const animagicKino2Events: Event[] = [
     endTime: '2025-08-03T18:35:00',
     location: 'AnimagiC-Kino 2',
     category: 'Anime',
-    tags: ['Pokemon', 'Pokemon Horizonte']
-  }
+    tags: ['Pokemon', 'Pokemon Horizonte'],
+  },
 ];

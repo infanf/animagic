@@ -6,7 +6,7 @@ import { UserSchedule } from '../models/types';
  */
 export class ScheduleService {
   private readonly STORAGE_KEY = 'convention-user-schedule';
-  
+
   /**
    * Get the user's schedule
    * @returns Promise with the user's schedule
@@ -14,7 +14,7 @@ export class ScheduleService {
   async getUserSchedule(): Promise<UserSchedule> {
     // In a real app, this would fetch from a backend API
     // For now, we'll use localStorage
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       setTimeout(() => {
         const storedSchedule = localStorage.getItem(this.STORAGE_KEY);
         if (storedSchedule) {
@@ -23,9 +23,12 @@ export class ScheduleService {
           // Create a default schedule if none exists
           const defaultSchedule: UserSchedule = {
             userId: 'user1', // In a real app, this would be the authenticated user's ID
-            events: []
+            events: [],
           };
-          localStorage.setItem(this.STORAGE_KEY, JSON.stringify(defaultSchedule));
+          localStorage.setItem(
+            this.STORAGE_KEY,
+            JSON.stringify(defaultSchedule)
+          );
           resolve(defaultSchedule);
         }
       }, 200);
@@ -39,13 +42,13 @@ export class ScheduleService {
    */
   async addEventToSchedule(eventId: string): Promise<UserSchedule> {
     const schedule = await this.getUserSchedule();
-    
+
     // Check if event is already in schedule
     if (!schedule.events.includes(eventId)) {
       schedule.events.push(eventId);
       localStorage.setItem(this.STORAGE_KEY, JSON.stringify(schedule));
     }
-    
+
     return schedule;
   }
 
@@ -56,10 +59,10 @@ export class ScheduleService {
    */
   async removeEventFromSchedule(eventId: string): Promise<UserSchedule> {
     const schedule = await this.getUserSchedule();
-    
+
     schedule.events = schedule.events.filter(id => id !== eventId);
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(schedule));
-    
+
     return schedule;
   }
 

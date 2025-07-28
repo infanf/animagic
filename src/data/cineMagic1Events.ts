@@ -11,7 +11,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-01T16:00:00',
     location: 'CineMagic 1',
     category: 'Auktion',
-    tags: ['Charity', 'Auktion']
+    tags: ['Charity', 'Auktion'],
   },
   {
     id: 'cinemagic1-2',
@@ -21,17 +21,18 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-01T17:30:00',
     location: 'CineMagic 1',
     category: 'Panel',
-    tags: ['Dice Actors', 'Q&A', 'Synchronsprecher']
+    tags: ['Dice Actors', 'Q&A', 'Synchronsprecher'],
   },
   {
     id: 'cinemagic1-3',
     title: '[Oshi No Ko] – [Mein Star] Season 2',
-    description: 'Ep. 1 & 2, Dt., ca. 50 Min., FSK 12 - ab 17:45: Vor dem Screening begrüßt euch das [Oshi No Ko]-Team persönlich und veranstaltet mit allen Fans ein Gewinnspiel',
+    description:
+      'Ep. 1 & 2, Dt., ca. 50 Min., FSK 12 - ab 17:45: Vor dem Screening begrüßt euch das [Oshi No Ko]-Team persönlich und veranstaltet mit allen Fans ein Gewinnspiel',
     startTime: '2025-08-01T18:00:00',
     endTime: '2025-08-01T18:50:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['Oshi No Ko', 'Special Guest', 'Gewinnspiel']
+    tags: ['Oshi No Ko', 'Special Guest', 'Gewinnspiel'],
   },
   {
     id: 'cinemagic1-4',
@@ -41,7 +42,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-01T19:30:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['Honey Lemon Soda']
+    tags: ['Honey Lemon Soda'],
   },
   {
     id: 'cinemagic1-5',
@@ -51,7 +52,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-01T21:50:00',
     location: 'CineMagic 1',
     category: 'Film',
-    tags: ['Godzilla', 'Film']
+    tags: ['Godzilla', 'Film'],
   },
   {
     id: 'cinemagic1-6',
@@ -61,7 +62,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-02T00:15:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['OVERLORD', 'Film']
+    tags: ['OVERLORD', 'Film'],
   },
   {
     id: 'cinemagic1-7',
@@ -71,9 +72,9 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-02T00:45:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['Berserk']
+    tags: ['Berserk'],
   },
-  
+
   // Samstag, 02.08.2025
   {
     id: 'cinemagic1-8',
@@ -83,7 +84,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-02T13:00:00',
     location: 'CineMagic 1',
     category: 'Panel',
-    tags: ['HAIKYU!!', 'Special-Talk', 'Regisseur', 'Produzenten']
+    tags: ['HAIKYU!!', 'Special-Talk', 'Regisseur', 'Produzenten'],
   },
   {
     id: 'cinemagic1-9',
@@ -93,7 +94,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-02T14:00:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['My Dress-Up Darling']
+    tags: ['My Dress-Up Darling'],
   },
   {
     id: 'cinemagic1-10',
@@ -103,7 +104,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-02T14:30:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['Turkey!']
+    tags: ['Turkey!'],
   },
   {
     id: 'cinemagic1-11',
@@ -113,7 +114,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-02T15:00:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['Adventure New Saga']
+    tags: ['Adventure New Saga'],
   },
   {
     id: 'cinemagic1-12',
@@ -123,7 +124,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-02T16:30:00',
     location: 'CineMagic 1',
     category: 'Panel',
-    tags: ['Toei Animation', 'Digimon', 'Q&A']
+    tags: ['Toei Animation', 'Digimon', 'Q&A'],
   },
   {
     id: 'cinemagic1-13',
@@ -133,7 +134,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-02T18:00:00',
     location: 'CineMagic 1',
     category: 'Panel',
-    tags: ['Eureka Seven', 'Anniversary', 'Q&A']
+    tags: ['Eureka Seven', 'Anniversary', 'Q&A'],
   },
   {
     id: 'cinemagic1-14',
@@ -143,7 +144,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-02T19:00:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['To Be Hero X']
+    tags: ['To Be Hero X'],
   },
   {
     id: 'cinemagic1-15',
@@ -153,7 +154,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-02T21:30:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['OVERLORD', 'Film']
+    tags: ['OVERLORD', 'Film'],
   },
   {
     id: 'cinemagic1-16',
@@ -163,7 +164,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-02T23:15:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['DAN DA DAN', 'Film']
+    tags: ['DAN DA DAN', 'Film'],
   },
   {
     id: 'cinemagic1-17',
@@ -173,7 +174,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-03T00:00:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['Berserk']
+    tags: ['Berserk'],
   },
   {
     id: 'cinemagic1-18',
@@ -183,9 +184,9 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-03T00:45:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['Demon Slayer']
+    tags: ['Demon Slayer'],
   },
-  
+
   // Sonntag, 03.08.2025
   {
     id: 'cinemagic1-19',
@@ -195,7 +196,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-03T12:15:00',
     location: 'CineMagic 1',
     category: 'Panel',
-    tags: ['Dice Actors', 'Q&A', 'Synchronsprecher']
+    tags: ['Dice Actors', 'Q&A', 'Synchronsprecher'],
   },
   {
     id: 'cinemagic1-20',
@@ -205,7 +206,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-03T14:00:00',
     location: 'CineMagic 1',
     category: 'Panel',
-    tags: ['Bones', 'Anniversary', 'Q&A']
+    tags: ['Bones', 'Anniversary', 'Q&A'],
   },
   {
     id: 'cinemagic1-21',
@@ -215,7 +216,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-03T15:30:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['Cheer for You!']
+    tags: ['Cheer for You!'],
   },
   {
     id: 'cinemagic1-22',
@@ -225,7 +226,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-03T16:00:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['The Beginning After the End']
+    tags: ['The Beginning After the End'],
   },
   {
     id: 'cinemagic1-23',
@@ -235,7 +236,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-03T16:30:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['Call of the Night']
+    tags: ['Call of the Night'],
   },
   {
     id: 'cinemagic1-24',
@@ -245,7 +246,7 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-03T17:00:00',
     location: 'CineMagic 1',
     category: 'Anime',
-    tags: ['Isekai Quartet']
+    tags: ['Isekai Quartet'],
   },
   {
     id: 'cinemagic1-25',
@@ -255,6 +256,6 @@ export const cineMagic1Events: Event[] = [
     endTime: '2025-08-03T18:40:00',
     location: 'CineMagic 1',
     category: 'Film',
-    tags: ['The Colors Within']
-  }
+    tags: ['The Colors Within'],
+  },
 ];

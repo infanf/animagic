@@ -11,7 +11,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-01T15:00:00',
     location: 'AnimagiC-Kino 3',
     category: 'Panel',
-    tags: ['Splitter Manga+', 'Manga-Label']
+    tags: ['Splitter Manga+', 'Manga-Label'],
   },
   {
     id: 'animagickino3-2',
@@ -21,7 +21,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-01T16:30:00',
     location: 'AnimagiC-Kino 3',
     category: 'Workshop',
-    tags: ['Angelina Paustian', 'Foodtourismus', 'Japan']
+    tags: ['Angelina Paustian', 'Foodtourismus', 'Japan'],
   },
   {
     id: 'animagickino3-3',
@@ -31,7 +31,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-01T19:50:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['BLEACH', 'Thousand-Year Blood War', 'Preview']
+    tags: ['BLEACH', 'Thousand-Year Blood War', 'Preview'],
   },
   {
     id: 'animagickino3-4',
@@ -41,7 +41,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-01T20:30:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['My Instant Death Ability']
+    tags: ['My Instant Death Ability'],
   },
   {
     id: 'animagickino3-5',
@@ -51,7 +51,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-01T21:35:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['Kamisama Kiss']
+    tags: ['Kamisama Kiss'],
   },
   {
     id: 'animagickino3-6',
@@ -61,7 +61,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-01T22:20:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['Bubblegum Crisis']
+    tags: ['Bubblegum Crisis'],
   },
   {
     id: 'animagickino3-7',
@@ -71,7 +71,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-01T23:00:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['Trinity Seven']
+    tags: ['Trinity Seven'],
   },
   {
     id: 'animagickino3-8',
@@ -81,7 +81,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-01T23:50:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['King-Sized Elf']
+    tags: ['King-Sized Elf'],
   },
   {
     id: 'animagickino3-9',
@@ -91,9 +91,9 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-02T00:45:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['Yandare Dark Elf', 'FSK 18']
+    tags: ['Yandare Dark Elf', 'FSK 18'],
   },
-  
+
   // Samstag, 02.08.2025
   {
     id: 'animagickino3-10',
@@ -103,7 +103,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-02T11:45:00',
     location: 'AnimagiC-Kino 3',
     category: 'Workshop',
-    tags: ['Ragnarök Online', 'Jubiläum']
+    tags: ['Ragnarök Online', 'Jubiläum'],
   },
   {
     id: 'animagickino3-11',
@@ -113,7 +113,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-02T13:00:00',
     location: 'AnimagiC-Kino 3',
     category: 'Workshop',
-    tags: ['Angelina Paustian', 'Bento', 'Japan']
+    tags: ['Angelina Paustian', 'Bento', 'Japan'],
   },
   {
     id: 'animagickino3-12',
@@ -123,7 +123,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-02T14:30:00',
     location: 'AnimagiC-Kino 3',
     category: 'Quiz',
-    tags: ['Detektiv Conan', 'Egmont Manga', 'Quiz']
+    tags: ['Detektiv Conan', 'Egmont Manga', 'Quiz'],
   },
   {
     id: 'animagickino3-13',
@@ -133,7 +133,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-02T15:45:00',
     location: 'AnimagiC-Kino 3',
     category: 'Panel',
-    tags: ['Panini Manga', 'Jenny Jinya', 'Loving Reaper']
+    tags: ['Panini Manga', 'Jenny Jinya', 'Loving Reaper'],
   },
   {
     id: 'animagickino3-14',
@@ -143,7 +143,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-02T19:45:00',
     location: 'AnimagiC-Kino 3',
     category: 'Signierstunde',
-    tags: ['Eureka Seven', 'First Come First Served']
+    tags: ['Eureka Seven', 'First Come First Served'],
   },
   {
     id: 'animagickino3-15',
@@ -153,17 +153,17 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-02T20:30:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['Dungeon People']
+    tags: ['Dungeon People'],
   },
   {
     id: 'animagickino3-16',
-    title: 'I Parry Everything: What Do You Mean I\'m the Strongest?',
+    title: "I Parry Everything: What Do You Mean I'm the Strongest?",
     description: 'Ep. 1, Dt., ca. 25 Min., FSK: 12',
     startTime: '2025-08-02T20:30:00',
     endTime: '2025-08-02T21:00:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['I Parry Everything']
+    tags: ['I Parry Everything'],
   },
   {
     id: 'animagickino3-17',
@@ -173,7 +173,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-02T21:30:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['7th Time Loop', 'Dub-Premiere']
+    tags: ['7th Time Loop', 'Dub-Premiere'],
   },
   {
     id: 'animagickino3-18',
@@ -183,7 +183,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-02T22:00:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['The Demon Sword Master of Excalibur Academy']
+    tags: ['The Demon Sword Master of Excalibur Academy'],
   },
   {
     id: 'animagickino3-19',
@@ -193,7 +193,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-02T22:55:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['Sword of the Demon Hunter', 'Kijin Gentosho']
+    tags: ['Sword of the Demon Hunter', 'Kijin Gentosho'],
   },
   {
     id: 'animagickino3-20',
@@ -203,7 +203,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-02T23:45:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['Plus-Sized Elf']
+    tags: ['Plus-Sized Elf'],
   },
   {
     id: 'animagickino3-21',
@@ -213,7 +213,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-03T00:15:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['Mukitashi', 'Welcome to Love Island']
+    tags: ['Mukitashi', 'Welcome to Love Island'],
   },
   {
     id: 'animagickino3-22',
@@ -223,9 +223,9 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-03T00:45:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['Beheneko', 'Dub-Premiere']
+    tags: ['Beheneko', 'Dub-Premiere'],
   },
-  
+
   // Sonntag, 03.08.2025
   {
     id: 'animagickino3-23',
@@ -235,7 +235,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-03T12:00:00',
     location: 'AnimagiC-Kino 3',
     category: 'Panel',
-    tags: ['TOKYOPOP', 'Verlags-Panel']
+    tags: ['TOKYOPOP', 'Verlags-Panel'],
   },
   {
     id: 'animagickino3-24',
@@ -245,7 +245,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-03T13:30:00',
     location: 'AnimagiC-Kino 3',
     category: 'Panel',
-    tags: ['Egmont Manga', 'Verlags-Panel']
+    tags: ['Egmont Manga', 'Verlags-Panel'],
   },
   {
     id: 'animagickino3-25',
@@ -255,7 +255,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-03T17:00:00',
     location: 'AnimagiC-Kino 3',
     category: 'Signierstunde',
-    tags: ['Eureka Seven', 'First Come First Served']
+    tags: ['Eureka Seven', 'First Come First Served'],
   },
   {
     id: 'animagickino3-26',
@@ -265,7 +265,7 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-03T17:45:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['Uma musume', 'Cinderella Gray']
+    tags: ['Uma musume', 'Cinderella Gray'],
   },
   {
     id: 'animagickino3-27',
@@ -275,6 +275,6 @@ export const animagicKino3Events: Event[] = [
     endTime: '2025-08-03T18:35:00',
     location: 'AnimagiC-Kino 3',
     category: 'Anime',
-    tags: ['Yu-Gi-Oh', 'Zexal HD']
-  }
+    tags: ['Yu-Gi-Oh', 'Zexal HD'],
+  },
 ];

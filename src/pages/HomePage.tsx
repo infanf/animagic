@@ -33,7 +33,12 @@ const HomePage: React.FC = () => {
         <Typography variant="h3" component="h1" gutterBottom>
           Convention App
         </Typography>
-        <Typography variant="h5" component="h2" color="text.secondary" gutterBottom>
+        <Typography
+          variant="h5"
+          component="h2"
+          color="text.secondary"
+          gutterBottom
+        >
           Dein persönlicher Begleiter für die Convention
         </Typography>
       </Box>
@@ -50,10 +55,10 @@ const HomePage: React.FC = () => {
               Entdecke alle Veranstaltungen der Convention
             </Typography>
           </Box>
-          <Button 
-            component={RouterLink} 
-            to="/program" 
-            variant="contained" 
+          <Button
+            component={RouterLink}
+            to="/program"
+            variant="contained"
             color="primary"
             fullWidth
           >
@@ -72,10 +77,10 @@ const HomePage: React.FC = () => {
               Verwalte deinen persönlichen Zeitplan
             </Typography>
           </Box>
-          <Button 
-            component={RouterLink} 
-            to="/schedule" 
-            variant="contained" 
+          <Button
+            component={RouterLink}
+            to="/schedule"
+            variant="contained"
             color="primary"
             fullWidth
           >
@@ -94,10 +99,10 @@ const HomePage: React.FC = () => {
               Finde Veranstaltungen nach Stichworten
             </Typography>
           </Box>
-          <Button 
-            component={RouterLink} 
-            to="/search" 
-            variant="contained" 
+          <Button
+            component={RouterLink}
+            to="/search"
+            variant="contained"
             color="primary"
             fullWidth
           >
@@ -111,9 +116,10 @@ const HomePage: React.FC = () => {
           Über die Convention
         </Typography>
         <Typography variant="body1" paragraph>
-          Willkommen zur Convention 2025! Erlebe drei Tage voller spannender Veranstaltungen, 
-          Workshops, Panels und mehr. Mit dieser App kannst du das komplette Programm durchsuchen 
-          und dir deinen persönlichen Zeitplan erstellen.
+          Willkommen zur Convention 2025! Erlebe drei Tage voller spannender
+          Veranstaltungen, Workshops, Panels und mehr. Mit dieser App kannst du
+          das komplette Programm durchsuchen und dir deinen persönlichen
+          Zeitplan erstellen.
         </Typography>
         <Typography variant="body1">
           Verpasse keine Veranstaltung mehr und plane deinen Besuch optimal!

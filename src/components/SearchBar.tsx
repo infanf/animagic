@@ -32,13 +32,13 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
           sx={{ ml: 1, flex: 1 }}
           placeholder="Veranstaltungen suchen..."
           value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
+          onChange={e => setSearchQuery(e.target.value)}
         />
         {searchQuery && (
-          <IconButton 
-            type="button" 
-            sx={{ p: '10px' }} 
-            aria-label="clear" 
+          <IconButton
+            type="button"
+            sx={{ p: '10px' }}
+            aria-label="clear"
             onClick={handleClear}
           >
             <ClearIcon />

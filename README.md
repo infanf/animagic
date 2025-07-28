@@ -34,6 +34,21 @@ Die App verwendet eine Service-Architektur, die später leicht mit einem Backend
 
 Aktuell verwenden diese Services Mock-Daten und lokalen Speicher, können aber später durch echte API-Aufrufe ersetzt werden.
 
+## Code Quality
+
+### Code Formatting
+
+Das Projekt verwendet Prettier für konsistente Code-Formatierung:
+
+- **Automatische Formatierung**: `npm run format` formatiert alle Quelldateien
+- **Formatierung prüfen**: `npm run format:check` prüft die Formatierung ohne Änderungen
+- **Pre-commit Hook**: Automatische Formatierung vor jedem Commit via husky und lint-staged
+
+### Pre-commit Hooks
+
+Vor jedem Commit werden automatisch folgende Aktionen ausgeführt:
+- **Code-Formatierung**: Alle gestagten Dateien werden mit Prettier formatiert
+
 ## Progressive Web App (PWA)
 
 Die App ist als Progressive Web App implementiert und bietet folgende Features:
@@ -102,6 +117,16 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run format`
+
+Formats all source code files using Prettier.\
+This ensures consistent code style across the project.
+
+### `npm run format:check`
+
+Checks if all source code files are properly formatted without making changes.\
+Useful for CI/CD pipelines to ensure code style consistency.
 
 ### `npm run eject`
 

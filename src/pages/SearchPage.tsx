@@ -14,13 +14,13 @@ const SearchPage: React.FC = () => {
   // Handle search
   const handleSearch = async (query: string) => {
     setSearchQuery(query);
-    
+
     if (!query.trim()) {
       setSearchResults([]);
       setHasSearched(false);
       return;
     }
-    
+
     try {
       setLoading(true);
       setHasSearched(true);
@@ -42,18 +42,18 @@ const SearchPage: React.FC = () => {
         <Typography variant="body1" color="text.secondary" paragraph>
           Suche nach Veranstaltungen anhand von Titel, Beschreibung oder Tags.
         </Typography>
-        
+
         <Paper sx={{ p: 3, mb: 3 }}>
           <SearchBar onSearch={handleSearch} />
         </Paper>
-        
+
         {hasSearched && (
           <Box sx={{ mt: 2 }}>
             {searchResults.length > 0 ? (
-              <EventList 
-                events={searchResults} 
-                loading={loading} 
-                title={`Suchergebnisse für "${searchQuery}" (${searchResults.length})`} 
+              <EventList
+                events={searchResults}
+                loading={loading}
+                title={`Suchergebnisse für "${searchQuery}" (${searchResults.length})`}
               />
             ) : (
               <Typography variant="body1" sx={{ textAlign: 'center', py: 4 }}>
