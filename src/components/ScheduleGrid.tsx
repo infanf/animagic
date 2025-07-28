@@ -15,7 +15,6 @@ interface TimeSlot {
 }
 
 const DATES = ['2025-08-01', '2025-08-02', '2025-08-03'];
-const SLOT_HEIGHT = 20; // px - Keep this in sync with CSS
 
 function getTimeSlots(start: Date, end: Date, intervalMinutes: number): TimeSlot[] {
   const slots: TimeSlot[] = [];
@@ -98,8 +97,6 @@ function getQuarterHourSlots(events: Event[], selectedDate: string): TimeSlot[] 
 const ScheduleGrid = () => {
   const [selectedDate, setSelectedDate] = useState<string>(DATES[0]);
   const [events, setEvents] = useState<Event[]>([]);
-  const [locations, setLocations] = useState<string[]>([]);
-  const [timeSlots, setTimeSlots] = useState<TimeSlot[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [userEventIds, setUserEventIds] = useState<string[]>([]);
   const [showOnlyFavorites, setShowOnlyFavorites] = useState(false);
@@ -112,15 +109,8 @@ const ScheduleGrid = () => {
         // Events für den Festivaltag inkl. Nach-Mitternacht-Events filtern
         const filtered = getEventsForFestivalDay(allEvents, selectedDate);
         setEvents(filtered);
-        // Get all unique locations
-        const locs = Array.from(new Set(filtered.map(e => e.location))).sort();
-        setLocations(locs);
-        // Viertelstunden-Slots berechnen (bis max. 05:00 Uhr)
-        setTimeSlots(getQuarterHourSlots(filtered, selectedDate));
       } catch (err) {
         setEvents([]);
-        setLocations([]);
-        setTimeSlots([]);
       } finally {
         setLoading(false);
       }
@@ -144,21 +134,20 @@ const ScheduleGrid = () => {
     return getQuarterHourSlots(showOnlyFavorites ? filteredEvents : events, selectedDate);
   }, [filteredEvents, events, selectedDate, showOnlyFavorites]);
 
-  // Define fixed location order
-  const LOCATION_ORDER = [
-    'Mozartsaal',
-    'Musensaal',
-    'Crunchyroll Cinema',
-    'CineMagic 1',
-    'CineMagic 2',
-    'AnimagiC-Kino 1',
-    'AnimagiC-Kino 2',
-    'AnimagiC-Kino 3',
-    'Ramen-Wok-Wok-Karaoke'
-  ];
-
   // Get unique locations from filtered events and sort according to fixed order
   const displayedLocations = React.useMemo(() => {
+    const LOCATION_ORDER = [
+      'Mozartsaal',
+      'Musensaal',
+      'Crunchyroll Cinema',
+      'CineMagic 1',
+      'CineMagic 2',
+      'AnimagiC-Kino 1',
+      'AnimagiC-Kino 2',
+      'AnimagiC-Kino 3',
+      'Ramen-Wok-Wok-Karaoke'
+    ];
+    
     const locs = new Set(events.map(e => e.location));
     const sortedLocs = Array.from(locs).sort((a, b) => {
       const aIndex = LOCATION_ORDER.indexOf(a);
