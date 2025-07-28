@@ -144,10 +144,37 @@ const ScheduleGrid = () => {
     return getQuarterHourSlots(showOnlyFavorites ? filteredEvents : events, selectedDate);
   }, [filteredEvents, events, selectedDate, showOnlyFavorites]);
 
-  // Get unique locations from filtered events
+  // Define fixed location order
+  const LOCATION_ORDER = [
+    'Mozartsaal',
+    'Musensaal',
+    'Crunchyroll Cinema',
+    'CineMagic 1',
+    'CineMagic 2',
+    'AnimagiC-Kino 1',
+    'AnimagiC-Kino 2',
+    'AnimagiC-Kino 3',
+    'Ramen-Wok-Wok-Karaoke'
+  ];
+
+  // Get unique locations from filtered events and sort according to fixed order
   const displayedLocations = React.useMemo(() => {
     const locs = new Set(events.map(e => e.location));
-    return Array.from(locs).sort();
+    const sortedLocs = Array.from(locs).sort((a, b) => {
+      const aIndex = LOCATION_ORDER.indexOf(a);
+      const bIndex = LOCATION_ORDER.indexOf(b);
+      
+      // If both locations are in the fixed order, sort by their position
+      if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+      // If only a is in the fixed order, it comes first
+      if (aIndex !== -1) return -1;
+      // If only b is in the fixed order, it comes first
+      if (bIndex !== -1) return 1;
+      // If neither is in the fixed order, sort alphabetically
+      return a.localeCompare(b);
+    });
+    
+    return sortedLocs;
   }, [events]);
 
   // Handler für Zeitplan-Button
