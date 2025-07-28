@@ -147,7 +147,6 @@
 
 .empty-cell {
   background: white;
-  border: 1px solid #eee;
   min-height: 20px;
 }
 
@@ -161,9 +160,22 @@
   z-index: 1;
 }
 
-.empty-cell {
-  background-color: white;
-  min-height: 40px;
+.favorites-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  justify-content: center;
+}
+
+.favorites-filter label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .date-selector {

@@ -102,6 +102,7 @@ const ScheduleGrid = () => {
   const [timeSlots, setTimeSlots] = useState<TimeSlot[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [userEventIds, setUserEventIds] = useState<string[]>([]);
+  const [showOnlyFavorites, setShowOnlyFavorites] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -127,10 +128,27 @@ const ScheduleGrid = () => {
     fetchData();
   }, [selectedDate]);
 
-  // Lade UserSchedule beim Mounten
+  // Load user schedule on mount
   useEffect(() => {
     scheduleService.getUserSchedule().then(sch => setUserEventIds(sch.events));
   }, []);
+
+  // Filter events based on favorites toggle
+  const filteredEvents = React.useMemo(() => {
+    if (!showOnlyFavorites) return events;
+    return events.filter(event => userEventIds.includes(event.id));
+  }, [events, userEventIds, showOnlyFavorites]);
+
+  // Get time slots based on filtered events
+  const displayedTimeSlots = React.useMemo(() => {
+    return getQuarterHourSlots(showOnlyFavorites ? filteredEvents : events, selectedDate);
+  }, [filteredEvents, events, selectedDate, showOnlyFavorites]);
+
+  // Get unique locations from filtered events
+  const displayedLocations = React.useMemo(() => {
+    const locs = new Set(events.map(e => e.location));
+    return Array.from(locs).sort();
+  }, [events]);
 
   // Handler für Zeitplan-Button
   const handleToggleEvent = async (eventId: string) => {
@@ -169,12 +187,12 @@ const ScheduleGrid = () => {
   const buildLocationGrid = (location: string) => {
     const grid: { event: Event | null; rowSpan: number; renderCell: boolean }[] = [];
     let currentSlotIndex = 0;
-    while (currentSlotIndex < timeSlots.length) {
+    while (currentSlotIndex < displayedTimeSlots.length) {
       // Finde Event, das in diesem Slot (nach Viertelstunden-Rundung) startet
       // eslint-disable-next-line no-loop-func
-      const event = events.find(e => e.location === location && eventStartsInSlotQuarter(e, timeSlots[currentSlotIndex]));
+      const event = filteredEvents.find(e => e.location === location && eventStartsInSlotQuarter(e, displayedTimeSlots[currentSlotIndex]));
       if (event) {
-        let span = getEventRowSpanQuarter(event, timeSlots.slice(currentSlotIndex));
+        let span = getEventRowSpanQuarter(event, displayedTimeSlots.slice(currentSlotIndex));
         if (!span || span < 1) span = 1; // Schutz gegen Endlosschleife
         grid.push({ event, rowSpan: span, renderCell: true });
         for (let i = 1; i < span; i++) {
@@ -186,23 +204,39 @@ const ScheduleGrid = () => {
         currentSlotIndex++;
       }
     }
-    while (grid.length < timeSlots.length) {
+    while (grid.length < displayedTimeSlots.length) {
       grid.push({ event: null, rowSpan: 1, renderCell: true });
     }
     return grid;
   };
 
-  locations.forEach(loc => {
+  displayedLocations.forEach(loc => {
     locationEventGrid[loc] = buildLocationGrid(loc);
   });
 
   // Calculate grid column template
-  const gridColumnTemplate = `100px repeat(${locations.length}, minmax(180px, 1fr))`;
+  const gridColumnTemplate = `100px repeat(${displayedLocations.length}, minmax(180px, 1fr))`;
+  
+
+  // Calculate grid template rows for the schedule grid
+  const gridTemplateRows = `auto repeat(${displayedTimeSlots.length}, 20px)`;
+
   
   return (
     <div>
       <div className="schedule-header-container">
         <h1>Kalenderübersicht</h1>
+        <div className="favorites-filter">
+          <label>
+            <input
+              type="checkbox"
+              checked={showOnlyFavorites}
+              onChange={(e) => setShowOnlyFavorites(e.target.checked)}
+              style={{ marginRight: '8px' }}
+            />
+            Nur Favoriten anzeigen
+          </label>
+        </div>
         <div className="date-selector">
           {DATES.map(date => (
             <button
@@ -223,20 +257,18 @@ const ScheduleGrid = () => {
             <div 
               className="schedule-grid"
               style={{
-                ...{
-                  '--time-slots': timeSlots.length,
-                  '--locations': locations.length,
-                } as React.CSSProperties,
-                gridTemplateRows: `[header] auto [content] repeat(${timeSlots.length}, ${SLOT_HEIGHT}px)`,
+                '--time-slots': displayedTimeSlots.length,
+                '--locations': displayedLocations.length,
+                gridTemplateRows,
                 gridTemplateColumns: gridColumnTemplate,
-                minWidth: `${100 + (locations.length * 180)}px`
-              }}
+                minWidth: `${100 + (displayedLocations.length * 180)}px`
+              } as React.CSSProperties}
             >
             {/* Time column header */}
             <div className="schedule-header time-column-header">Zeit</div>
             
             {/* Location headers */}
-            {locations.map((loc, locIdx) => (
+            {displayedLocations.map((loc, locIdx) => (
               <div 
                 key={`header-${loc}`} 
                 className="schedule-header location-header"
@@ -247,7 +279,7 @@ const ScheduleGrid = () => {
             ))}
             
             {/* Time slots and events */}
-            {timeSlots.map((slot, rowIdx) => (
+            {displayedTimeSlots.map((slot, rowIdx) => (
               <React.Fragment key={`row-${rowIdx}`}>
                 {/* Time label */}
                 <div 
@@ -261,7 +293,7 @@ const ScheduleGrid = () => {
                 </div>
                 
                 {/* Event cells */}
-                {locations.map((loc, locIdx) => {
+                {displayedLocations.map((loc, locIdx) => {
                   const cell = locationEventGrid[loc][rowIdx];
                   if (!cell.renderCell) return null;
                   
