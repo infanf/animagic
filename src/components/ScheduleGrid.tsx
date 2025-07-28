@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { eventService } from '../services/eventService';
 import { Event } from '../models/types';
 import { formatTime, formatDate, getDayOfWeek } from '../utils/dateUtils';
-import '../styles/LocationCalendar.css';
+import '../styles/ScheduleGrid.css';
 import StarIcon from '@mui/icons-material/Star';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import IconButton from '@mui/material/IconButton';
@@ -15,7 +15,7 @@ interface TimeSlot {
 }
 
 const DATES = ['2025-08-01', '2025-08-02', '2025-08-03'];
-const SLOT_HEIGHT = 40; // px
+const SLOT_HEIGHT = 20; // px - Keep this in sync with CSS
 
 function getTimeSlots(start: Date, end: Date, intervalMinutes: number): TimeSlot[] {
   const slots: TimeSlot[] = [];
@@ -95,7 +95,7 @@ function getQuarterHourSlots(events: Event[], selectedDate: string): TimeSlot[] 
 // Unused utility functions removed to fix lint errors
 // These functions were defined but never used in the component
 
-const ScheduleGrid: React.FC = () => {
+const ScheduleGrid = () => {
   const [selectedDate, setSelectedDate] = useState<string>(DATES[0]);
   const [events, setEvents] = useState<Event[]>([]);
   const [locations, setLocations] = useState<string[]>([]);
@@ -196,88 +196,136 @@ const ScheduleGrid: React.FC = () => {
     locationEventGrid[loc] = buildLocationGrid(loc);
   });
 
+  // Calculate grid column template
+  const gridColumnTemplate = `100px repeat(${locations.length}, minmax(180px, 1fr))`;
+  
   return (
-    <div className="location-calendar">
-      <h1>Kalenderübersicht (Grid)</h1>
-      <div className="date-selector">
-        {DATES.map(date => (
-          <button
-            key={date}
-            className={`date-button ${selectedDate === date ? 'active' : ''}`}
-            onClick={() => setSelectedDate(date)}
-          >
-            {formatDate(date)} ({getDayOfWeek(date)})
-          </button>
-        ))}
+    <div>
+      <div className="schedule-header-container">
+        <h1>Kalenderübersicht</h1>
+        <div className="date-selector">
+          {DATES.map(date => (
+            <button
+              key={date}
+              className={`date-button ${selectedDate === date ? 'active' : ''}`}
+              onClick={() => setSelectedDate(date)}
+            >
+              {formatDate(date)} ({getDayOfWeek(date)})
+            </button>
+          ))}
+        </div>
       </div>
-      {loading ? (
-        <div className="loading">Lade Veranstaltungen...</div>
-      ) : (
-        <div className="schedule-grid-wrapper" style={{ overflowX: 'auto' }}>
-          <table className="schedule-grid" style={{ borderCollapse: 'collapse', minWidth: '100%' }}>
-            <thead>
-              <tr>
-                <th style={{ minWidth: 90, background: '#f5f5f5' }}>Zeit</th>
-                {locations.map(loc => (
-                  <th key={loc} style={{ minWidth: 180, background: '#f5f5f5' }}>{loc}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {timeSlots.map((slot, rowIdx) => (
-                <tr key={rowIdx} style={{ height: SLOT_HEIGHT }}>
-                  <td style={{ fontWeight: 500, background: '#fafafa', borderRight: '1px solid #eee', height: SLOT_HEIGHT }}>
-                    {slot.start.getMinutes() === 0
-                      ? formatTime(slot.start.toISOString())
-                      : ''}
-                  </td>
-                  {locations.map(loc => {
-                    const cell = locationEventGrid[loc][rowIdx];
-                    if (!cell.renderCell) return null;
-                    if (cell.event && cell.rowSpan > 0) {
-                      const event = cell.event;
-                      const isInSchedule = userEventIds.includes(event.id);
-                      const categoryColor = getCategoryColor(event.category);
-                      return (
-                        <td
-                          key={loc + rowIdx}
-                          rowSpan={cell.rowSpan}
-                          style={{
-                            verticalAlign: 'top',
-                            border: '1px solid #eee',
-                            borderRadius: 4,
-                            fontSize: 14,
-                            height: SLOT_HEIGHT * cell.rowSpan,
-                            padding: 0,
-                          }}
+      <div className="schedule-grid-container">
+        {loading ? (
+          <div className="loading">Lade Veranstaltungen...</div>
+        ) : (
+          <div className="schedule-grid-wrapper">
+            <div 
+              className="schedule-grid"
+              style={{
+                ...{
+                  '--time-slots': timeSlots.length,
+                  '--locations': locations.length,
+                } as React.CSSProperties,
+                gridTemplateRows: `[header] auto [content] repeat(${timeSlots.length}, ${SLOT_HEIGHT}px)`,
+                gridTemplateColumns: gridColumnTemplate,
+                minWidth: `${100 + (locations.length * 180)}px`
+              }}
+            >
+            {/* Time column header */}
+            <div className="schedule-header time-column-header">Zeit</div>
+            
+            {/* Location headers */}
+            {locations.map((loc, locIdx) => (
+              <div 
+                key={`header-${loc}`} 
+                className="schedule-header location-header"
+                style={{ gridColumn: locIdx + 2 }}
+              >
+                {loc}
+              </div>
+            ))}
+            
+            {/* Time slots and events */}
+            {timeSlots.map((slot, rowIdx) => (
+              <React.Fragment key={`row-${rowIdx}`}>
+                {/* Time label */}
+                <div 
+                  className="time-slot time-slot-cell"
+                  style={{
+                    gridRow: rowIdx + 2,
+                    gridColumn: 1,
+                  }}
+                >
+                  {slot.start.getMinutes() === 0 ? formatTime(slot.start.toISOString()) : ''}
+                </div>
+                
+                {/* Event cells */}
+                {locations.map((loc, locIdx) => {
+                  const cell = locationEventGrid[loc][rowIdx];
+                  if (!cell.renderCell) return null;
+                  
+                  if (cell.event && cell.rowSpan > 0) {
+                    const event = cell.event;
+                    const isInSchedule = userEventIds.includes(event.id);
+                    const categoryColor = getCategoryColor(event.category);
+                    
+                    return (
+                      <div
+                        key={`${loc}-${rowIdx}`}
+                        className="event-cell"
+                        style={{
+                          gridRow: `${rowIdx + 2} / span ${cell.rowSpan}`,
+                          gridColumn: locIdx + 2,
+                          padding: '2px'
+                        }}
+                      >
+                        <div 
+                          className="event-item"
+                          style={{ background: categoryColor }}
                         >
-                          <div style={{ width: 'calc(100% - 4px)', height: 'calc(100% - 4px)', padding: '10px 8px', margin: '2px', background: categoryColor, borderRadius: 4, boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: 4 }}>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                              <strong>{event.title}</strong>
-                              <IconButton size="small" onClick={() => handleToggleEvent(event.id)} aria-label="Zeitplan">
-                                {isInSchedule ? <StarIcon color="warning" /> : <StarBorderIcon />}
-                              </IconButton>
-                            </div>
-                            <span style={{ fontSize: 12 }}>
-                              {formatTime(event.startTime)} - {formatTime(event.endTime)}
-                            </span>
+                          <div className="event-header">
+                            <strong className="event-title">{event.title}</strong>
+                            <IconButton 
+                              size="small" 
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleToggleEvent(event.id);
+                              }} 
+                              aria-label="Zeitplan"
+                              className="event-favorite-button"
+                            >
+                              {isInSchedule ? <StarIcon color="warning" fontSize="small" /> : <StarBorderIcon fontSize="small" />}
+                            </IconButton>
                           </div>
-                        </td>
-                      );
-                    } else {
-                      // Leere Zelle
-                      return (
-                        <td key={loc + rowIdx} style={{ border: '1px solid #eee', height: SLOT_HEIGHT }}></td>
-                      );
-                    }
-                  })}
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                          <div className="event-time">
+                            {formatTime(event.startTime)} - {formatTime(event.endTime)}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  } else if (cell.renderCell) {
+                    // Empty cell
+                    return (
+                      <div 
+                        key={`${loc}-${rowIdx}`}
+                        className="empty-cell"
+                        style={{
+                          gridRow: rowIdx + 2,
+                          gridColumn: locIdx + 2
+                        }}
+                      />
+                    );
+                  }
+                  return null;
+                })}
+              </React.Fragment>
+            ))}
+          </div>
         </div>
       )}
     </div>
+  </div>
   );
 };
 
