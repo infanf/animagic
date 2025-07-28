@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
-import { 
-  AppBar, 
-  Box, 
-  Toolbar, 
-  Typography, 
-  Button, 
-  IconButton, 
-  Drawer, 
-  List, 
-  ListItem, 
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Typography,
+  Button,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
   ListItemButton,
-  ListItemIcon, 
-  ListItemText, 
+  ListItemIcon,
+  ListItemText,
   Container,
   useMediaQuery,
   useTheme
 } from '@mui/material';
+
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
@@ -67,18 +68,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <MenuIcon />
             </IconButton>
           )}
-          
+
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Convention App
           </Typography>
-          
+
+
+
           {!isMobile && menuItems.map((item) => (
-            <Button 
+            <Button
               key={item.path}
               component={RouterLink}
               to={item.path}
               color="inherit"
-              sx={{ 
+              sx={{
                 mx: 1,
                 fontWeight: location.pathname === item.path ? 'bold' : 'normal',
                 borderBottom: location.pathname === item.path ? '2px solid white' : 'none'
@@ -89,7 +92,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           ))}
         </Toolbar>
       </AppBar>
-      
+
       <Drawer
         anchor="left"
         open={drawerOpen}
@@ -104,8 +107,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <List>
             {menuItems.map((item) => (
               <ListItem key={item.text} disablePadding>
-                <ListItemButton 
-                  component={RouterLink} 
+                <ListItemButton
+                  component={RouterLink}
                   to={item.path}
                   selected={location.pathname === item.path}
                 >
@@ -119,11 +122,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </List>
         </Box>
       </Drawer>
-      
+
       <Box component="main" sx={{ flexGrow: 1, py: 3 }}>
         {children}
       </Box>
-      
+
       <Box component="footer" sx={{ py: 3, bgcolor: 'background.paper', mt: 'auto' }}>
         <Container maxWidth="md">
           <Typography variant="body2" color="text.secondary" align="center">

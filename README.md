@@ -11,6 +11,8 @@ Diese App wurde mit React, TypeScript und Material-UI erstellt.
 - **Suchfunktion**: Veranstaltungen nach Titel, Beschreibung oder Tags durchsuchen
 - **Kategoriefilter**: Veranstaltungen nach Kategorien filtern
 - **Responsive Design**: Optimiert für Desktop und mobile Geräte
+- **Progressive Web App**: Installierbar als native App auf mobilen Geräten
+- **Caching**: Service Worker für schnelle App-Performance
 
 ## Projektstruktur
 
@@ -20,7 +22,7 @@ src/
 ├── models/          # Datenmodelle und Typdefinitionen
 ├── pages/           # Hauptseiten der Anwendung
 ├── services/        # Dienste für Datenzugriff (später mit Backend erweiterbar)
-└── utils/           # Hilfsfunktionen
+└── utils/           # Hilfsfunktionen (z.B. offlineUtils)
 ```
 
 ## Service-Architektur
@@ -31,6 +33,19 @@ Die App verwendet eine Service-Architektur, die später leicht mit einem Backend
 - **ScheduleService**: Verwaltet den persönlichen Zeitplan des Benutzers
 
 Aktuell verwenden diese Services Mock-Daten und lokalen Speicher, können aber später durch echte API-Aufrufe ersetzt werden.
+
+## Progressive Web App (PWA)
+
+Die App ist als Progressive Web App implementiert und bietet folgende Features:
+
+### Service Worker
+- **Caching**: Statische Assets werden gecacht für bessere Performance
+- **App-Performance**: Schnelleres Laden durch lokale Ressourcen
+
+### Installation
+- **App-Installation**: Kann auf mobilen Geräten als native App installiert werden
+- **Manifest**: Vollständiges Web App Manifest mit Icons und Metadaten
+- **Splash Screen**: Angepasster Startbildschirm für die App
 
 ## Deployment
 
