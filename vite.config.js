@@ -1,13 +1,7 @@
-const { defineConfig } = require('vite');
-const react = require('@vitejs/plugin-react');
-const { resolve } = require('path');
-
-// https://vitejs.dev/config/
-module.exports = defineConfig({
-  plugins: [react()],
+module.exports = {
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
+      '@': './src',
     },
   },
   server: {
@@ -20,4 +14,4 @@ module.exports = defineConfig({
   },
   base: '/animagic/',
   publicDir: 'public',
-}); 
+}; 

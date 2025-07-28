@@ -1,9 +1,4 @@
-const { defineConfig } = require('vitest/config');
-const react = require('@vitejs/plugin-react');
-const { resolve } = require('path');
-
-module.exports = defineConfig({
-  plugins: [react()],
+module.exports = {
   test: {
     environment: 'jsdom',
     setupFiles: ['./src/setupTests.ts'],
@@ -22,7 +17,7 @@ module.exports = defineConfig({
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
+      '@': './src',
     },
   },
-}); 
+}; 
