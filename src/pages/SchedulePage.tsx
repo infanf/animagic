@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Container,
-  Typography,
-  Box,
-  Button,
-  Alert,
-  CircularProgress,
-} from '@mui/material';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Alert from '@mui/material/Alert';
+import CircularProgress from '@mui/material/CircularProgress';
 import { eventService } from '../services/eventService';
 import { scheduleService } from '../services/scheduleService';
 import { Event } from '../models/types';

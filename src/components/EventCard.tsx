@@ -1,13 +1,11 @@
 import React from 'react';
-import {
-  Card,
-  CardContent,
-  CardActions,
-  Typography,
-  Button,
-  Chip,
-  Box,
-} from '@mui/material';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Chip from '@mui/material/Chip';
+import Box from '@mui/material/Box';
 import { Event } from '../models/types';
 import { formatDate } from '../utils/dateUtils';
 import LocationOnIcon from '@mui/icons-material/LocationOn';

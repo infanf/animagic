@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { Container, Typography, Box, Paper } from '@mui/material';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
 import { eventService } from '../services/eventService';
 import { Event } from '../models/types';
 import EventList from '../components/EventList';

@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Box,
-  Typography,
-  CircularProgress,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-  SelectChangeEvent,
-} from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import CircularProgress from '@mui/material/CircularProgress';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 import { Event } from '../models/types';
 import EventCard from './EventCard';
 import { scheduleService } from '../services/scheduleService';
