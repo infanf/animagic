@@ -48,6 +48,7 @@ Das Projekt verwendet Prettier für konsistente Code-Formatierung:
 
 Vor jedem Commit werden automatisch folgende Aktionen ausgeführt:
 - **Code-Formatierung**: Alle gestagten Dateien werden mit Prettier formatiert
+- **Linting**: ESLint wird ausgeführt um Code-Qualität zu prüfen
 
 ## Progressive Web App (PWA)
 
@@ -95,9 +96,9 @@ For the deployment to work, GitHub Pages must be enabled in the repository setti
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm start` or `npm run dev`
 
-Runs the app in the development mode.\
+Runs the app in the development mode using Vite.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
@@ -105,18 +106,20 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner using Vitest in the interactive watch mode.\
+You can also run `npm run test:ui` for a visual test interface or `npm run test:run` for a single test run.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `build` folder using Vite.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm run preview`
+
+Serves the production build locally for testing before deployment.
 
 ### `npm run format`
 
@@ -127,6 +130,14 @@ This ensures consistent code style across the project.
 
 Checks if all source code files are properly formatted without making changes.\
 Useful for CI/CD pipelines to ensure code style consistency.
+
+### `npm run lint`
+
+Runs ESLint to check for code quality issues and potential errors.
+
+### `npm run lint:fix`
+
+Automatically fixes ESLint issues that can be resolved automatically.
 
 ### `npm run eject`
 

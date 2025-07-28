@@ -127,7 +127,7 @@ const ScheduleGrid = () => {
         // Events für den Festivaltag inkl. Nach-Mitternacht-Events filtern
         const filtered = getEventsForFestivalDay(allEvents, selectedDate);
         setEvents(filtered);
-      } catch (err) {
+      } catch {
         setEvents([]);
       } finally {
         setLoading(false);
@@ -233,7 +233,6 @@ const ScheduleGrid = () => {
     let currentSlotIndex = 0;
     while (currentSlotIndex < displayedTimeSlots.length) {
       // Finde Event, das in diesem Slot (nach Viertelstunden-Rundung) startet
-      // eslint-disable-next-line no-loop-func
       const event = filteredEvents.find(
         e =>
           e.location === location &&
