@@ -214,6 +214,20 @@ h2 {
 .faq-a ul { padding-left: 18px; margin: 6px 0; }
 .faq-a li { margin-bottom: 4px; }
 .faq-footer { font-size: 0.72rem; color: var(--fg-dim); margin-top: 16px; text-align: center; }
+.link-btn {
+  background: none; border: none; padding: 4px 0; cursor: pointer;
+  color: var(--red); font-size: 0.8rem; font-weight: 700; text-decoration: underline;
+}
+
+/* Impressum */
+.imprint p { font-size: 0.87rem; line-height: 1.55; color: var(--fg-dim); margin-bottom: 12px; }
+.imprint p strong { color: var(--fg); }
+.imprint a { color: var(--red); }
+.imprint h3 {
+  font-family: var(--font-head);
+  font-size: 1.25rem; font-weight: 700; color: var(--red); margin: 18px 0 8px;
+}
+.imprint h2 { margin-top: 20px; }
 
 /* Bottom-Nav */
 .bottom-nav {

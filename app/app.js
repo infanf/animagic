@@ -262,10 +262,23 @@
       $('#view-schedule').hidden = view !== 'schedule';
       $('#view-myplan').hidden = view !== 'myplan';
       $('#view-faq').hidden = view !== 'faq';
+      $('#view-imprint').hidden = true;
       if (view === 'myplan') renderMyPlan();
       window.scrollTo(0, 0);
     })
   );
+
+  // Impressum
+  $('#open-imprint').addEventListener('click', () => {
+    $('#view-faq').hidden = true;
+    $('#view-imprint').hidden = false;
+    window.scrollTo(0, 0);
+  });
+  $('#close-imprint').addEventListener('click', () => {
+    $('#view-imprint').hidden = true;
+    $('#view-faq').hidden = false;
+    window.scrollTo(0, 0);
+  });
 
   // ── Service Worker ────────────────────────────────────────────────
   if ('serviceWorker' in navigator) {
