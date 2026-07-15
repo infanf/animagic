@@ -96,6 +96,20 @@ body {
   padding: 1px 6px;
   margin-left: 4px;
 }
+.unofficial {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-left: 6px;
+  white-space: nowrap;
+}
 .header-sub { color: rgba(255, 255, 255, 0.85); font-size: 0.76rem; margin-top: 3px; }
 
 main { max-width: 720px; margin: 0 auto; padding: 12px; }
