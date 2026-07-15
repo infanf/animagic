@@ -168,7 +168,7 @@ h2 {
 }
 .tag.cat { color: #fff; background: var(--cat-color, var(--red)); }
 .tag.premiere { background: none; color: var(--red); font-weight: 800; padding-left: 0; }
-.tag.alt { background: none; border: 1px solid var(--line); color: var(--fg-dim); }
+.tag.alt { background: none; border: 1px solid var(--line); color: var(--fg-dim); line-height: 1; }
 .ev-fav {
   background: none; border: none; font-size: 1.45rem; color: var(--line);
   cursor: pointer; padding: 0 2px; align-self: flex-start; line-height: 1;
