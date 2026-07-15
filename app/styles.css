@@ -1,6 +1,26 @@
 /* AnimagiC 2026 Messe-App – Design nach Programmheft-Vorbild */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* Headline-Font des Programmhefts (variable, 200–700, selbst gehostet) */
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url('fonts/yanone-kaffeesatz-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url('fonts/yanone-kaffeesatz-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root { --font-head: 'Yanone Kaffeesatz', 'Arial Narrow', system-ui, sans-serif; }
+
 /* Light (Programmheft: weiße Seiten, rote Headlines) ist Standard */
 :root {
   --bg: #f8f5f1;
@@ -58,10 +78,10 @@ body {
   position: sticky; top: 0; z-index: 20;
 }
 .app-header h1 {
-  font-size: 1.45rem;
-  font-weight: 900;
-  font-style: italic;
-  letter-spacing: -0.5px;
+  font-family: var(--font-head);
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 .logo-anima { color: #fff; }
 .logo-gic { color: #ffb3c8; }
@@ -81,11 +101,12 @@ body {
 main { max-width: 720px; margin: 0 auto; padding: 12px; }
 
 h2 {
-  font-size: 1.35rem;
-  font-weight: 900;
+  font-family: var(--font-head);
+  font-size: 1.7rem;
+  font-weight: 700;
   color: var(--red);
   margin: 8px 0 12px;
-  letter-spacing: -0.3px;
+  letter-spacing: 0.3px;
 }
 .hint { color: var(--fg-dim); font-size: 0.85rem; margin-bottom: 14px; }
 .hint .star { color: var(--star); }
@@ -93,8 +114,9 @@ h2 {
 /* Day-Tabs – wie die roten Tagesüberschriften im Heft */
 .day-tabs { display: flex; gap: 8px; margin-bottom: 12px; }
 .day-tab {
+  font-family: var(--font-head);
   flex: 1; padding: 9px 4px; border: 1px solid var(--line); border-radius: 8px;
-  background: var(--bg-card); color: var(--fg); font-size: 0.95rem; font-weight: 700;
+  background: var(--bg-card); color: var(--fg); font-size: 1.15rem; font-weight: 600;
   cursor: pointer; text-align: center;
 }
 .day-tab .d-date { display: block; font-size: 0.72rem; font-weight: 400; color: var(--fg-dim); }
@@ -120,7 +142,8 @@ h2 {
 /* Event-Liste – an die Programmtafeln angelehnt:
    rote Zeitspalte, schwarze Titel, dünne Trennlinien */
 .time-label {
-  font-size: 0.95rem; font-weight: 900; color: var(--red);
+  font-family: var(--font-head);
+  font-size: 1.2rem; font-weight: 700; color: var(--red);
   padding: 12px 2px 4px; margin-bottom: 6px;
   border-bottom: 2px solid var(--red);
 }
@@ -156,7 +179,8 @@ h2 {
 /* Mein Plan */
 .myplan-day { margin-bottom: 18px; }
 .myplan-day h3 {
-  font-size: 1.05rem; font-weight: 900; color: var(--red);
+  font-family: var(--font-head);
+  font-size: 1.3rem; font-weight: 700; color: var(--red);
   border-bottom: 2px solid var(--red); padding-bottom: 4px; margin-bottom: 8px;
 }
 .conflict-note { font-size: 0.75rem; color: var(--danger); margin: -4px 0 8px 4px; }
@@ -215,7 +239,7 @@ h2 {
   position: absolute; top: 10px; right: 12px; background: var(--bg-card2); border: 1px solid var(--line);
   color: var(--fg); font-size: 1rem; border-radius: 50%; width: 34px; height: 34px; cursor: pointer;
 }
-.md-title { font-size: 1.2rem; font-weight: 900; margin: 4px 30px 6px 0; line-height: 1.25; letter-spacing: -0.3px; }
+.md-title { font-family: var(--font-head); font-size: 1.55rem; font-weight: 700; margin: 4px 30px 6px 0; line-height: 1.15; letter-spacing: 0.3px; }
 .md-when { color: var(--red); font-size: 0.9rem; font-weight: 800; margin-bottom: 2px; }
 .md-room { color: var(--fg-dim); font-size: 0.85rem; margin-bottom: 10px; }
 .md-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
