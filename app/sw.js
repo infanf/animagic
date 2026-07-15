@@ -1,5 +1,5 @@
 // Service Worker – Offline-Cache (Cache-first für App-Shell)
-const CACHE = 'animagic26-v6';
+const CACHE = 'animagic26-v12';
 const ASSETS = [
   './',
   './index.html',
@@ -8,6 +8,8 @@ const ASSETS = [
   './details.js',
   './app.js',
   './manifest.webmanifest',
+  './fonts/yanone-kaffeesatz-latin.woff2',
+  './fonts/yanone-kaffeesatz-latin-ext.woff2',
   './img/icon.svg',
   './img/icon-192.png',
   './img/icon-512.png',

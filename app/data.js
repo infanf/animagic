@@ -18,16 +18,17 @@ const ROOMS = {
   stand: { name: 'Publisher-Stände', level: '' },
 };
 
+// Gedeckte Druckfarben, an die Programmheft-Optik angelehnt
 const CATEGORIES = {
-  konzert: { label: 'Konzert', color: '#e91e8c' },
-  show: { label: 'Show', color: '#9c27b0' },
-  screening: { label: 'Screening', color: '#3f51b5' },
-  panel: { label: 'Panel / Talk', color: '#00897b' },
-  workshop: { label: 'Workshop', color: '#f57c00' },
-  signierstunde: { label: 'Signierstunde', color: '#c62828' },
-  zeremonie: { label: 'Zeremonie', color: '#d4af37' },
-  auktion: { label: 'Auktion', color: '#607d8b' },
-  wettbewerb: { label: 'Wettbewerb', color: '#7cb342' },
+  konzert: { label: 'Konzert', color: '#c2185b' },
+  show: { label: 'Show', color: '#7b2d8b' },
+  screening: { label: 'Screening', color: '#34558b' },
+  panel: { label: 'Panel / Talk', color: '#2e6e63' },
+  workshop: { label: 'Workshop', color: '#b3541e' },
+  signierstunde: { label: 'Signierstunde', color: '#d40e2a' },
+  zeremonie: { label: 'Zeremonie', color: '#9c7a1f' },
+  auktion: { label: 'Auktion', color: '#5c6670' },
+  wettbewerb: { label: 'Wettbewerb', color: '#4e7a2a' },
 };
 
 // premiere: WP = Weltpremiere, DP = Deutschlandpremiere, EP = Europapremiere, ECP = Europa-Convention-Premiere, DUB = DUB-Premiere, PREV = Preview

@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#1a0a14">
+  <meta name="theme-color" content="#7a0e28" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#5d0a1e" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
   <meta name="description" content="Inoffizielle Messe-App zur AnimagiC 2026 – Zeitplan, eigener Plan, Event-Infos und FAQ">
   <title>AnimagiC 2026 – Messe-App</title>
   <link rel="manifest" href="manifest.webmanifest">
@@ -15,8 +17,8 @@
 </head>
 <body>
   <header class="app-header">
-    <h1><span class="logo-anima">Anima</span><span class="logo-gic">giC</span> <span class="logo-year">2026</span></h1>
-    <p class="header-sub">31. Juli – 2. August · Rosengarten Mannheim · 100% MAGIC</p>
+    <h1><span class="logo-anima">Anima</span><span class="logo-gic">giC</span> <span class="logo-year">2026</span> <span class="unofficial">Inoffizielle Fan-App</span></h1>
+    <p class="header-sub">31. Juli – 2. August · Rosengarten Mannheim · 100% MAGIC · kein Angebot des Veranstalters</p>
   </header>
 
   <main id="main">
@@ -46,7 +48,49 @@
     <section id="view-faq" class="view" hidden>
       <h2>FAQ &amp; Infos zur Messe</h2>
       <div id="faq-list" class="faq-list"></div>
-      <p class="faq-footer">Alle Angaben aus dem offiziellen Programmheft 2026 und animagic.de – ohne Gewähr. Dies ist eine inoffizielle Fan-App.</p>
+      <p class="faq-footer">Alle Angaben aus dem offiziellen Programmheft 2026 und animagic.de – ohne Gewähr. Dies ist eine inoffizielle Fan-App.<br>
+        <button id="open-imprint" class="link-btn">Impressum &amp; Datenschutz</button>
+      </p>
+    </section>
+
+    <!-- Impressum -->
+    <section id="view-imprint" class="view imprint" hidden>
+      <h2>Impressum</h2>
+      <p>Angaben gemäß § 5 DDG:</p>
+      <p>
+        <strong>Christopher Schreiner</strong><br>
+        Kleinfeldstr. 21a<br>
+        82110 Germering<br>
+        Deutschland
+      </p>
+      <p>E-Mail: <a href="mailto:myanili@infanf.de">myanili@infanf.de</a></p>
+      <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV: Christopher Schreiner, Anschrift wie oben.</p>
+
+      <h3>Hinweis zur App</h3>
+      <p>Dies ist ein privates, nicht-kommerzielles Fan-Projekt. Es besteht keine Verbindung zum Veranstalter
+        der AnimagiC. „AnimagiC“ sowie alle genannten Veranstaltungs-, Werk- und Markennamen gehören ihren
+        jeweiligen Rechteinhabern. Die Programmdaten stammen aus dem offiziellen Programmheft 2026 und von
+        animagic.de; alle Angaben ohne Gewähr – maßgeblich sind die offiziellen Veröffentlichungen des Veranstalters.</p>
+
+      <h3>Haftung für Links</h3>
+      <p>Diese App enthält keine externen Links mit Ausnahme der genannten offiziellen Quellen. Für die Inhalte
+        verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+
+      <h2>Datenschutzerklärung</h2>
+      <p><strong>Keine Datenerhebung durch die App:</strong> Diese App verwendet keine Cookies, kein Tracking und
+        keine Analyse-Dienste. Es werden keine personenbezogenen Daten an den Betreiber oder Dritte übermittelt.</p>
+      <p><strong>Lokale Speicherung:</strong> Dein persönlicher Zeitplan (Favoriten), die Tagesauswahl und
+        Anzeige-Einstellungen werden ausschließlich lokal in deinem Browser gespeichert (localStorage) und
+        verlassen dein Gerät nicht. Der Offline-Cache (Service Worker) speichert die App-Dateien ebenfalls nur lokal.
+        Beides kannst du jederzeit über die Website-Einstellungen deines Browsers löschen.</p>
+      <p><strong>Server-Logs:</strong> Beim Abruf der App verarbeitet der Webserver technisch bedingt Verbindungsdaten
+        (IP-Adresse, Zeitpunkt, abgerufene Datei, User-Agent) zur Bereitstellung und Absicherung des Betriebs
+        (Art. 6 Abs. 1 lit. f DSGVO). Diese Logs werden nicht mit anderen Daten zusammengeführt und regelmäßig gelöscht.</p>
+      <p><strong>Deine Rechte:</strong> Du hast nach DSGVO das Recht auf Auskunft, Berichtigung, Löschung,
+        Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Beschwerde bei einer Aufsichtsbehörde.
+        Kontakt: siehe Impressum.</p>
+
+      <p><button id="close-imprint" class="link-btn">← Zurück zu den FAQ</button></p>
     </section>
   </main>
 
