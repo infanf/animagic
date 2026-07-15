@@ -199,6 +199,17 @@ h2 {
 .empty { text-align: center; color: var(--fg-dim); padding: 40px 10px; font-size: 0.9rem; }
 
 /* Mein Plan */
+.seg-toggle {
+  display: inline-flex; margin-bottom: 12px;
+  border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+  background: var(--bg-card);
+}
+.seg-btn {
+  padding: 8px 18px; background: none; border: none; cursor: pointer;
+  color: var(--fg-dim); font-size: 0.88rem; font-weight: 700;
+}
+.seg-btn.active { background: var(--red); color: #fff; }
+
 .myplan-day { margin-bottom: 18px; }
 .myplan-day h3 {
   font-family: var(--font-head);
@@ -206,6 +217,43 @@ h2 {
   border-bottom: 2px solid var(--red); padding-bottom: 4px; margin-bottom: 8px;
 }
 .conflict-note { font-size: 0.75rem; color: var(--danger); margin: -4px 0 8px 4px; }
+
+/* Kalenderansicht */
+.cal-grid {
+  position: relative;
+  margin-left: 44px;               /* Platz für Stunden-Labels */
+  border-left: 1px solid var(--line);
+}
+.cal-hour {
+  position: absolute; left: 0; right: 0;
+  border-top: 1px solid var(--line);
+}
+.cal-hour span {
+  position: absolute; left: -44px; top: -0.55em;
+  font-size: 0.68rem; color: var(--fg-dim);
+  background: var(--bg); padding-right: 4px;
+}
+.cal-events { position: absolute; inset: 0; }
+.cal-event {
+  position: absolute;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--cat-color, var(--red));
+  border-radius: 6px;
+  padding: 3px 6px;
+  cursor: pointer;
+  box-shadow: 0 1px 2px var(--shadow);
+}
+.cal-event b {
+  display: block; font-size: 0.66rem; font-weight: 800;
+  color: var(--red); line-height: 1.2; white-space: nowrap;
+}
+.cal-event span {
+  font-size: 0.72rem; font-weight: 700; line-height: 1.2;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.cal-event.conflict { border-color: var(--danger); border-left-color: var(--danger); }
 .event-card.conflict { border-color: var(--danger); border-width: 2px; }
 
 /* FAQ */

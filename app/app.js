@@ -10,6 +10,7 @@
     search: '',
     premiereOnly: false,
     favs: new Set(JSON.parse(localStorage.getItem('am26.favs') || '[]')),
+    planView: localStorage.getItem('am26.planView') || 'list',
   };
 
   const $ = (sel) => document.querySelector(sel);
@@ -149,13 +150,20 @@
   }
 
   // ── Mein Plan ─────────────────────────────────────────────────────
+  // Endzeit in Minuten; Events ohne Ende (z. B. Einlass) zählen 30 Min.
+  const tEnd = (ev) => (ev.end ? tMin(ev.end) : tMin(ev.start) + 30);
+
   function renderMyPlan() {
     const wrap = $('#myplan-list');
     const favEvents = EVENTS.filter((ev) => state.favs.has(ev.id));
+    $('#plan-mode-list').classList.toggle('active', state.planView === 'list');
+    $('#plan-mode-cal').classList.toggle('active', state.planView === 'cal');
     if (!favEvents.length) {
       wrap.innerHTML = '<div class="empty">Noch keine Events gespeichert.<br>Markiere Programmpunkte im Zeitplan mit ☆.</div>';
       return;
     }
+    if (state.planView === 'cal') return renderPlanCalendar(favEvents, wrap);
+
     let html = '';
     let anyConflict = false;
     for (const day of DAYS) {
@@ -174,6 +182,86 @@
       : '';
     wrap.innerHTML = conflictNote + html;
     bindCards(wrap);
+  }
+
+  // Spaltenzuordnung für überlappende Events (klassisches Kalender-Packing):
+  // transitiv überlappende Events bilden einen Cluster, darin greedy die
+  // erste freie Spalte; Blockbreite = 100 % / Spaltenzahl des Clusters.
+  function assignColumns(evs) {
+    const result = [];
+    let cluster = [];
+    let clusterEnd = -1;
+
+    const flush = () => {
+      if (!cluster.length) return;
+      const colEnds = [];
+      const items = [];
+      for (const ev of cluster) {
+        let col = colEnds.findIndex((end) => end <= tMin(ev.start));
+        if (col === -1) { col = colEnds.length; colEnds.push(tEnd(ev)); }
+        else colEnds[col] = tEnd(ev);
+        items.push({ ev, col });
+      }
+      for (const it of items) result.push({ ...it, ncols: colEnds.length });
+      cluster = [];
+      clusterEnd = -1;
+    };
+
+    for (const ev of [...evs].sort((a, b) => tMin(a.start) - tMin(b.start) || tEnd(b) - tEnd(a))) {
+      if (cluster.length && tMin(ev.start) >= clusterEnd) flush();
+      cluster.push(ev);
+      clusterEnd = Math.max(clusterEnd, tEnd(ev));
+    }
+    flush();
+    return result;
+  }
+
+  function renderPlanCalendar(favEvents, wrap) {
+    const PPM = 1.3; // Pixel pro Minute
+    let html = '';
+    let anyConflict = false;
+
+    for (const day of DAYS) {
+      const evs = favEvents.filter((e) => e.day === day.id);
+      if (!evs.length) continue;
+      const gridStart = Math.floor(Math.min(...evs.map((e) => tMin(e.start))) / 60) * 60;
+      const gridEnd = Math.ceil(Math.max(...evs.map(tEnd)) / 60) * 60;
+      const gridH = (gridEnd - gridStart) * PPM;
+
+      let hours = '';
+      for (let m = gridStart; m <= gridEnd; m += 60) {
+        hours += `<div class="cal-hour" style="top:${(m - gridStart) * PPM}px"><span>${String(Math.floor(m / 60) % 24).padStart(2, '0')}:00</span></div>`;
+      }
+
+      let blocks = '';
+      for (const { ev, col, ncols } of assignColumns(evs)) {
+        const conflict = evs.some((other) => other !== ev && overlaps(ev, other));
+        if (conflict) anyConflict = true;
+        const top = (tMin(ev.start) - gridStart) * PPM;
+        const height = Math.max((tEnd(ev) - tMin(ev.start)) * PPM, 26);
+        const width = 100 / ncols;
+        blocks += `
+          <div class="cal-event ${conflict ? 'conflict' : ''}" data-id="${ev.id}"
+               style="top:${top}px;height:${height}px;left:${col * width}%;width:${width}%;--cat-color:${CATEGORIES[ev.cat].color}">
+            <b>${ev.start}${ev.end ? ' – ' + ev.end : ''}</b>
+            <span>${ev.title}</span>
+          </div>`;
+      }
+
+      html += `
+        <div class="myplan-day cal-day">
+          <h3>${day.label}, ${day.date}2026</h3>
+          <div class="cal-grid" style="height:${gridH}px">${hours}<div class="cal-events">${blocks}</div></div>
+        </div>`;
+    }
+
+    const conflictNote = anyConflict
+      ? '<p class="conflict-note">⚠️ Rot umrandete Events überschneiden sich – sie stehen nebeneinander.</p>'
+      : '';
+    wrap.innerHTML = conflictNote + html;
+    wrap.querySelectorAll('.cal-event').forEach((el) =>
+      el.addEventListener('click', () => openModal(el.dataset.id))
+    );
   }
 
   const overlaps = (a, b) =>
@@ -267,6 +355,15 @@
       window.scrollTo(0, 0);
     })
   );
+
+  // Mein-Plan-Ansicht umschalten
+  const setPlanView = (mode) => {
+    state.planView = mode;
+    localStorage.setItem('am26.planView', mode);
+    renderMyPlan();
+  };
+  $('#plan-mode-list').addEventListener('click', () => setPlanView('list'));
+  $('#plan-mode-cal').addEventListener('click', () => setPlanView('cal'));
 
   // Impressum
   $('#open-imprint').addEventListener('click', () => {
