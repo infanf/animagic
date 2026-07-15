@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1a0a14">
+  <meta name="description" content="Inoffizielle Messe-App zur AnimagiC 2026 – Zeitplan, eigener Plan, Event-Infos und FAQ">
+  <title>AnimagiC 2026 – Messe-App</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1><span class="logo-anima">Anima</span><span class="logo-gic">giC</span> <span class="logo-year">2026</span></h1>
+    <p class="header-sub">31. Juli – 2. August · Rosengarten Mannheim · 100% MAGIC</p>
+  </header>
+
+  <main id="main">
+    <!-- Zeitplan -->
+    <section id="view-schedule" class="view">
+      <div class="day-tabs" id="day-tabs" role="tablist"></div>
+      <div class="filter-bar">
+        <input type="search" id="filter-search" placeholder="Suche nach Events, Gästen …" autocomplete="off">
+        <div class="filter-row">
+          <select id="filter-room" aria-label="Raum filtern"></select>
+          <select id="filter-cat" aria-label="Kategorie filtern"></select>
+          <label class="filter-check"><input type="checkbox" id="filter-premiere"> Nur&nbsp;Premieren</label>
+        </div>
+        <div class="filter-meta" id="filter-meta"></div>
+      </div>
+      <div id="event-list" class="event-list"></div>
+    </section>
+
+    <!-- Mein Plan -->
+    <section id="view-myplan" class="view" hidden>
+      <h2>Mein Plan</h2>
+      <p class="hint">Tippe auf den Stern <span class="star">★</span> bei einem Event, um es hier zu speichern. Überschneidungen werden markiert.</p>
+      <div id="myplan-list"></div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="view-faq" class="view" hidden>
+      <h2>FAQ &amp; Infos zur Messe</h2>
+      <div id="faq-list" class="faq-list"></div>
+      <p class="faq-footer">Alle Angaben aus dem offiziellen Programmheft 2026 und animagic.de – ohne Gewähr. Dies ist eine inoffizielle Fan-App.</p>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button class="nav-btn active" data-view="schedule"><span class="nav-icon">🗓️</span>Zeitplan</button>
+    <button class="nav-btn" data-view="myplan"><span class="nav-icon">★</span>Mein Plan<span id="myplan-badge" class="badge" hidden></span></button>
+    <button class="nav-btn" data-view="faq"><span class="nav-icon">❓</span>FAQ</button>
+  </nav>
+
+  <!-- Install-Banner -->
+  <div id="install-banner" class="install-banner" hidden>
+    <div class="install-text">
+      <b>App installieren</b>
+      <span id="install-hint">Zeitplan &amp; Mein Plan offline auf dem Homescreen</span>
+    </div>
+    <button id="install-btn" class="install-btn">Installieren</button>
+    <button id="install-dismiss" class="install-dismiss" aria-label="Ausblenden">✕</button>
+  </div>
+
+  <!-- Event-Detail-Modal -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <button class="modal-close" aria-label="Schließen">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="details.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

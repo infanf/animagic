@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3d0a24"/>
+      <stop offset="0.6" stop-color="#1a0a14"/>
+      <stop offset="1" stop-color="#240d33"/>
+    </linearGradient>
+  </defs>
+  <!-- Maskable: volle Fläche, Motiv in der inneren Safe-Zone (80 %) -->
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <circle cx="256" cy="228" r="88" fill="none" stroke="#e91e8c" stroke-width="20"/>
+  <circle cx="256" cy="228" r="45" fill="#ff5aa9"/>
+  <circle cx="273" cy="213" r="13" fill="#fff"/>
+  <text x="256" y="392" text-anchor="middle" font-family="Arial, sans-serif" font-size="64" font-weight="900" fill="#f5e9ef">2026</text>
+</svg>
