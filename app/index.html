@@ -24,15 +24,17 @@
   <main id="main">
     <!-- Zeitplan -->
     <section id="view-schedule" class="view">
-      <div class="day-tabs" id="day-tabs" role="tablist"></div>
-      <div class="filter-bar">
-        <input type="search" id="filter-search" placeholder="Suche nach Events, Gästen …" autocomplete="off">
-        <div class="filter-row">
-          <select id="filter-room" aria-label="Raum filtern"></select>
-          <select id="filter-cat" aria-label="Kategorie filtern"></select>
-          <label class="filter-check"><input type="checkbox" id="filter-premiere"> Nur&nbsp;Premieren</label>
+      <div class="schedule-controls">
+        <div class="day-tabs" id="day-tabs" role="tablist"></div>
+        <div class="filter-bar">
+          <input type="search" id="filter-search" placeholder="Suche nach Events, Gästen …" autocomplete="off">
+          <div class="filter-row">
+            <select id="filter-room" aria-label="Raum filtern"></select>
+            <select id="filter-cat" aria-label="Kategorie filtern"></select>
+            <label class="filter-check"><input type="checkbox" id="filter-premiere"> Nur&nbsp;Premieren</label>
+          </div>
+          <div class="filter-meta" id="filter-meta"></div>
         </div>
-        <div class="filter-meta" id="filter-meta"></div>
       </div>
       <div id="event-list" class="event-list"></div>
     </section>

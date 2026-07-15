@@ -75,7 +75,6 @@ body {
     linear-gradient(120deg, #5d0a1e 0%, #7a0e28 45%, #4a0a2e 100%);
   color: var(--header-fg);
   padding: 16px 16px 12px;
-  position: sticky; top: 0; z-index: 20;
 }
 .app-header h1 {
   font-family: var(--font-head);
@@ -124,6 +123,15 @@ h2 {
 }
 .hint { color: var(--fg-dim); font-size: 0.85rem; margin-bottom: 14px; }
 .hint .star { color: var(--star); }
+
+/* Tabs + Filter bleiben beim Scrollen am oberen Rand sichtbar */
+.schedule-controls {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--bg);
+  margin: -12px -12px 2px;
+  padding: 10px 12px 2px;
+  box-shadow: 0 2px 6px var(--shadow);
+}
 
 /* Day-Tabs – wie die roten Tagesüberschriften im Heft */
 .day-tabs { display: flex; gap: 8px; margin-bottom: 12px; }
