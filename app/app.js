@@ -219,7 +219,6 @@
   function renderPlanCalendar(favEvents, wrap) {
     const PPM = 1.3; // Pixel pro Minute
     let html = '';
-    let anyConflict = false;
 
     for (const day of DAYS) {
       const evs = favEvents.filter((e) => e.day === day.id);
@@ -235,13 +234,11 @@
 
       let blocks = '';
       for (const { ev, col, ncols } of assignColumns(evs)) {
-        const conflict = evs.some((other) => other !== ev && overlaps(ev, other));
-        if (conflict) anyConflict = true;
         const top = (tMin(ev.start) - gridStart) * PPM;
         const height = Math.max((tEnd(ev) - tMin(ev.start)) * PPM, 26);
         const width = 100 / ncols;
         blocks += `
-          <div class="cal-event ${conflict ? 'conflict' : ''}" data-id="${ev.id}"
+          <div class="cal-event" data-id="${ev.id}"
                style="top:${top}px;height:${height}px;left:${col * width}%;width:${width}%;--cat-color:${CATEGORIES[ev.cat].color}">
             <b>${ev.start}${ev.end ? ' – ' + ev.end : ''}</b>
             <span>${ev.title}</span>
@@ -255,10 +252,7 @@
         </div>`;
     }
 
-    const conflictNote = anyConflict
-      ? '<p class="conflict-note">⚠️ Rot umrandete Events überschneiden sich – sie stehen nebeneinander.</p>'
-      : '';
-    wrap.innerHTML = conflictNote + html;
+    wrap.innerHTML = html;
     wrap.querySelectorAll('.cal-event').forEach((el) =>
       el.addEventListener('click', () => openModal(el.dataset.id))
     );
